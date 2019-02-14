@@ -14,9 +14,9 @@ jobs:
       - run:
           name: Create a virtualenv
           command: |
-            mkdir -p /tmp/venv/country_template
-            virtualenv /tmp/venv/country_template
-            echo "source /tmp/venv/country_template/bin/activate" >> $BASH_ENV
+            mkdir -p /tmp/venv/nsw
+            virtualenv /tmp/venv/nsw
+            echo "source /tmp/venv/nsw/bin/activate" >> $BASH_ENV
 
       - run:
           name: Install dependencies
@@ -27,7 +27,7 @@ jobs:
       - save_cache:
           key: v1-py2-deps-{{ checksum "setup.py" }}
           paths:
-            - /tmp/venv/country_template
+            - /tmp/venv/nsw
 
       - save_cache:
           key: v1-py2-build-{{ .Revision }}
@@ -67,7 +67,7 @@ jobs:
       - run:
           name: Upload a Python package to Pypi
           command: |
-            source /tmp/venv/country_template/bin/activate
+            source /tmp/venv/nsw/bin/activate
             twine upload dist/* --username $PYPI_USERNAME --password $PYPI_PASSWORD
 
       - run:
@@ -87,9 +87,9 @@ jobs:
       - run:
           name: Create a virtualenv
           command: |
-            mkdir -p /tmp/venv/country_template
-            python -m venv /tmp/venv/country_template
-            echo "source /tmp/venv/country_template/bin/activate" >> $BASH_ENV
+            mkdir -p /tmp/venv/nsw
+            python -m venv /tmp/venv/nsw
+            echo "source /tmp/venv/nsw/bin/activate" >> $BASH_ENV
 
       - run:
           name: Install dependencies
@@ -100,7 +100,7 @@ jobs:
       - save_cache:
           key: v1-py3-deps-{{ checksum "setup.py" }}
           paths:
-            - /tmp/venv/country_template
+            - /tmp/venv/nsw
 
       - save_cache:
           key: v1-py3-build-{{ .Revision }}
@@ -140,7 +140,7 @@ jobs:
       - run:
           name: Upload a Python package to Pypi
           command: |
-            source /tmp/venv/country_template/bin/activate
+            source /tmp/venv/nsw/bin/activate
             twine upload dist/* --username $PYPI_USERNAME --password $PYPI_PASSWORD
 
 workflows:
