@@ -17,11 +17,13 @@ class active_kids__is_parent(Variable):
     definition_period = MONTH
     label = "Applicant is a parent"
 
+
 class active_kids__is_guardian(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
     label = "Applicant is a guardian"
+
 
 class active_kids__is_carer(Variable):
     value_type = bool
@@ -29,17 +31,27 @@ class active_kids__is_carer(Variable):
     definition_period = MONTH
     label = "Applicant is a carer"
 
+
 class active_kids__is_nsw_resident(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
     label = "Child is a NSW Resident"
 
+
+class active_kids__is_enrolled_full_time(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Child is enrolled in full time education, including home schooling, and TAFE"
+
+
 class active_kids__age_in_months(Variable):
     value_type = float
     entity = Person
     definition_period = MONTH
-    label = "Child's age in months"
+    label = "Childs age in months"
+
 
 class active_kids__is_entitled(Variable):
     value_type = bool
@@ -53,7 +65,8 @@ class active_kids__is_entitled(Variable):
                 person('active_kids__is_parent', period)
                 | person('active_kids__is_guardian', period)
                 | person('active_kids__is_carer', period)
-            )
+                )
             and person('active_kids__is_nsw_resident', period)
             and (54 <= person('active_kids__age_in_months', period) <= 216)
-        )
+            and person('active_kids__is_enrolled_full_time', period)
+            )
