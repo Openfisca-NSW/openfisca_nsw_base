@@ -1,0 +1,13 @@
+# Test files describe situations and their expected outcomes
+# We can run this test on our command line using `openfisca-run-test income_tax.yaml`
+
+- name: Should be a parent or guardian
+  period: 2017-01
+  input:
+    active_kids__is_parent: True
+    active_kids__is_carer: False
+    active_kids__is_guardian: False
+    active_kids__is_nsw_resident: True
+    active_kids__age_in_months: 100
+  output:
+    active_kids__is_entitled: True
