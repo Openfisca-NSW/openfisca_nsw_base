@@ -41,37 +41,37 @@ jobs:
             NSW_PATH=`python -c "import openfisca_nsw; print(openfisca_nsw.CountryTaxBenefitSystem().get_package_metadata()['location'])"`
             openfisca-run-test --country openfisca_nsw $NSW_PATH/openfisca_nsw/tests/
 
-  deploy:
-    docker:
-      - image: python:3.7
-    environment:
-      PYPI_USERNAME: openfisca-bot
-      # PYPI_PASSWORD: this value is set in CircleCI's web interface; do not set it here, it is a secret!
+  # deploy:
+  #   docker:
+  #     - image: python:3.7
+  #   environment:
+  #     PYPI_USERNAME: openfisca-bot
+  #     # PYPI_PASSWORD: this value is set in CircleCI's web interface; do not set it here, it is a secret!
 
-    steps:
-      - checkout
+  #   steps:
+  #     - checkout
 
-      - restore_cache:
-          key: v1-py3-{{ .Branch }}-{{ checksum "setup.py" }}
+  #     - restore_cache:
+  #         key: v1-py3-{{ .Branch }}-{{ checksum "setup.py" }}
 
-      - run:
-          name: Check for functional changes
-          command: if ! .circleci/has-functional-changes.sh ; then circleci step halt ; fi
+  #     - run:
+  #         name: Check for functional changes
+  #         command: if ! .circleci/has-functional-changes.sh ; then circleci step halt ; fi
 
-      - run:
-          name: Upload a Python package to Pypi
-          command: |
-            source /tmp/venv/openfisca_core/bin/activate
-            .circleci/publish-python-package.sh
+  #     - run:
+  #         name: Upload a Python package to Pypi
+  #         command: |
+  #           source /tmp/venv/openfisca_core/bin/activate
+  #           .circleci/publish-python-package.sh
 
-      - run:
-          name: Publish a git tag
-          command: .circleci/publish-git-tag.sh
+  #     - run:
+  #         name: Publish a git tag
+  #         command: .circleci/publish-git-tag.sh
 
-      - run:
-          name: Update doc
-          command: |
-            curl -X POST --header "Content-Type: application/json" -d '{"branch":"master"}' https://circleci.com/api/v1.1/project/github/openfisca/openfisca-doc/build?circle-token=$CIRCLE_TOKEN
+  #     - run:
+  #         name: Update doc
+  #         command: |
+  #           curl -X POST --header "Content-Type: application/json" -d '{"branch":"master"}' https://circleci.com/api/v1.1/project/github/openfisca/openfisca-doc/build?circle-token=$CIRCLE_TOKEN
 
   check_version_and_changelog:
     docker:
@@ -91,10 +91,10 @@ workflows:
     jobs:
       - build
       - check_version_and_changelog
-      - deploy:
-          requires:
-            - build
-            - check_version_and_changelog
-          filters:
-            branches:
-              only: master
+      # - deploy:
+      #     requires:
+      #       - build
+      #       - check_version_and_changelog
+      #     filters:
+      #       branches:
+      #         only: master
