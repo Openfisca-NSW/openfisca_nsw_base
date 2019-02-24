@@ -38,8 +38,8 @@ jobs:
       - run:
           name: Run Country Template tests
           command: |
-            COUNTRY_TEMPLATE_PATH=`python -c "import openfisca_country_template; print(openfisca_country_template.CountryTaxBenefitSystem().get_package_metadata()['location'])"`
-            openfisca test $COUNTRY_TEMPLATE_PATH/openfisca_country_template/tests/
+            NSW_PATH=`python -c "import openfisca_nsw; print(openfisca_nsw.CountryTaxBenefitSystem().get_package_metadata()['location'])"`
+            openfisca-run-test --country openfisca_nsw $NSW_PATH/openfisca_nsw/tests/
 
   deploy:
     docker:
