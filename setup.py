@@ -20,7 +20,7 @@ setup(
     url = "https://github.com/openfisca/country-template",
     include_package_data = True,  # Will read MANIFEST.in
     data_files = [
-        ("share/openfisca/openfisca-country-template", ["CHANGELOG.md", "LICENSE", "README.md"]),
+        ("share/openfisca/openfisca-nsw", ["CHANGELOG.md", "LICENSE", "README.md"]),
         ],
     install_requires = [
         "OpenFisca-Core[web-api] >= 25.0, < 26.0",
