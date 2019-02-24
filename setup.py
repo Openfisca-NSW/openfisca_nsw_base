@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "OpenFisca-nsw",
-    version = "0.1.0",
+    version = "0.1.1",
     author = "OpenFisca Team",
     author_email = "contact@openfisca.org",
     classifiers=[
