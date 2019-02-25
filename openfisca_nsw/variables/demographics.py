@@ -37,6 +37,7 @@ class age(Variable):
 
         return (period.start.year - birth_year) - where(is_birthday_past, 0, 1)  # If the birthday is not passed this year, subtract one year
 
+
 class age_in_months(Variable):
     value_type = int
     entity = Person
@@ -50,6 +51,6 @@ class age_in_months(Variable):
         birth_month = birth.astype('datetime64[M]').astype(int) % 12 + 1
 
         age_in_months = persons('age', period) * 12
-        
+
         is_birthday_past = (birth_month < period.start.month) + (birth_month == period.start.month) * (birth_day <= period.start.day)
         birth_month + period.start.month
