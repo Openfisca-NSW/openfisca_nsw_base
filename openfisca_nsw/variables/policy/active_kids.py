@@ -11,25 +11,25 @@ from openfisca_nsw.entities import *
 
 
 # This variable is a pure input: it doesn't have a formula
-class active_kids__is_parent(Variable):
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "Applicant is a parent"
+# class active_kids__is_parent(Variable):
+#     value_type = bool
+#     entity = Person
+#     definition_period = MONTH
+#     label = "Applicant is a parent"
 
 
-class active_kids__is_guardian(Variable):
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "Applicant is a guardian"
+# class active_kids__is_guardian(Variable):
+#     value_type = bool
+#     entity = Person
+#     definition_period = MONTH
+#     label = "Applicant is a guardian"
 
 
-class active_kids__is_carer(Variable):
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "Applicant is a carer"
+# class active_kids__is_carer(Variable):
+#     value_type = bool
+#     entity = Person
+#     definition_period = MONTH
+#     label = "Applicant is a carer"
 
 
 class active_kids__is_nsw_resident(Variable):

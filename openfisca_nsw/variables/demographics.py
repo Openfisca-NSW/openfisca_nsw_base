@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # This file defines variables for the modelled legislation.
-# A variable is a property of an Entity such as a Person, a Household…
+# A variable is a property of an Entity such as a Person, a Family
 # See https://openfisca.org/doc/key-concepts/variables.html
 
 # Import from openfisca-core the common Python objects used to code the legislation in OpenFisca
