@@ -10,13 +10,6 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class is_enrolled_full_time(Variable):
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "Child is enrolled in full time education, including home schooling, and TAFE"
-
-
 class active_kids__voucher_amount(Variable):
     value_type = int
     entity = Person
