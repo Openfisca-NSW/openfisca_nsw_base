@@ -1,9 +1,0 @@
-description: Eligible for active kids
-metadata:
-  unit: MONTH
-values:
-  # This parameter has last changed on the 1st of Jan 1971.
-  1945-01-01:
-    value: True
-  1971-01-01:
-    value: True
