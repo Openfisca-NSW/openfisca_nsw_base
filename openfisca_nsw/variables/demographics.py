@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # This file defines variables for the modelled legislation.
-# A variable is a property of an Entity such as a Person, a Household…
+# A variable is a property of an Entity such as a Person, a Family
 # See https://openfisca.org/doc/key-concepts/variables.html
 
 # Import from openfisca-core the common Python objects used to code the legislation in OpenFisca
@@ -36,3 +36,20 @@ class age(Variable):
         is_birthday_past = (birth_month < period.start.month) + (birth_month == period.start.month) * (birth_day <= period.start.day)
 
         return (period.start.year - birth_year) - where(is_birthday_past, 0, 1)  # If the birthday is not passed this year, subtract one year
+
+class age_in_months(Variable):
+    value_type = int
+    entity = Person
+    definition_period = MONTH
+    label = u"Person's age (in years)"
+
+    # A person's age is computed according to its birth date.
+    def formula(persons, period, parameters):
+        birth = persons('birth', period)
+
+        birth_month = birth.astype('datetime64[M]').astype(int) % 12 + 1
+
+        age_in_months = persons('age', period) * 12
+        
+        is_birthday_past = (birth_month < period.start.month) + (birth_month == period.start.month) * (birth_day <= period.start.day)
+        birth_month + period.start.month
