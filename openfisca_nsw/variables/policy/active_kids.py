@@ -10,63 +10,34 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-# This variable is a pure input: it doesn't have a formula
-# class active_kids__is_parent(Variable):
-#     value_type = bool
-#     entity = Person
-#     definition_period = MONTH
-#     label = "Applicant is a parent"
-
-
-# class active_kids__is_guardian(Variable):
-#     value_type = bool
-#     entity = Person
-#     definition_period = MONTH
-#     label = "Applicant is a guardian"
-
-
-# class active_kids__is_carer(Variable):
-#     value_type = bool
-#     entity = Person
-#     definition_period = MONTH
-#     label = "Applicant is a carer"
-
-
-class active_kids__is_nsw_resident(Variable):
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "Child is a NSW Resident"
-
-
-class active_kids__is_enrolled_full_time(Variable):
+class is_enrolled_full_time(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
     label = "Child is enrolled in full time education, including home schooling, and TAFE"
 
 
-class active_kids__age_in_months(Variable):
-    value_type = float
+class active_kids__voucher_amount(Variable):
+    value_type = int
     entity = Person
     definition_period = MONTH
-    label = "Childs age in months"
+    label = "Calculates voucher amount for Active Kids"
+
+    def formula(persons, period, parameters):
+        return persons('active_kids__is_entitled', period) \
+            * parameters(period).active_kids.voucher
 
 
 class active_kids__is_entitled(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Calculates entitlement to active kids"
+    label = "Calculates entitlement to Active Kids"
 
-    def formula(person, period, parameters):
+    def formula(persons, period, parameters):
         return (
-            (
-                person('active_kids__is_parent', period)
-                | person('active_kids__is_guardian', period)
-                | person('active_kids__is_carer', period)
-                )
-            and person('active_kids__is_nsw_resident', period)
-            and (54 <= person('active_kids__age_in_months', period) <= 216)
-            and person('active_kids__is_enrolled_full_time', period)
+            persons.has_role(Family.PARENT)
+            * persons('is_nsw_resident', period)
+            * (54 <= persons('age_in_months', period) <= 216)
+            * persons('is_enrolled_full_time', period)
             )
