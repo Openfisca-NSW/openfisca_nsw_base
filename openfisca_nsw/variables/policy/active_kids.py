@@ -32,10 +32,11 @@ class active_kids__child_meets_criteria(Variable):
         max_age = parameters(period).active_kids.max_age
         age = persons('age_in_months', period)
         return (
-            persons('is_nsw_resident', period) * \
-            persons('is_enrolled_full_time', period) * \
+            persons('is_nsw_resident', period) *
+            persons('is_enrolled_full_time', period) *
             (age >= min_age) * (age < max_age)
             )
+
 
 class active_kids__is_eligible(Variable):
     value_type = bool
@@ -55,6 +56,7 @@ class active_kids__family_has_children_eligible(Variable):
     entity = Family
     definition_period = MONTH
     label = "family has 1 or more children eligible for Active Kids vouchers"
+
     def formula(families, period, parameters):
         eligible = families.members('active_kids__child_meets_criteria', period)
         return families.any(eligible, role=Family.CHILD)
