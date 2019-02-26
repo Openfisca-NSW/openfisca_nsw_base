@@ -1,9 +1,12 @@
 # Changelog
 
-### 0.1.2 - [#4](https://github.com/openfisca/country-template/pull/4)
+
+
+### 0.2.0 - [#4](https://github.com/openfisca/country-template/pull/4)
 
 * Tax and benefit system evolution.
-  - Added age_in_months
+  - Added variables based on birth day: `age_in_months`, `is_birthday_past`, `birth_month`
+  - Renamed `active_kids__is_entitled` to `active_kids__meets_criteria`
 
 ### 0.1.1 - [#2](https://github.com/openfisca/country-template/pull/2)
 
