@@ -1,5 +1,10 @@
 # Changelog
 
+### 0.1.2 - [#4](https://github.com/openfisca/country-template/pull/4)
+
+* Tax and benefit system evolution.
+  - Added age_in_months
+
 ### 0.1.1 - [#2](https://github.com/openfisca/country-template/pull/2)
 
 * Technical improvement
