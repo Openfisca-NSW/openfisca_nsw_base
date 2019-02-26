@@ -54,7 +54,7 @@ class active_kids__family_has_children_eligible(Variable):
     value_type = bool
     entity = Family
     definition_period = MONTH
-    label = "family has 1 or more children eligible for Active Kids"
+    label = "family has 1 or more children eligible for Active Kids vouchers"
     def formula(families, period, parameters):
         eligible = families.members('active_kids__child_meets_criteria', period)
         return families.any(eligible, role=Family.CHILD)
