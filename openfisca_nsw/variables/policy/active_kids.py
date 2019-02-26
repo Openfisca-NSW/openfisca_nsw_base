@@ -29,14 +29,14 @@ class active_kids__child_meets_criteria(Variable):
     reference = 'https://sport.nsw.gov.au/sectordevelopment/activekids'
 
     def formula(persons, period, parameters):
-        min_age = parameters(period).active_kids.min_age
-        max_age = parameters(period).active_kids.max_age
-        age = persons('age_in_months', period)
+        min_age_in_months = 12 * parameters(period).active_kids.min_age
+        max_age_in_months = 12 * parameters(period).active_kids.max_age
+        age_in_months = persons('age_in_months', period)
         return (
             persons('is_nsw_resident', period) *
             persons('is_enrolled_in_school', period) *
             persons('has_valid_medicare_card', period) *
-            (age >= min_age) * (age < max_age)
+            (age_in_months >= min_age_in_months) * (age_in_months < max_age_in_months)
             )
 
 
