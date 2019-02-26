@@ -24,8 +24,14 @@ Family = build_entity(
             'key': 'child',
             'plural': 'children',
             'label': u'Child',
+            'doc': u'Children of the parents, carers, or guardians.'
+            },
+        {
+            'key': 'other',
+            'plural': 'others',
+            'label': u'Other',
             'doc': u'Other individuals living in the household.'
-            }
+            }   
         ]
     )
 
