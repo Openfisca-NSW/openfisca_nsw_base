@@ -47,18 +47,6 @@ class age_in_months(Variable):
 
     # A person's age is computed according to its birth date.
     def formula(persons, period, parameters):
-        birth = persons('birth', period)
-        birth_month = birth.astype('datetime64[M]').astype(int) % 12 + 1
-        age_in_months = persons('age', period) * 12
-        print("age in months" , age_in_months)
-
-        # is_birthday_past = (birth_month < period.start.month) + (birth_month == period.start.month) * (birth_day <= period.start.day)
-
-        print("birth month", birth_month, "period month", period.start.month)
+        birth_month = persons('birth', period).astype('datetime64[M]').astype(int) % 12 + 1
         months_to_add = period.start.month - birth_month
-
-        print("months to add", months_to_add)
-
-        age_in_months = (persons('age', period) * 12) + months_to_add
-        print("age_in_months", age_in_months)
-        return age_in_months
+        return (persons('age', period) * 12) + months_to_add
