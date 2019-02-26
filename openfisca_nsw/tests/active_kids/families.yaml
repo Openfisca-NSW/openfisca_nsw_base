@@ -6,6 +6,7 @@
         is_parent: true
       child1:
         is_nsw_resident: True
+        has_valid_medicare_card: True
         is_enrolled_in_school: True
         age_in_months: 100
       aunty:
@@ -34,6 +35,7 @@
         is_guardian: true
       child1:
         is_nsw_resident: True
+        has_valid_medicare_card: True
         is_enrolled_in_school: True
         age_in_months: 100
     families:
@@ -42,8 +44,8 @@
         children: [child1]
   output:
     active_kids__child_meets_criteria:
-      - False #parent
-      - True #child
+      - False # parent
+      - True # child
     active_kids__is_eligible:
       - True
       - False 
@@ -56,6 +58,7 @@
         is_carer: true
       child1:
         is_nsw_resident: True
+        has_valid_medicare_card: True
         is_enrolled_in_school: True
         age_in_months: 100
     families:
