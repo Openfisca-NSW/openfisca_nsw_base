@@ -36,7 +36,7 @@ class age(Variable):
         is_birthday_past = (birth_month < period.start.month) + (birth_month == period.start.month) * (birth_day <= period.start.day)
 
         # If the birthday is not passed this year, subtract one year
-        return (period.start.year - birth_year) - where(is_birthday_past, 0, 1)  
+        return (period.start.year - birth_year) - where(is_birthday_past, 0, 1)
 
 
 class age_in_months(Variable):
