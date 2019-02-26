@@ -21,11 +21,11 @@ class active_kids__voucher_amount(Variable):
             * parameters(period).active_kids.voucher
 
 
-class active_kids__is_entitled(Variable):
+class active_kids__meets_criteria(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Calculates entitlement to Active Kids"
+    label = "child meets criteria for Active Kids"
 
     def formula(persons, period, parameters):
         min_age = parameters(period).active_kids.min_age
@@ -34,6 +34,5 @@ class active_kids__is_entitled(Variable):
         return (
             persons('is_nsw_resident', period) * \
             persons('is_enrolled_full_time', period) * \
-            (age >= min_age) * \
-            (age < max_age)
+            (age >= min_age) * (age < max_age)
             )
