@@ -1,6 +1,11 @@
 # Changelog
 
 
+### 0.2.1 - [#8](https://github.com/openfisca/country-template/pull/8)
+
+* Tax and benefit system evolution.
+ - Added medicare card to eligibility criteria for Active Kids
+
 
 ### 0.2.0 - [#4](https://github.com/openfisca/country-template/pull/4)
 
