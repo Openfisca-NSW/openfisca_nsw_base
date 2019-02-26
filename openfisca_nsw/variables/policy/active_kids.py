@@ -28,9 +28,12 @@ class active_kids__is_entitled(Variable):
     label = "Calculates entitlement to Active Kids"
 
     def formula(persons, period, parameters):
+        min_age = parameters(period).active_kids.min_age
+        max_age = parameters(period).active_kids.max_age
+        age = persons('age_in_months', period)
         return (
-            persons.has_role(Family.PARENT)
-            * persons('is_nsw_resident', period)
-            * (54 <= persons('age_in_months', period) <= 216)
-            * persons('is_enrolled_full_time', period)
+            persons('is_nsw_resident', period) * \
+            persons('is_enrolled_full_time', period) * \
+            (age >= min_age) * \
+            (age < max_age)
             )
