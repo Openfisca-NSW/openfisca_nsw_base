@@ -43,8 +43,17 @@ class age_in_months(Variable):
     value_type = int
     entity = Person
     definition_period = MONTH
-    label = u"Person's age (in months)"
+    label = u"Person's age (in years)"
 
+    # A person's age is computed according to its birth date.
     def formula(persons, period, parameters):
-        birth_month = persons('birth', period).astype('datetime64[M]').astype(int) % 12 + 1
-        return (persons('age', period) * 12) + (period.start.month - birth_month)
+        birth = persons('birth', period)
+        birth_month = birth.astype('datetime64[M]').astype(int) % 12 + 1
+
+        birth_day = (birth - birth.astype('datetime64[M]') + 1).astype(int)
+        is_birthday_past = (birth_month < period.start.month) + (birth_month == period.start.month) * (birth_day <= period.start.day)
+
+        age_in_years = persons('age', period) + where(is_birthday_past, 0, 1)
+        return (age_in_years * 12) + (period.start.month - birth_month)
+
+
