@@ -3,13 +3,10 @@
         "Alicia": {
             "birth": {
                 "2017-01": null
-            },
-            "disposable_income": {
-                "2017-01": null
             }
         }
     },
-    "households": {
+    "families": {
         "_": {
             "parents": ["Alicia"]
         }
