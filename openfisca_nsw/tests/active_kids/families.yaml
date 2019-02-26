@@ -6,7 +6,7 @@
         is_parent: true
       child1:
         is_nsw_resident: True
-        is_enrolled_full_time: True
+        is_enrolled_in_school: True
         age_in_months: 100
       aunty:
         age: 25
@@ -34,7 +34,7 @@
         is_guardian: true
       child1:
         is_nsw_resident: True
-        is_enrolled_full_time: True
+        is_enrolled_in_school: True
         age_in_months: 100
     families:
       family1:
@@ -56,7 +56,7 @@
         is_carer: true
       child1:
         is_nsw_resident: True
-        is_enrolled_full_time: True
+        is_enrolled_in_school: True
         age_in_months: 100
     families:
       family1:

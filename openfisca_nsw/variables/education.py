@@ -4,8 +4,8 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class is_enrolled_full_time(Variable):
+class is_enrolled_in_school(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Child is enrolled in full time education, including home schooling, and TAFE"
+    label = "enrolled in school (from Kindergarten to Year 12, including those who are home-schooled or enrolled in secondary school education at TAFE NSW)"

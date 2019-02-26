@@ -26,6 +26,7 @@ class active_kids__child_meets_criteria(Variable):
     entity = Person
     definition_period = MONTH
     label = "child meets criteria for Active Kids"
+    reference = 'https://sport.nsw.gov.au/sectordevelopment/activekids'
 
     def formula(persons, period, parameters):
         min_age = parameters(period).active_kids.min_age
@@ -33,7 +34,7 @@ class active_kids__child_meets_criteria(Variable):
         age = persons('age_in_months', period)
         return (
             persons('is_nsw_resident', period) *
-            persons('is_enrolled_full_time', period) *
+            persons('is_enrolled_in_school', period) *
             (age >= min_age) * (age < max_age)
             )
 
