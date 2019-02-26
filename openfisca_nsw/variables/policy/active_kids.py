@@ -41,7 +41,7 @@ class active_kids__is_eligible(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "adult is entitled to 1 or more Active Kids vouchers for their family"
+    label = "person is a parent/carer/guardian and is entitled to 1 or more Active Kids vouchers for their family"
 
     def formula(persons, period, parameters):
         parent = persons('is_parent', period)
