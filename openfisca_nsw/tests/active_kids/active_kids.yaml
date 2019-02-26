@@ -1,27 +1,83 @@
-# Test files describe situations and their expected outcomes
-# We can run this test on our command line using `openfisca-run-test income_tax.yaml`
-
-- name: Parent is entitled to active kids voucher for a child
-  period: "2019-02"
-  absolute_error_margin: 0
+- name: Entitled Parent applicant
+  period: 2019-01
   input:
-    persons:
-      Mama:
-        is_nsw_resident: true
-      kid1:
-        age: 5
-        is_nsw_resident: true
-        is_enrolled_full_time: true
-    families:
-      family1:
-        parents: [ "Mama" ]
-        children: [ "kid1" ]
+    # active_kids__is_parent: True
+    # active_kids__is_carer: False
+    # active_kids__is_guardian: False
+    is_nsw_resident: True
+    is_enrolled_full_time: True
+    age_in_months: 100
   output:
-    active_kids__is_entitled:
-      2019-02:  
-        - true
-        - true
-    active_kids__voucher_amount:
-      2019-02:
-        - 0
-        - 100
+    active_kids__is_entitled: True
+
+- name: Entitled Guardian applicant
+  period: 2019-01
+  input:
+    # active_kids__is_parent: False
+    # active_kids__is_carer: False
+    # active_kids__is_guardian: True
+    is_nsw_resident: True
+    is_enrolled_full_time: True
+    age_in_months: 100
+  output:
+    active_kids__is_entitled: True
+
+- name: Entitled Carer applicant
+  period: 2019-01
+  input:
+    # active_kids__is_parent: False
+    # active_kids__is_carer: True
+    # active_kids__is_guardian: False
+    is_nsw_resident: True
+    is_enrolled_full_time: True
+    age_in_months: 100
+  output:
+    active_kids__is_entitled: True
+
+- name: Entitled Parent applicant, child not NSW resident, so not entitled to rebate
+  period: 2019-01
+  input:
+    # active_kids__is_parent: True
+    # active_kids__is_carer: False
+    # active_kids__is_guardian: False
+    is_nsw_resident: False
+    is_enrolled_full_time: True
+    age_in_months: 100
+  output:
+    active_kids__is_entitled: False
+
+- name: Entitled Parent applicant, child not enrolled in edu, so not entitled to rebate
+  period: 2019-01
+  input:
+    # active_kids__is_parent: True
+    # active_kids__is_carer: False
+    # active_kids__is_guardian: False
+    is_nsw_resident: True
+    is_enrolled_full_time: False
+    age_in_months: 100
+  output:
+    active_kids__is_entitled: False
+
+- name: Entitled Parent applicant, child too young, so not entitled to rebate
+  period: 2019-01
+  input:
+    # active_kids__is_parent: True
+    # active_kids__is_carer: False
+    # active_kids__is_guardian: False
+    is_nsw_resident: True
+    is_enrolled_full_time: True
+    age_in_months: 50
+  output:
+    active_kids__is_entitled: False
+
+- name: Entitled Parent applicant, child too old, so not entitled to rebate
+  period: 2019-01
+  input:
+    # active_kids__is_parent: True
+    # active_kids__is_carer: False
+    # active_kids__is_guardian: False
+    is_nsw_resident: True
+    is_enrolled_full_time: True
+    age_in_months: 217
+  output:
+    active_kids__is_entitled: False
