@@ -1,0 +1,46 @@
+- name: Entitled child
+  period: 2019-01
+  input:
+    is_nsw_resident: True
+    is_enrolled_in_school: True
+    age_in_months: 100
+  output:
+    active_kids__child_meets_criteria: True
+    active_kids__voucher_amount: 100
+
+- name: Entitled child, child not NSW resident, so not entitled to rebate
+  period: 2019-01
+  input:
+    is_nsw_resident: False
+    is_enrolled_in_school: True
+    age_in_months: 100
+  output:
+    active_kids__child_meets_criteria: False
+    active_kids__voucher_amount: 0
+
+- name: Entitled child, child not enrolled in edu, so not entitled to rebate
+  period: 2019-01
+  input:
+    is_nsw_resident: True
+    is_enrolled_in_school: False
+    age_in_months: 100
+  output:
+    active_kids__child_meets_criteria: False
+
+- name: Entitled child, child too young, so not entitled to rebate
+  period: 2019-01
+  input:
+    is_nsw_resident: True
+    is_enrolled_in_school: True
+    age_in_months: 50
+  output:
+    active_kids__child_meets_criteria: False
+
+- name: Entitled child, child too old, so not entitled to rebate
+  period: 2019-01
+  input:
+    is_nsw_resident: True
+    is_enrolled_in_school: True
+    age_in_months: 217
+  output:
+    active_kids__child_meets_criteria: False

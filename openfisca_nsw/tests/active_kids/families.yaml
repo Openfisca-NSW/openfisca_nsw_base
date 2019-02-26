@@ -1,0 +1,71 @@
+- name: Entitled Parent applicant
+  period: 2019-01
+  input:
+    persons:
+      parent1:
+        is_parent: true
+      child1:
+        is_nsw_resident: True
+        is_enrolled_in_school: True
+        age_in_months: 100
+      aunty:
+        age: 25
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+        others: [aunty]
+  output:
+    active_kids__child_meets_criteria:
+      - False
+      - True
+      - False
+    active_kids__voucher_amount: [ 0, 100, 0 ]
+    active_kids__is_eligible:
+      - True
+      - False # The child is not a parent, so not eligible
+      - False # Aunty is not eligible
+
+- name: Entitled Guardian applicant
+  period: 2019-01
+  input:
+    persons:
+      parent1:
+        is_guardian: true
+      child1:
+        is_nsw_resident: True
+        is_enrolled_in_school: True
+        age_in_months: 100
+    families:
+      family1:
+        parents: [parent1]
+        children: [child1]
+  output:
+    active_kids__child_meets_criteria:
+      - False #parent
+      - True #child
+    active_kids__is_eligible:
+      - True
+      - False 
+
+- name: Entitled Carer applicant
+  period: 2019-01
+  input:
+    persons:
+      parent1:
+        is_carer: true
+      child1:
+        is_nsw_resident: True
+        is_enrolled_in_school: True
+        age_in_months: 100
+    families:
+      family1:
+        parents: [parent1]
+        children: [child1]
+  output:
+    active_kids__child_meets_criteria:
+      - False
+      - True
+    active_kids__is_eligible:
+      - True
+      - False 
