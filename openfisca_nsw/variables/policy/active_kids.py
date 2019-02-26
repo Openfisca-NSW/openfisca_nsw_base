@@ -17,11 +17,11 @@ class active_kids__voucher_amount(Variable):
     label = "Calculates voucher amount for Active Kids"
 
     def formula(persons, period, parameters):
-        return persons('active_kids__is_entitled', period) \
+        return persons('active_kids__child_meets_criteria', period) \
             * parameters(period).active_kids.voucher
 
 
-class active_kids__meets_criteria(Variable):
+class active_kids__child_meets_criteria(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
@@ -36,3 +36,25 @@ class active_kids__meets_criteria(Variable):
             persons('is_enrolled_full_time', period) * \
             (age >= min_age) * (age < max_age)
             )
+
+class active_kids__is_eligible(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "adult is entitled to 1 or more Active Kids vouchers for their family"
+
+    def formula(persons, period, parameters):
+        parent = persons('is_parent', period)
+        guardian = persons('is_guardian', period)
+        carer = persons('is_carer', period)
+        return (parent + guardian + carer) * persons.family('active_kids__family_has_children_eligible', period)
+
+
+class active_kids__family_has_children_eligible(Variable):
+    value_type = bool
+    entity = Family
+    definition_period = MONTH
+    label = "family has 1 or more children eligible for Active Kids"
+    def formula(families, period, parameters):
+        eligible = families.members('active_kids__child_meets_criteria', period)
+        return families.any(eligible, role=Family.CHILD)

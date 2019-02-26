@@ -64,6 +64,7 @@ class is_birthday_past(Variable):
         birth_day = (birth - birth.astype('datetime64[M]') + 1).astype(int)
         return (birth_month < period.start.month) + (birth_month == period.start.month) * (birth_day <= period.start.day)
 
+
 class birth_month(Variable):
     value_type = int
     entity = Person
