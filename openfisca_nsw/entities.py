@@ -31,7 +31,7 @@ Family = build_entity(
             'plural': 'others',
             'label': u'Other',
             'doc': u'Other individuals living in the household.'
-            }   
+            }
         ]
     )
 
