@@ -3,7 +3,7 @@
   input:
     is_nsw_resident: True
     is_enrolled_in_school: True
-    age_in_months: 100
+    birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: True
     active_kids__voucher_amount: 100
@@ -13,7 +13,7 @@
   input:
     is_nsw_resident: False
     is_enrolled_in_school: True
-    age_in_months: 100
+    birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: False
     active_kids__voucher_amount: 0
@@ -23,7 +23,7 @@
   input:
     is_nsw_resident: True
     is_enrolled_in_school: False
-    age_in_months: 100
+    birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: False
 
@@ -32,7 +32,7 @@
   input:
     is_nsw_resident: True
     is_enrolled_in_school: True
-    age_in_months: 50
+    birth: 2018-01
   output:
     active_kids__child_meets_criteria: False
 
@@ -41,6 +41,6 @@
   input:
     is_nsw_resident: True
     is_enrolled_in_school: True
-    age_in_months: 217
+    birth: 2001-01
   output:
     active_kids__child_meets_criteria: False
