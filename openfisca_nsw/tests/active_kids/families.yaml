@@ -6,6 +6,7 @@
         is_parent: true
       child1:
         is_nsw_resident: True
+        has_valid_medicare_card: True
         is_enrolled_in_school: True
         birth: 2014-01-01
       aunty:
@@ -37,6 +38,7 @@
         is_guardian: true
       child1:
         is_nsw_resident: True
+        has_valid_medicare_card: True
         is_enrolled_in_school: True
         birth: 2014-01-01
     families:
@@ -59,6 +61,7 @@
         is_carer: true
       child1:
         is_nsw_resident: True
+        has_valid_medicare_card: True
         is_enrolled_in_school: True
         birth: 2014-01-01
     families:

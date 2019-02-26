@@ -2,6 +2,7 @@
   period: 2019-01
   input:
     is_nsw_resident: True
+    has_valid_medicare_card: True
     is_enrolled_in_school: True
     birth: 2014-01-01
   output:
@@ -12,16 +13,29 @@
   period: 2019-01
   input:
     is_nsw_resident: False
+    has_valid_medicare_card: True
     is_enrolled_in_school: True
     birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: False
     active_kids__voucher_amount: 0
 
+- name: Entitled child, but doesn't have a medicare card
+  period: 2019-01
+  input:
+    is_nsw_resident: True
+    is_enrolled_in_school: True
+    age_in_months: 100
+  output:
+    active_kids__child_meets_criteria: False
+    active_kids__voucher_amount: 0
+
+
 - name: Entitled child, child not enrolled in edu, so not entitled to rebate
   period: 2019-01
   input:
     is_nsw_resident: True
+    has_valid_medicare_card: True
     is_enrolled_in_school: False
     birth: 2014-01-01
   output:
@@ -31,6 +45,7 @@
   period: 2019-01
   input:
     is_nsw_resident: True
+    has_valid_medicare_card: True
     is_enrolled_in_school: True
     birth: 2018-01
   output:
@@ -40,6 +55,7 @@
   period: 2019-01
   input:
     is_nsw_resident: True
+    has_valid_medicare_card: True
     is_enrolled_in_school: True
     birth: 2001-01
   output:

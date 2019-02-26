@@ -35,6 +35,7 @@ class active_kids__child_meets_criteria(Variable):
         return (
             persons('is_nsw_resident', period) *
             persons('is_enrolled_in_school', period) *
+            persons('has_valid_medicare_card', period) *
             (age >= min_age) * (age < max_age)
             )
 
