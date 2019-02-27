@@ -8,7 +8,7 @@
         is_nsw_resident: True
         has_valid_medicare_card: True
         is_enrolled_in_school: True
-        active_kids__calendar_year: False
+        active_kids__already_issued_in_calendar_year: False
         birth: 2014-01-01
       aunty:
         is_nsw_resident: True
@@ -41,7 +41,7 @@
         is_nsw_resident: True
         has_valid_medicare_card: True
         is_enrolled_in_school: True
-        active_kids__calendar_year: False
+        active_kids__already_issued_in_calendar_year: False
         birth: 2014-01-01
     families:
       family1:
@@ -65,7 +65,7 @@
         is_nsw_resident: True
         has_valid_medicare_card: True
         is_enrolled_in_school: True
-        active_kids__calendar_year: False
+        active_kids__already_issued_in_calendar_year: False
         birth: 2014-01-01
     families:
       family1:

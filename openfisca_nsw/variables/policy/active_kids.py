@@ -10,7 +10,7 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class active_kids__calendar_year(Variable):
+class active_kids__already_issued_in_calendar_year(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
@@ -42,7 +42,7 @@ class active_kids__child_meets_criteria(Variable):
         return (
             persons('is_nsw_resident', period) *
             persons('is_enrolled_in_school', period) *
-            not_(persons('active_kids__calendar_year', period)) *
+            not_(persons('active_kids__already_issued_in_calendar_year', period)) *
             persons('has_valid_medicare_card', period) *
             (age_in_months >= min_age_in_months) * (age_in_months < max_age_in_months)
             )
