@@ -8,6 +8,7 @@
         is_nsw_resident: True
         has_valid_medicare_card: True
         is_enrolled_in_school: True
+        active_kids__already_issued_in_calendar_year: False
         birth: 2014-01-01
       aunty:
         is_nsw_resident: True
@@ -40,6 +41,7 @@
         is_nsw_resident: True
         has_valid_medicare_card: True
         is_enrolled_in_school: True
+        active_kids__already_issued_in_calendar_year: False
         birth: 2014-01-01
     families:
       family1:
@@ -51,7 +53,7 @@
       - True  # child
     active_kids__is_eligible:
       - True
-      - False 
+      - False
 
 - name: Entitled Carer applicant
   period: 2019-01
@@ -63,6 +65,7 @@
         is_nsw_resident: True
         has_valid_medicare_card: True
         is_enrolled_in_school: True
+        active_kids__already_issued_in_calendar_year: False
         birth: 2014-01-01
     families:
       family1:
@@ -74,4 +77,4 @@
       - True
     active_kids__is_eligible:
       - True
-      - False 
+      - False

@@ -10,6 +10,14 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
+class active_kids__already_issued_in_calendar_year(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = YEAR
+    set_input = set_input_dispatch_by_period
+    label = "Whether the child has already had an active kids voucher this calendar year"
+
+
 class active_kids__voucher_amount(Variable):
     value_type = int
     entity = Person
@@ -35,6 +43,7 @@ class active_kids__child_meets_criteria(Variable):
         return (
             persons('is_nsw_resident', period) *
             persons('is_enrolled_in_school', period) *
+            not_(persons('active_kids__already_issued_in_calendar_year', period.this_year)) *
             persons('has_valid_medicare_card', period) *
             (age_in_months >= min_age_in_months) * (age_in_months < max_age_in_months)
             )

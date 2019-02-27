@@ -4,6 +4,7 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: True
+    active_kids__already_issued_in_calendar_year: False
     birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: True
@@ -15,6 +16,7 @@
     is_nsw_resident: False
     has_valid_medicare_card: True
     is_enrolled_in_school: True
+    active_kids__already_issued_in_calendar_year: False
     birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: False
@@ -25,6 +27,7 @@
   input:
     is_nsw_resident: True
     is_enrolled_in_school: True
+    active_kids__already_issued_in_calendar_year: False
     age_in_months: 100
   output:
     active_kids__child_meets_criteria: False
@@ -37,6 +40,7 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: False
+    active_kids__already_issued_in_calendar_year: False
     birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: False
@@ -47,6 +51,7 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: True
+    active_kids__already_issued_in_calendar_year: False
     birth: 2018-01-03
   output:
     active_kids__child_meets_criteria: False
@@ -57,6 +62,18 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: True
+    active_kids__already_issued_in_calendar_year: False
+    birth: 2000-01-01
+  output:
+    active_kids__child_meets_criteria: False
+
+- name: Entitled child, child already issued voucher this calendar year
+  period: 2019-01
+  input:
+    is_nsw_resident: True
+    has_valid_medicare_card: True
+    is_enrolled_in_school: True
+    active_kids__already_issued_in_calendar_year: True
     birth: 2000-01-01
   output:
     active_kids__child_meets_criteria: False
