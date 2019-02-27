@@ -4,7 +4,7 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: True
-    age_in_months: 100
+    birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: True
     active_kids__voucher_amount: 100
@@ -15,7 +15,7 @@
     is_nsw_resident: False
     has_valid_medicare_card: True
     is_enrolled_in_school: True
-    age_in_months: 100
+    birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: False
     active_kids__voucher_amount: 0
@@ -37,7 +37,7 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: False
-    age_in_months: 100
+    birth: 2014-01-01
   output:
     active_kids__child_meets_criteria: False
 
@@ -47,7 +47,7 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: True
-    age_in_months: 50
+    birth: 2018-01-03
   output:
     active_kids__child_meets_criteria: False
 
@@ -57,6 +57,6 @@
     is_nsw_resident: True
     has_valid_medicare_card: True
     is_enrolled_in_school: True
-    age_in_months: 217
+    birth: 2000-01-01
   output:
     active_kids__child_meets_criteria: False

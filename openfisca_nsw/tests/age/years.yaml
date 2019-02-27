@@ -38,3 +38,21 @@
       2015-02: 34
       2015-03: 35
 
+- name: Ages in a family
+  period: 2016-01
+  input:
+    persons:
+      parent1:
+        birth: 2000-01-01
+      child1:
+        birth: 2014-01-01
+      aunty:
+        birth: 2014-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+        others: [aunty]
+  output:
+    age: [16, 2, 2]
+    age_in_months: [192, 24, 24]
