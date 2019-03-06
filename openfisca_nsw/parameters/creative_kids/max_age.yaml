@@ -1,0 +1,5 @@
+description: Maximum age of a child required to be eligible for Creative Kids vouchers
+reference: FAQ, Eligibility Criteria, Creative Kids Program. https://www.service.nsw.gov.au/creative-kids-faqs-parents-guardians-and-carers#eligibility
+values:
+  2019-01-01:
+    value: 19
