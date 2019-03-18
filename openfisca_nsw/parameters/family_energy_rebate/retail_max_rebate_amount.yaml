@@ -1,0 +1,5 @@
+description: Maximum rebate amount to retail customers that do not hold a DHS Concession Card or Healthcare Card and do not qualify for the Low Income Household Rebate
+reference: Family Energy Rebate criteria, http://www.resourcesandenergy.nsw.gov.au/energy-consumers/financial-assistance?a=436725
+values:
+  2018-01-31:
+    value: 180
