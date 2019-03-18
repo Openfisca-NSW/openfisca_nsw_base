@@ -51,7 +51,7 @@ class family_energy_rebate__retail_rebate_amount(Variable):
 def formula(persons, period, parameters):
     condition_healthcare = persons('has_healthcare_card', period)
     condition_concession = persons('has_concession_card', period)
-    condition_health_or_concession = (condition_healthcare + condition_concession) *
+    condition_health_or_concession = condition_healthcare + condition_concession
     return select(
         [condition_health_or_concession, not_(condition_health_or_concession)]
         [persons('family_energy_rebate__person_meets_retail_criteria', period) * parameters(period).retail_min_rebate_amount, persons('family_energy_rebate__person_meets_retail_criteria', period) * parameters(period).retail_max_rebate_amount]
