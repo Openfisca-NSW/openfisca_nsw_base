@@ -19,14 +19,13 @@ class family_energy_rebate__person_meets_retail_criteria(Variable):
     reference = 'http://www.resourcesandenergy.nsw.gov.au/energy-consumers/financial-assistance?a=436725'
 
     def formula(persons, period, parameters):
-
         return (
             persons('is_nsw_resident', period) *
             persons('has_energy_account', period) *
             not_(persons('energy_provider_category', period)) *
             persons('is_ftb_recipient', period))
 
-    
+
 # This is used to calculate whether persons are eligible for family energy rebate - On Supply category
 class family_energy_rebate__person_meets_supply_criteria(Variable):
     value_type = bool
@@ -36,14 +35,13 @@ class family_energy_rebate__person_meets_supply_criteria(Variable):
     reference = 'http://www.resourcesandenergy.nsw.gov.au/energy-consumers/financial-assistance?a=436725'
 
     def formula(persons, period, parameters):
-
         return (
             persons('is_nsw_resident', period) *
             persons('has_energy_account', period) *
             persons('energy_provider_category', period) *
             persons('is_ftb_recipient', period))
 
-    
+
 # This is used to calculate the rebate amount for family energy rebate - for retail customers
 class family_energy_rebate__retail_rebate_amount(Variable):
     value_type = int
@@ -56,6 +54,9 @@ class family_energy_rebate__retail_rebate_amount(Variable):
         condition_concession = persons('has_concession_card', period)
         condition_health_or_concession = condition_healthcare + condition_concession
         return select(
-            [condition_health_or_concession, not_(condition_health_or_concession)]
-            [persons('family_energy_rebate__person_meets_retail_criteria', period) * parameters(period).retail_min_rebate_amount, persons('family_energy_rebate__person_meets_retail_criteria', period) * parameters(period).retail_max_rebate_amount])
-
+            [condition_health_or_concession, not_(condition_health_or_concession)],
+            [persons('family_energy_rebate__person_meets_retail_criteria', period)
+            * parameters(period).family_energy_rebate.retail_min_rebate_amount,
+            persons('family_energy_rebate__person_meets_retail_criteria', period)
+            * parameters(period).family_energy_rebate.retail_max_rebate_amount],
+            )

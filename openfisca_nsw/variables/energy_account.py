@@ -10,6 +10,7 @@ class has_energy_account(Variable):
     definition_period = MONTH
     label = "registered an energy account in their own name"
 
+
 class energy_provider_category(Variable):
     value_type = bool
     entity = Person
