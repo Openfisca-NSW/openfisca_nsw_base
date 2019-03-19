@@ -3,8 +3,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: True
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: True
     has_concession_card: True
   output:
@@ -16,8 +16,8 @@
   input:
     is_nsw_resident: False
     has_energy_account: True
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: True
     has_concession_card: True
   output:
@@ -29,8 +29,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: False
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: True
     has_concession_card: True
   output:
@@ -42,8 +42,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: False
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: True
     has_concession_card: True
   output:
@@ -55,8 +55,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: True
-    energy_provider_category: True
-    is_ftb_recipient: True
+    energy_provider_supply_customer: True
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: True
     has_concession_card: True
   output:
@@ -68,8 +68,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: True
-    energy_provider_category: False
-    is_ftb_recipient: False
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: False
     has_healthcare_card: True
     has_concession_card: True
   output:
@@ -81,8 +81,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: True
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: False
     has_concession_card: False
   output:
@@ -94,8 +94,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: True
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: False
     has_concession_card: True
   output:
@@ -107,8 +107,8 @@
   input:
     is_nsw_resident: True
     has_energy_account: True
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: True
     has_concession_card: False
   output:
@@ -120,8 +120,8 @@
   input:
     is_nsw_resident: False
     has_energy_account: True
-    energy_provider_category: False
-    is_ftb_recipient: True
+    energy_provider_supply_customer: False
+    is_family_tax_benefit_recipient: True
     has_healthcare_card: False
     has_concession_card: False
   output:

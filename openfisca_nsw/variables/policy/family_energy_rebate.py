@@ -22,8 +22,8 @@ class family_energy_rebate__person_meets_retail_criteria(Variable):
         return (
             persons('is_nsw_resident', period) *
             persons('has_energy_account', period) *
-            not_(persons('energy_provider_category', period)) *
-            persons('is_ftb_recipient', period))
+            not_(persons('energy_provider_supply_customer', period)) *
+            persons('is_family_tax_benefit_recipient', period))
 
 
 # This is used to calculate whether persons are eligible for family energy rebate - On Supply category
@@ -38,8 +38,8 @@ class family_energy_rebate__person_meets_supply_criteria(Variable):
         return (
             persons('is_nsw_resident', period) *
             persons('has_energy_account', period) *
-            persons('energy_provider_category', period) *
-            persons('is_ftb_recipient', period))
+            persons('energy_provider_supply_customer', period) *
+            persons('is_family_tax_benefit_recipient', period))
 
 
 # This is used to calculate the rebate amount for family energy rebate - for retail customers

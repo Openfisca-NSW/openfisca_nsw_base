@@ -4,7 +4,7 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class is_ftb_recipient(Variable):
+class is_family_tax_benefit_recipient(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
