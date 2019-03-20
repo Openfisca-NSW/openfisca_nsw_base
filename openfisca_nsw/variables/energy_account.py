@@ -4,7 +4,7 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class has_energy_account(Variable):
+class is_energy_account_holder(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH

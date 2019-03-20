@@ -2,7 +2,7 @@
   period: 2019-02
   input:
     is_nsw_resident: True
-    has_energy_account: True
+    is_energy_account_holder: True
     energy_provider_supply_customer: False
     is_family_tax_benefit_recipient: True
     has_concession_card: True
@@ -14,7 +14,7 @@
   period: 2019-02
   input:
     is_nsw_resident: False
-    has_energy_account: True
+    is_energy_account_holder: True
     energy_provider_supply_customer: False
     is_family_tax_benefit_recipient: True
     has_concession_card: True
@@ -26,7 +26,7 @@
   period: 2019-02
   input:
     is_nsw_resident: True
-    has_energy_account: False
+    is_energy_account_holder: False
     energy_provider_supply_customer: False
     is_family_tax_benefit_recipient: True
     has_concession_card: True
@@ -38,7 +38,7 @@
   period: 2019-02
   input:
     is_nsw_resident: True
-    has_energy_account: True
+    is_energy_account_holder: True
     energy_provider_supply_customer: True
     is_family_tax_benefit_recipient: True
     has_concession_card: True
@@ -50,7 +50,7 @@
   period: 2019-02
   input:
     is_nsw_resident: True
-    has_energy_account: True
+    is_energy_account_holder: True
     energy_provider_supply_customer: False
     is_family_tax_benefit_recipient: False
     has_concession_card: True
@@ -62,7 +62,7 @@
   period: 2019-02
   input:
     is_nsw_resident: True
-    has_energy_account: True
+    is_energy_account_holder: True
     energy_provider_supply_customer: False
     is_family_tax_benefit_recipient: True
     has_concession_card: False

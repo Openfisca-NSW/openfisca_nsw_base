@@ -21,7 +21,7 @@ class family_energy_rebate__person_meets_retail_criteria(Variable):
     def formula(persons, period, parameters):
         return (
             persons('is_nsw_resident', period) *
-            persons('has_energy_account', period) *
+            persons('is_energy_account_holder', period) *
             not_(persons('energy_provider_supply_customer', period)) *
             persons('is_family_tax_benefit_recipient', period))
 
@@ -37,7 +37,7 @@ class family_energy_rebate__person_meets_supply_criteria(Variable):
     def formula(persons, period, parameters):
         return (
             persons('is_nsw_resident', period) *
-            persons('has_energy_account', period) *
+            persons('is_energy_account_holder', period) *
             persons('energy_provider_supply_customer', period) *
             persons('is_family_tax_benefit_recipient', period))
 
