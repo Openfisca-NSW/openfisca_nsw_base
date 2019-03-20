@@ -38,18 +38,6 @@
   period: 2019-02
   input:
     is_nsw_resident: True
-    has_energy_account: False
-    energy_provider_supply_customer: False
-    is_family_tax_benefit_recipient: True
-    has_concession_card: True
-  output:
-    family_energy_rebate__person_meets_retail_criteria: False
-    family_energy_rebate__retail_rebate_amount: 0
-
-- name: Person ineligible due to not having a retail energy connection (For Retail customers)
-  period: 2019-02
-  input:
-    is_nsw_resident: True
     has_energy_account: True
     energy_provider_supply_customer: True
     is_family_tax_benefit_recipient: True
