@@ -1,0 +1,5 @@
+description: Voucher value in AUD for Creative Kids voucher
+reference: https://www.service.nsw.gov.au/creative-kids-faqs-parents-guardians-and-carers#program-information
+values:
+  2019-01-01:
+    value: 100
