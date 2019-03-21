@@ -8,4 +8,4 @@ class has_concession_card(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Has one of the Department of Human Services concession or Healthcare cards - https://www.humanservices.gov.au/individuals/subjects/concession-and-health-care-cards"
+    label = "Has any one of the Department of Human Services concession or Healthcare cards - https://www.humanservices.gov.au/individuals/subjects/concession-and-health-care-cards"
