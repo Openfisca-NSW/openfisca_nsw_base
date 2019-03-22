@@ -53,7 +53,11 @@ class NRMA_free2go__free2go_discount(Variable):
     label = "Discount applied to free2go based on age and membership term"
 
     def formula(persons, period, parameters):
-        return select(
+        discount_amount = select(  # calculate the discount amount
             [(persons('NRMA_free2go__age_when_joining', period) == 16), (persons('NRMA_free2go__age_when_joining', period) >= 17)],
             [parameters(period).NRMA_free2go.discount.by_year[persons('NRMA_free2go__membership_term', period)].sixteen, parameters(period).NRMA_free2go.discount.by_year[persons('NRMA_free2go__membership_term', period)].over_sixteen]
+            )
+        return select(  # if they qualify, return it, otherwise don't
+            [persons('NRMA_free2go__is_eligible', period), not_(persons('NRMA_free2go__is_eligible', period))],
+            [discount_amount, 0]
             )
