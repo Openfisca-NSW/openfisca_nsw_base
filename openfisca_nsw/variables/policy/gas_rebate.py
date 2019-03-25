@@ -13,7 +13,7 @@ from openfisca_nsw.entities import *
 class gas_rebate__already_issued_in_financial_year(Variable):
     value_type = bool
     entity = Person
-    definition_period = YEAR
+    definition_period = MONTH
     set_input = set_input_dispatch_by_period
     label = "Whether the user has already had a gas rebate this financial year"
 
@@ -46,7 +46,7 @@ class gas_rebate__person_meets_retail_criteria(Variable):
             persons('is_energy_account_holder', period) *
             not_(persons('energy_provider_supply_customer', period) + persons('energy_bottled_gas_user', period)) *
             persons('gas_rebate__person_holds_valid_concession_card', period) *
-            not_(persons('gas_rebate__already_issued_in_financial_year', period.this_year)))
+            not_(persons('gas_rebate__already_issued_in_financial_year', period)))
 
 
 class gas_rebate__person_meets_supply_criteria(Variable):
@@ -62,7 +62,7 @@ class gas_rebate__person_meets_supply_criteria(Variable):
             not_(persons('is_energy_account_holder', period)) *
             (persons('energy_provider_supply_customer', period) + persons('energy_bottled_gas_user', period)) *
             persons('gas_rebate__person_holds_valid_concession_card', period) *
-            not_(persons('gas_rebate__already_issued_in_financial_year', period.this_year)))
+            not_(persons('gas_rebate__already_issued_in_financial_year', period)))
 
 
 class gas_rebate__rebate_amount(Variable):
