@@ -15,4 +15,11 @@ class energy_provider_supply_customer(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Does the applicant receive their energy bill from a strata manager/community village operator?"
+    label = "Applicant receives their energy bill from a strata manager/community village operator"
+
+
+class energy_bottled_gas_user(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Applicant uses bottled LPG gas"

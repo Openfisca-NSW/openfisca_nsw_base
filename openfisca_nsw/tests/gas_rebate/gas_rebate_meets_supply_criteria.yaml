@@ -1,0 +1,64 @@
+- name: Eligible person for Gas Rebate (Supply, has health care card)
+  period: 2019-02
+  input:
+    is_nsw_resident: True
+    is_energy_account_holder: False
+    energy_provider_supply_customer: True
+    energy_bottled_gas_user: False
+    gas_rebate__already_issued_in_financial_year: False
+    has_health_care_card: True
+    has_department_human_services_pensioner_concession_card: False
+    has_department_veteran_affairs_pensioner_concession_card: False
+    has_department_veteran_affairs_gold_card: False
+  output:
+    gas_rebate__person_meets_retail_criteria: False
+    gas_rebate__person_meets_supply_criteria: True
+    gas_rebate__rebate_amount: 121
+- name: Eligible person for Gas Rebate (Supply, has DHS pensioner card)
+  period: 2019-02
+  input:
+    is_nsw_resident: True
+    is_energy_account_holder: False
+    energy_provider_supply_customer: True
+    energy_bottled_gas_user: False
+    gas_rebate__already_issued_in_financial_year: False
+    has_health_care_card: False
+    has_department_human_services_pensioner_concession_card: True
+    has_department_veteran_affairs_pensioner_concession_card: False
+    has_department_veteran_affairs_gold_card: False
+  output:
+    gas_rebate__person_meets_retail_criteria: False
+    gas_rebate__person_meets_supply_criteria: True
+    gas_rebate__rebate_amount: 121
+- name: Eligible person for Gas Rebate (Supply, has DVA pensioner card)
+  period: 2019-02
+  input:
+    is_nsw_resident: True
+    is_energy_account_holder: False
+    energy_provider_supply_customer: True
+    energy_bottled_gas_user: False
+    gas_rebate__already_issued_in_financial_year: False
+    has_health_care_card: False
+    has_department_human_services_pensioner_concession_card: False
+    has_department_veteran_affairs_pensioner_concession_card: True
+    has_department_veteran_affairs_gold_card: False
+  output:
+    gas_rebate__person_meets_retail_criteria: False
+    gas_rebate__person_meets_supply_criteria: True
+    gas_rebate__rebate_amount: 121
+- name: Eligible person for Gas Rebate (Supply, has DVA gold card)
+  period: 2019-02
+  input:
+    is_nsw_resident: True
+    is_energy_account_holder: False
+    energy_provider_supply_customer: True
+    energy_bottled_gas_user: False
+    gas_rebate__already_issued_in_financial_year: False
+    has_health_care_card: False
+    has_department_human_services_pensioner_concession_card: False
+    has_department_veteran_affairs_pensioner_concession_card: False
+    has_department_veteran_affairs_gold_card: True
+  output:
+    gas_rebate__person_meets_retail_criteria: False
+    gas_rebate__person_meets_supply_criteria: True
+    gas_rebate__rebate_amount: 121
