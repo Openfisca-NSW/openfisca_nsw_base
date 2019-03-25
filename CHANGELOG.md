@@ -46,3 +46,9 @@
 * Tax and Benefit System evolution.
   - Added StEPS
   - Merged to PR 19
+
+### 0.5.0 - [#21](https://github.com/digitalnsw/openfisca-nsw/pull/21)
+
+* Tax and Benefit System evolution.
+  - Added gas Rebate eligibility calculator
+  - Added gas rebate amount calculator 
