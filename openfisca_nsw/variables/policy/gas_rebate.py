@@ -10,7 +10,14 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-# This is used to calculate whether persons are eligible for family energy rebate - Retail category
+class gas_rebate__already_issued_in_financial_year(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = YEAR
+    set_input = set_input_dispatch_by_period
+    label = "Whether the user has already had a gas rebate this financial year"
+
+
 class gas_rebate__person_holds_valid_concession_card(Variable):
     value_type = bool
     entity = Person
@@ -20,9 +27,9 @@ class gas_rebate__person_holds_valid_concession_card(Variable):
 
     def formula(persons, period, parameters):
         return (
-            persons('has_health_care_card', period) *
-            persons('has_department_human_services_pensioner_concession_card', period) *
-            persons('has_department_veteran_affairs_pensioner_concession_card', period) *
+            persons('has_health_care_card', period) +
+            persons('has_department_human_services_pensioner_concession_card', period) +
+            persons('has_department_veteran_affairs_pensioner_concession_card', period) +
             persons('has_department_veteran_affairs_gold_card', period))
 
 
@@ -30,27 +37,43 @@ class gas_rebate__person_meets_retail_criteria(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Applicant meets criteria for Gas (Retail Customers)"
+    label = "Applicant meets criteria for Gas (Retail customers)"
     reference = 'https://www.service.nsw.gov.au/transaction/apply-gas-rebate-retail-customers'
 
     def formula(persons, period, parameters):
         return (
             persons('is_nsw_resident', period) *
             persons('is_energy_account_holder', period) *
-            not_(persons('energy_provider_supply_customer', period)) *
-            persons('retail_gas_rebate__person_holds_valid_concession_card', period))
+            not_(persons('energy_provider_supply_customer', period) + persons('energy_bottled_gas_user', period)) *
+            persons('gas_rebate__person_holds_valid_concession_card', period) *
+            not_(persons('gas_rebate__already_issued_in_financial_year', period.this_year)))
 
 
 class gas_rebate__person_meets_supply_criteria(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Applicant meets criteria for Gas (Retail Customers)"
-    reference = 'https://www.service.nsw.gov.au/transaction/apply-gas-rebate-retail-customers'
+    label = "Applicant meets criteria for Gas (Supply and LPG bottle customers)"
+    reference = 'https://www.service.nsw.gov.au/transaction/apply-gas-rebate-supply-and-bottled-gas-customers'
 
     def formula(persons, period, parameters):
         return (
             persons('is_nsw_resident', period) *
-            persons('is_energy_account_holder', period) *
-            not_(persons('energy_provider_supply_customer', period)) *
-            persons('retail_gas_rebate__person_holds_valid_concession_card', period))
+            not_(persons('is_energy_account_holder', period)) *
+            (persons('energy_provider_supply_customer', period) + persons('energy_bottled_gas_user', period)) *
+            persons('gas_rebate__person_holds_valid_concession_card', period) *
+            not_(persons('gas_rebate__already_issued_in_financial_year', period.this_year)))
+
+
+class gas_rebate__rebate_amount(Variable):
+    value_type = int
+    entity = Person
+    definition_period = MONTH
+    label = "Applicant meets criteria for Gas (Retail Customers)"
+    reference = 'https://www.service.nsw.gov.au/transaction/apply-gas-rebate-retail-customers'
+
+    def formula(persons, period, parameters):
+        return select(
+            [persons('gas_rebate__person_meets_retail_criteria', period), persons('gas_rebate__person_meets_supply_criteria', period)],
+            [parameters(period).gas_rebate.retail_amount, parameters(period).gas_rebate.supply_or_bottled_amount]
+            )
