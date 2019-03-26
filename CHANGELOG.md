@@ -51,4 +51,9 @@
 
 * Tax and Benefit System evolution.
   - Added gas Rebate eligibility calculator
-  - Added gas rebate amount calculator 
+  - Added gas rebate amount calculator
+
+### 0.6.0 - [#23](https://github.com/digitalnsw/openfisca-nsw/pull/23)
+
+* Tax and Benefit System evolution.
+  - Free will preparation
