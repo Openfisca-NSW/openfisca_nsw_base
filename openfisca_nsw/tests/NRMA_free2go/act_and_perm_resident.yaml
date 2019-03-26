@@ -142,7 +142,7 @@
         NRMA_free2go__is_eligible: true
         NRMA_free2go__free2go_discount: 0
 -
-    name: 'Eligible - 20 year old Australian Perm Resident in year 3 who is an ACT resident and NRMA member - receives 50% discount as they joined after turning 17'
+    name: 'Eligible - 20 year old Australian Perm Resident in year 3 who is an ACT resident and NRMA member - receives 0% discount as they joined after turning 17'
     period: 2019-02
     input:
         is_act_resident: true
