@@ -16,7 +16,6 @@ class will_preparation_eligible_for_free_will_preparation(Variable):
     definition_period = ETERNITY
     label = "Whether the child is due to join school next year"
 
-
     def formula(persons, period, parameters):
         return (
             persons('is_full_age_pension_recipient', period) +
