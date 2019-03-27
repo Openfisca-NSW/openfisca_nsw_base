@@ -1,0 +1,5 @@
+description: Maximum age of a child required to be eligible for StEPS
+reference: https://www1.health.nsw.gov.au/pds/ActivePDSDocuments/PD2018_015.pdf
+values:
+  2018-05-22:
+    value: 5

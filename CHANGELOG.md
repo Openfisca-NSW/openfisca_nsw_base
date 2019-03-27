@@ -2,7 +2,7 @@
 
 ### 0.2.2 - [#12](https://github.com/digitalnsw/openfisca-nsw/pull/12)
 
-* Tax and benefit system evolution. 
+* Tax and benefit system evolution.
   - Corrected Active Kids max age cutoff to 19 years
 * Technical improvement.
   - Change max and min age parameters for Active Kids to be in years, not months
@@ -19,7 +19,7 @@
   - Added variables based on birth day: `age_in_months`, `is_birthday_past`, `birth_month`
   - Renamed `active_kids__is_entitled` to `active_kids__child_meets_criteria`
   - Added "others" role in family
-  - Added 
+  - Added
     - `active_kids__voucher_amount`
     - `active_kids__family_has_children_eligible`
     - `active_kids__is_eligible`
@@ -29,7 +29,31 @@
 * Technical improvement
   - Remove deployment from circle-ci
 
-### 0.1.0 - [#1](https://github.com/digitalnsw/openfisca-nsw/pull/1)
+### 0.2.0 - [#17](https://github.com/digitalnsw/openfisca-nsw/pull/17)
 
-* Technical improvement
-  - Circle ci config
+* Tax and Benefit System evolution.
+  - Added Family Energy Rebate eligibility criteria
+* Technical improvement.
+  - Refactor government cards in to one variable category
+
+### 0.3.0 - [#19](https://github.com/digitalnsw/openfisca-nsw/pull/19)
+
+* Tax and Benefit System evolution.
+  - Added NRMA free2go programme
+
+### 0.4.0 - [#20](https://github.com/digitalnsw/openfisca-nsw/pull/20)
+
+* Tax and Benefit System evolution.
+  - Added StEPS
+  - Merged to PR 19
+
+### 0.5.0 - [#21](https://github.com/digitalnsw/openfisca-nsw/pull/21)
+
+* Tax and Benefit System evolution.
+  - Added gas Rebate eligibility calculator
+  - Added gas rebate amount calculator
+
+### 0.6.0 - [#23](https://github.com/digitalnsw/openfisca-nsw/pull/23)
+
+* Tax and Benefit System evolution.
+  - Free will preparation

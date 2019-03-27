@@ -9,3 +9,17 @@ class is_family_tax_benefit_recipient(Variable):
     entity = Person
     definition_period = MONTH
     label = "has been an FTB Recipient in the past year"
+
+
+class is_full_age_pension_recipient(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Receives age pension from Department of Human Services"
+
+
+class is_veterans_pension_recipient(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Receives full pension from Department of Veteran Affairs"

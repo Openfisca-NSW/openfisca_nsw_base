@@ -8,4 +8,11 @@ class is_nsw_resident(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "is a resident of NSW"
+    label = "is a resident of New South Wales"
+
+
+class is_act_resident(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "is a resident of the Australian Capital Territory"
