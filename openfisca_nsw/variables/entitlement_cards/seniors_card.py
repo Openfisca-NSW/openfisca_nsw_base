@@ -19,7 +19,7 @@ class has_any_seniors_card(Variable):
             persons('has_sa_seniors_card', period) +
             persons('has_tas_seniors_card', period) +
             persons('has_vic_seniors_card', period) +
-            persons('has_wa_seniors_card', period) +
+            persons('has_wa_seniors_card', period)
             )
 
 
