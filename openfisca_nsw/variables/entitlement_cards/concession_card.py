@@ -37,3 +37,17 @@ class has_department_veteran_affairs_gold_card(Variable):
     entity = Person
     definition_period = MONTH
     label = "DVA Gold Card marked with either War Widow or War Widower Pension, or Totally and Permanently Incapacitated (TPI) or Disability Pension (EDA)."
+
+
+class has_nsw_seniors_card(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Holds a pensioner concession card from NSW."
+
+
+class has_act_seniors_card(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Holds a pensioner concession card from ACT."

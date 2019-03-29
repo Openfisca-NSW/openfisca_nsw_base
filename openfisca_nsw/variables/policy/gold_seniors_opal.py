@@ -10,22 +10,15 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class nsw_seniors_card_works_under_20hrs(Variable):
+class gold_seniors_opal_person_is_eligible(Variable):
     value_type = bool
     entity = Person
-    definition_period = MONTH
-    label = "Whether the person works under 20 hours a week over a 12 month period"
-
-
-class nsw_seniors_card_person_is_eligible(Variable):
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "Whether the person is eligible for a NSW seniors card"
+    definition_period = ETERNITY
+    label = "Person is eligible for Gold Pensioners' Opal Card"
 
     def formula(persons, period, parameters):
         return (
-            (persons('age', period) >= parameters(period).nsw_seniors_card.min_age) *
-            persons('is_permanent_nsw_resident', period) *
-            persons('nsw_seniors_card_works_under_20hrs', period)
+            (persons('nsw_seniors_card_person_is_eligible', period) * persons('has_nsw_seniors_card', period)) +
+            persons('has_nsw_seniors_card', period) +
+            persons('has_act_seniors_card', period)
             )
