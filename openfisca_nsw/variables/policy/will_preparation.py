@@ -14,7 +14,7 @@ class will_preparation_eligible_for_free_will_preparation(Variable):
     value_type = bool
     entity = Person
     definition_period = ETERNITY
-    label = "Whether the child is due to join school next year"
+    label = "Whether the person is eligible for free will preparation"
 
     def formula(persons, period, parameters):
         return (
