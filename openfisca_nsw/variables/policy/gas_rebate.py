@@ -27,10 +27,10 @@ class gas_rebate__person_holds_valid_concession_card(Variable):
 
     def formula(persons, period, parameters):
         return (
-            persons('has_health_care_card', period) +
-            persons('has_department_human_services_pensioner_concession_card', period) +
-            persons('has_department_veteran_affairs_pensioner_concession_card', period) +
-            persons('has_department_veteran_affairs_gold_card', period))
+            persons('has_health_care_card', period)
+            + persons('has_department_human_services_pensioner_concession_card', period)
+            + persons('has_department_veteran_affairs_pensioner_concession_card', period)
+            + persons('has_department_veteran_affairs_gold_card', period))
 
 
 class gas_rebate__person_meets_retail_criteria(Variable):
@@ -42,11 +42,12 @@ class gas_rebate__person_meets_retail_criteria(Variable):
 
     def formula(persons, period, parameters):
         return (
-            persons('is_nsw_resident', period) *
-            persons('is_energy_account_holder', period) *
-            not_(persons('energy_provider_supply_customer', period) + persons('energy_bottled_gas_user', period)) *
-            persons('gas_rebate__person_holds_valid_concession_card', period) *
-            not_(persons('gas_rebate__already_issued_in_financial_year', period)))
+            persons('is_nsw_resident', period)
+            * persons('is_energy_account_holder', period)
+            * not_(persons('energy_provider_supply_customer', period)
+              + persons('energy_bottled_gas_user', period))
+            * persons('gas_rebate__person_holds_valid_concession_card', period)
+            * not_(persons('gas_rebate__already_issued_in_financial_year', period)))
 
 
 class gas_rebate__person_meets_supply_criteria(Variable):
@@ -58,11 +59,12 @@ class gas_rebate__person_meets_supply_criteria(Variable):
 
     def formula(persons, period, parameters):
         return (
-            persons('is_nsw_resident', period) *
-            not_(persons('is_energy_account_holder', period)) *
-            (persons('energy_provider_supply_customer', period) + persons('energy_bottled_gas_user', period)) *
-            persons('gas_rebate__person_holds_valid_concession_card', period) *
-            not_(persons('gas_rebate__already_issued_in_financial_year', period)))
+            persons('is_nsw_resident', period)
+            * not_(persons('is_energy_account_holder', period))
+            * (persons('energy_provider_supply_customer', period)
+              + persons('energy_bottled_gas_user', period))
+            * persons('gas_rebate__person_holds_valid_concession_card', period)
+            * not_(persons('gas_rebate__already_issued_in_financial_year', period)))
 
 
 class gas_rebate__rebate_amount(Variable):

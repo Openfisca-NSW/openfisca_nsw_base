@@ -1,0 +1,24 @@
+- name: Inligible - not a perm NSW resident
+  period: 2019-02
+  input:
+    is_permanent_nsw_resident: false
+    nsw_seniors_card_works_under_20hrs: true
+    birth: 1959-01-01
+  output:
+    nsw_seniors_card_person_is_eligible: false
+- name: Inligible - works over 20 hours
+  period: 2019-02
+  input:
+    is_permanent_nsw_resident: true
+    nsw_seniors_card_works_under_20hrs: false
+    birth: 1959-01-01
+  output:
+    nsw_seniors_card_person_is_eligible: false
+- name: Inligible - too young
+  period: 2019-02
+  input:
+    is_permanent_nsw_resident: true
+    nsw_seniors_card_works_under_20hrs: true
+    birth: 1960-01-01
+  output:
+    nsw_seniors_card_person_is_eligible: false
