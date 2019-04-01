@@ -14,7 +14,7 @@ class national_parks_seniors_person_is_eligible(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Whether the person is eligible for seniors' discount annual park passes. https://www.nationalparks.nsw.gov.au/passes-and-fees/discount-and-concession-passes#seniors-discount-annual-park-passes"
+    label = "Whether the person is eligible for seniors' discount annual park passes at approx 20% discount. https://www.nationalparks.nsw.gov.au/passes-and-fees/discount-and-concession-passes#seniors-discount-annual-park-passes"
 
     def formula(persons, period, parameters):
         return (
