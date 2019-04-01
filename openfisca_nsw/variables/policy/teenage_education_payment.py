@@ -24,9 +24,9 @@ class teenage_education_payments__youth_meets_payment_criteria(Variable):
         age_in_months = persons('age_in_months', period)
 
         return (
-            (persons('is_enrolled_in_school', period) + persons('is_nsw_resident', period)) *
-            (persons(age_in_months >= min_age_in_months) * (age_in_months < upper_age_in_months)) +
-            (persons('teenage_education_payments__youth_18_meets_payment_criteria', period))
+            (persons('is_enrolled_in_school', period) + persons('is_nsw_resident', period))
+            * (persons(age_in_months >= min_age_in_months) * (age_in_months < upper_age_in_months))
+            + (persons('teenage_education_payments__youth_18_meets_payment_criteria', period))
             )
 
 
@@ -43,8 +43,8 @@ class teenage_education_payments__youth_18_meets_payment_criteria(Variable):
         age_in_months = persons('age_in_months', period)
         # Youth age is over 17 but less than 19
         return (
-            (age_in_months >= upper_age_in_months) *
-            (age_in_months < max_age_in_months)
+            (age_in_months >= upper_age_in_months)
+            * (age_in_months < max_age_in_months)
             )
 
 
@@ -55,18 +55,12 @@ class teenage_education_payments__adult_meets_payment_criteria (Variable):
     label = "person is a carer / short-term carer / guardian who is entitled to the Teenage Education Payment"
 
     def formula(persons, period, parameters):
-        carer = persons('is_carer', period)
-        guardian = persons('is_guardian', period)
-        short_term_carer = persons('is_carer_providing_short_term_placement', period)
-        respite_carer = persons('is_respite_carer', period)
-
-        def formula(persons, period, parameters):
-            return (
-                (carer + guardian + short_term_carer) *
-                not_(respite_carer) *
-                persons('teenage_education_payments__youth_meets_payment_criteria', period) *
-                persons('teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15', period)
-                )
+        return (
+            (persons('is_carer', period) + persons('is_guardian', period) + persons('is_carer_providing_short_term_placement', period))
+            * not_(persons('is_respite_carer', period))
+            * persons('teenage_education_payments__youth_meets_payment_criteria', period)
+            * persons('teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15', period)
+            )
 
 
 class teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15 (Variable):
@@ -74,3 +68,14 @@ class teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15 
     entity = Person
     definition_period = MONTH
     label = "carer or guardian received Family Tax Benefit part A when young person was 15 years old"
+
+
+class teenage_education_payments__amount (Variable):
+    value_type = int
+    entity = Person
+    definition_period = MONTH
+    label = "Teenage Education Paymnent amount"
+
+    def formula(persons, period, parameters):
+        return persons('teenage_education_payments__adult_meets_payment_criteria', period) \
+            * parameters(period).teenage_education_payment.payment

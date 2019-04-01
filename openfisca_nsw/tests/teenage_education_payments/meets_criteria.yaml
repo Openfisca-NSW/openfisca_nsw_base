@@ -1,5 +1,5 @@
-- name: Adult applicant is a carer, and is eligible to Teenage Education Payment
-  period: 2019-01
+- name: "Adult applicant is a carer, and is eligible to Teenage Education Payment"
+  period: 2019-02
   input:
     is_parent: false
     is_guardian: false
@@ -14,9 +14,8 @@
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
     teenage_education_payments__amount: 6000
-
-name: Adult applicant is a carer, providing short placements, and is eligible to Teenage Education Payment
-  period: 2019-01
+- name: "Adult applicant is a carer, providing short placements, and is eligible to Teenage Education Payment"
+  period: 2019-02
   input:
     is_parent: false
     is_guardian: false
@@ -31,10 +30,8 @@ name: Adult applicant is a carer, providing short placements, and is eligible to
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
     teenage_education_payments__amount: 6000
-
-
-name: Adult applicant is a guardian, and is eligible to Teenage Education Payment
-  period: 2019-01
+- name: "Adult applicant is a guardian, and is eligible to Teenage Education Payment"
+  period: 2019-02
   input:
     is_parent: false
     is_guardian: true
@@ -49,9 +46,8 @@ name: Adult applicant is a guardian, and is eligible to Teenage Education Paymen
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
     teenage_education_payments__amount: 6000
-
-name: Adult applicant is a respite carer, not eligible to Teenage Education Payment
-  period: 2019-01
+- name: "Adult applicant is a respite carer, not eligible to Teenage Education Payment"
+  period: 2019-02
   input:
     is_parent: false
     is_guardian: false
@@ -64,5 +60,5 @@ name: Adult applicant is a respite carer, not eligible to Teenage Education Paym
     teenage_education_payments__youth_meets_payment_criteria: true
     teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
   output:
-    teenage_education_payments__adult_meets_payment_criteria: true
-    teenage_education_payments__amount: 6000
+    teenage_education_payments__adult_meets_payment_criteria: false
+    teenage_education_payments__amount: 0

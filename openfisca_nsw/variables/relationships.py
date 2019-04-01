@@ -25,14 +25,14 @@ class is_carer(Variable):
     label = "is parent of children in family"
 
 
-class is_respite_carer:
+class is_respite_carer(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
     label = "person is a respite carer"
 
 
-class is_carer_providing_short_term_placement:
+class is_carer_providing_short_term_placement(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
