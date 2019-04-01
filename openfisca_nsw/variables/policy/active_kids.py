@@ -41,11 +41,11 @@ class active_kids__child_meets_criteria(Variable):
         max_age_in_months = 12 * parameters(period).active_kids.max_age
         age_in_months = persons('age_in_months', period)
         return (
-            persons('is_nsw_resident', period) *
-            persons('is_enrolled_in_school', period) *
-            not_(persons('active_kids__already_issued_in_calendar_year', period.this_year)) *
-            persons('has_valid_medicare_card', period) *
-            (age_in_months >= min_age_in_months) * (age_in_months < max_age_in_months)
+            persons('is_nsw_resident', period)
+            * persons('is_enrolled_in_school', period)
+            * not_(persons('active_kids__already_issued_in_calendar_year', period.this_year))
+            * persons('has_valid_medicare_card', period)
+            * (age_in_months >= min_age_in_months) * (age_in_months < max_age_in_months)
             )
 
 

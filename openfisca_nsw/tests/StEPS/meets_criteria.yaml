@@ -1,0 +1,24 @@
+- name: Entitled child at 4 years old
+  period: 2019-01
+  input:
+    birth: 2015-01-01
+    StEPS__already_screened: false
+    StEPS__child_is_joining_school: false
+  output:
+    StEPS__child_meets_criteria: true
+- name: Entitled child at 5 years old
+  period: 2019-01
+  input:
+    birth: 2014-01-01
+    StEPS__already_screened: false
+    StEPS__child_is_joining_school: false
+  output:
+    StEPS__child_meets_criteria: true
+- name: Entitled child 3 years old
+  period: 2019-01
+  input:
+    birth: 2016-01-01
+    StEPS__already_screened: false
+    StEPS__child_is_joining_school: true
+  output:
+    StEPS__child_meets_criteria: true
