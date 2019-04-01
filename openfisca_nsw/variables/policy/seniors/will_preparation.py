@@ -18,6 +18,6 @@ class will_preparation_eligible_for_free_will_preparation(Variable):
 
     def formula(persons, period, parameters):
         return (
-            persons('is_full_age_pension_recipient', period) +
-            persons('is_veterans_pension_recipient', period)
+            persons('is_full_age_pension_recipient', period)
+            + persons('is_veterans_pension_recipient', period)
             )

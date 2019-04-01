@@ -33,7 +33,8 @@ class StEPS__child_meets_criteria(Variable):
 
     def formula(persons, period, parameters):
         return (
-            not_(persons('StEPS__already_screened', period)) *
-            ((persons('age', period) >= parameters(period).StEPS.min_age) * (persons('age', period) <= parameters(period).StEPS.max_age)) +
-            ((persons('age', period) >= parameters(period).StEPS.age_if_joining_school) * persons('StEPS__child_is_joining_school', period))
-            )
+            not_(persons('StEPS__already_screened', period))
+            * ((persons('age', period) >= parameters(period).StEPS.min_age)
+              * (persons('age', period) <= parameters(period).StEPS.max_age))
+            + ((persons('age', period) >= parameters(period).StEPS.age_if_joining_school)
+              * persons('StEPS__child_is_joining_school', period)))
