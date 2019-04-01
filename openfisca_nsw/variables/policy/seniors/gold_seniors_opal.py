@@ -18,7 +18,7 @@ class gold_seniors_opal_person_is_eligible(Variable):
 
     def formula(persons, period, parameters):
         return (
-            (persons('nsw_seniors_card_person_is_eligible', period) * persons('has_nsw_seniors_card', period)) +
-            persons('has_nsw_seniors_card', period) +
-            persons('has_act_seniors_card', period)
+            (persons('nsw_seniors_card_person_is_eligible', period) * persons('has_nsw_seniors_card', period))
+            + persons('has_nsw_seniors_card', period)
+            + persons('has_act_seniors_card', period)
             )

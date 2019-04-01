@@ -25,7 +25,7 @@ class nsw_seniors_card_person_is_eligible(Variable):
 
     def formula(persons, period, parameters):
         return (
-            (persons('age', period) >= parameters(period).nsw_seniors_card.min_age) *
-            persons('is_permanent_nsw_resident', period) *
-            persons('nsw_seniors_card_works_under_20hrs', period)
+            (persons('age', period) >= parameters(period).nsw_seniors_card.min_age)
+            * persons('is_permanent_nsw_resident', period)
+            * persons('nsw_seniors_card_works_under_20hrs', period)
             )

@@ -12,14 +12,14 @@ class has_any_seniors_card(Variable):
 
     def formula(persons, period, parameters):
         return (
-            persons('has_nsw_seniors_card', period) +
-            persons('has_act_seniors_card', period) +
-            persons('has_nt_seniors_card', period) +
-            persons('has_qld_seniors_card', period) +
-            persons('has_sa_seniors_card', period) +
-            persons('has_tas_seniors_card', period) +
-            persons('has_vic_seniors_card', period) +
-            persons('has_wa_seniors_card', period)
+            persons('has_nsw_seniors_card', period)
+            + persons('has_act_seniors_card', period)
+            + persons('has_nt_seniors_card', period)
+            + persons('has_qld_seniors_card', period)
+            + persons('has_sa_seniors_card', period)
+            + persons('has_tas_seniors_card', period)
+            + persons('has_vic_seniors_card', period)
+            + persons('has_wa_seniors_card', period)
             )
 
 
