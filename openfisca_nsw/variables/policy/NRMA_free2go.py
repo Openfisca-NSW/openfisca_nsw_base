@@ -18,10 +18,11 @@ class NRMA_free2go__is_eligible(Variable):
 
     def formula(persons, period, parameters):
         return (
-            (persons('is_nsw_resident', period) + persons('is_act_resident', period)) *
-            persons('NRMA_free2go__is_NRMA_member', period) *
-            (persons('is_australian_citizen', period) + persons('is_permanent_resident', period)) *
-            (persons('age', period) >= parameters(period).NRMA_free2go.min_age) * (persons('age', period) <= parameters(period).NRMA_free2go.max_age)
+            (persons('is_nsw_resident', period) + persons('is_act_resident', period))
+            * persons('NRMA_free2go__is_NRMA_member', period)
+            * (persons('is_australian_citizen', period) + persons('is_permanent_resident', period))
+            * (persons('age', period) >= parameters(period).NRMA_free2go.min_age)
+            * (persons('age', period) <= parameters(period).NRMA_free2go.max_age)
             )
 
 

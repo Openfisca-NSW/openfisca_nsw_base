@@ -25,8 +25,8 @@ class creative_kids__voucher_amount(Variable):
     label = "Calculates voucher amount for Creative Kids"
 
     def formula(persons, period, parameters):
-        return persons('creative_kids__child_meets_criteria', period) \
-            * parameters(period).creative_kids.voucher
+        return (persons('creative_kids__child_meets_criteria', period)
+                * parameters(period).creative_kids.voucher)
 
 
 class creative_kids__child_meets_criteria(Variable):
@@ -40,13 +40,12 @@ class creative_kids__child_meets_criteria(Variable):
         min_age_in_months = 12 * parameters(period).creative_kids.min_age
         max_age_in_months = 12 * parameters(period).creative_kids.max_age
         age_in_months = persons('age_in_months', period)
-        return (
-            persons('is_nsw_resident', period) *
-            persons('is_enrolled_in_school', period) *
-            not_(persons('creative_kids__already_issued_in_calendar_year', period.this_year)) *
-            persons('has_valid_medicare_card', period) *
-            (age_in_months >= min_age_in_months) * (age_in_months < max_age_in_months)
-            )
+        return (persons('is_nsw_resident', period)
+               * persons('is_enrolled_in_school', period)
+               * not_(persons('creative_kids__already_issued_in_calendar_year', period.this_year))
+               * persons('has_valid_medicare_card', period)
+               * (age_in_months >= min_age_in_months)
+               * (age_in_months < max_age_in_months))
 
 
 class creative_kids__is_eligible(Variable):
