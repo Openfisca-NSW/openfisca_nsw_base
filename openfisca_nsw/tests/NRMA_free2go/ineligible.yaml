@@ -53,7 +53,9 @@
     output:
         NRMA_free2go__is_eligible: false
 -
-    name: 'Ineligible - 16 year old Australian Citizen in year 1 who is an NRMA member but not a NSW or ACT resident - returns 0 discount due to ineligibility'
+    name: >
+      Ineligible - 16 year old Australian Citizen in year 1 who is an NRMA member
+      but not a NSW or ACT resident - returns 0 discount due to ineligibility
     period: 2019-02
     input:
         is_nsw_resident: false
