@@ -54,15 +54,21 @@ class teenage_education_payments__adult_meets_payment_criteria (Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "person is a carer or guardian"
+    label = "person is a carer / short-term carer / guardian who is entitled to the Teenage Education Payment"
 
     def formula (persons, period, parameters):
         carer = persons('is_carer', period)
         guardian = persons('is_guardian', period)
+        short_term_carer = persons('is_carer_providing_short_term_placement', period)
+        respite_carer = persons('is_respite_carer', period)
 
-        return (
-            carer + guardian
-        )
+        def formula (persons, period, parameters):
+            return (
+                (carer + guardian + short_term_carer) *
+                not_(respite_carer) *
+                persons('teenage_education_payments__youth_meets_payment_criteria', period) * 
+                persons('teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15', period)
+            )
 
 
 class teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15 (Variable):
@@ -70,18 +76,3 @@ class teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15 
     entity = Person
     definition_period = MONTH
     label = "carer or guardian received Family Tax Benefit part A when young person was 15 years old"
-
-
-
-class teenage_education_payment__carer_providing_short_term_placement:
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "carer provoiding short term placement of more than 3 months"
-
-
-class teenage_education_payment__is_respite_carer:
-    value_type = bool
-    entity = Person
-    definition_period = MONTH
-    label = "person is a respite carerß"
