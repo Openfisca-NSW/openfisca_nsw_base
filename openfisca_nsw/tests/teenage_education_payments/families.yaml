@@ -1,0 +1,288 @@
+- name: Entitled carer applicant and child meets criteria
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: true
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - True
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 6000
+      - 0 # The child is not a parent, so not eligible
+- name: Entitled Parent applicant and child meets criteria - adult is NSW resident but child education is not in NSW
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: true
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: false
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - True
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 6000
+      - 0 # The child is not a parent, so not eligible
+- name: Entitled Parent applicant and child meets criteria - adult isnt NSW resident but child is in NSW education
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: true
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: false
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - True
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 6000
+      - 0 # The child is not a parent, so not eligible
+- name: Entitled guardian applicant and child meets criteria
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: true
+        is_carer: false
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - True
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 6000
+      - 0 # The child is not a parent, so not eligible
+- name: Entitled short term placement applicant and child meets criteria
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: false
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: true
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - True
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 6000
+      - 0 # The child is not a parent, so not eligible
+- name: Child meets criteria but ineligible as adult is parent
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: true
+        is_guardian: false
+        is_carer: false
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - False
+      - False
+    teenage_education_payments__is_eligible:
+      - False
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 0
+      - 0 # The child is not a parent, so not eligible
+- name: Child meets criteria but ineligible as adult is respite carer
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: false
+        is_respite_carer: true
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - False
+      - False
+    teenage_education_payments__is_eligible:
+      - False
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 0
+      - 0 # The child is not a parent, so not eligible
+- name: Child meets criteria but ineligible as adult did not receive FTB at age 15
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: true
+        is_carer: false
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: false
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - False
+      - False
+    teenage_education_payments__is_eligible:
+      - False
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 0
+      - 0 # The child is not a parent, so not eligible
+- name: Persons meet criteria but NSW education and NSW resident both not met so ineligible
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: true
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: false
+      child1:
+        is_enrolled_in_nsw_school: false
+        birth: 2002-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - True
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - False
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 0
+      - 0 # The child is not a parent, so not eligible

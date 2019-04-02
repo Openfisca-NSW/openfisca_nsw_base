@@ -6,14 +6,10 @@
     is_carer: true
     is_respite_carer: false
     is_carer_providing_short_term_placement: false
-    is_enrolled_in_school: true
-    is_nsw_resident: true
-    teenage_education_payments__youth_18_meets_payment_criteria: false
-    teenage_education_payments__youth_meets_payment_criteria: true
     teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
-    teenage_education_payments__amount: 6000
+    teenage_education_payments__amount: 0 #returns 0 due ot there being no eligible child associated
 - name: "Adult applicant is a carer, providing short placements, and is eligible to Teenage Education Payment"
   period: 2019-02
   input:
@@ -22,14 +18,10 @@
     is_carer: false
     is_respite_carer: false
     is_carer_providing_short_term_placement: true
-    is_enrolled_in_school: true
-    is_nsw_resident: true
-    teenage_education_payments__youth_18_meets_payment_criteria: false
-    teenage_education_payments__youth_meets_payment_criteria: true
     teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
-    teenage_education_payments__amount: 6000
+    teenage_education_payments__amount: 0
 - name: "Adult applicant is a guardian, and is eligible to Teenage Education Payment"
   period: 2019-02
   input:
@@ -38,14 +30,10 @@
     is_carer: false
     is_respite_carer: false
     is_carer_providing_short_term_placement: true
-    is_enrolled_in_school: true
-    is_nsw_resident: true
-    teenage_education_payments__youth_18_meets_payment_criteria: false
-    teenage_education_payments__youth_meets_payment_criteria: true
     teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
-    teenage_education_payments__amount: 6000
+    teenage_education_payments__amount: 0
 - name: "Adult applicant is a respite carer, not eligible to Teenage Education Payment"
   period: 2019-02
   input:
@@ -54,10 +42,18 @@
     is_carer: false
     is_respite_carer: true
     is_carer_providing_short_term_placement: false
-    is_enrolled_in_school: true
-    is_nsw_resident: true
-    teenage_education_payments__youth_18_meets_payment_criteria: false
-    teenage_education_payments__youth_meets_payment_criteria: true
+    teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+  output:
+    teenage_education_payments__adult_meets_payment_criteria: false
+    teenage_education_payments__amount: 0
+- name: "Adult applicant is a parent, and is not eligible to Teenage Education Payment"
+  period: 2019-02
+  input:
+    is_parent: true
+    is_guardian: false
+    is_carer: false
+    is_respite_carer: false
+    is_carer_providing_short_term_placement: false
     teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
   output:
     teenage_education_payments__adult_meets_payment_criteria: false
