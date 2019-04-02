@@ -1,0 +1,7 @@
+- name: "Adult holds Australian Pensioner Concession Card, is eligible"
+  period: 2019-02
+  input:
+    has_health_care_card: true
+    has_has_department_veteran_affairs_gold_card_TPI_EDA: true
+    has_department_veteran_affairs_gold_card_war_widow: true
+  output:

@@ -32,8 +32,14 @@ class has_department_veteran_affairs_pensioner_concession_card(Variable):
     label = "Has a Department of Vterans Affairs concession card"
 
 
-class has_department_veteran_affairs_gold_card(Variable):
+class has_department_veteran_affairs_gold_card_war_widow(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "DVA Gold Card marked with either War Widow or War Widower Pension, or Totally and Permanently Incapacitated (TPI) or Disability Pension (EDA)."
+    label = "DVA Gold Card marked with either War Widow or War Widower Pension."
+
+class has_department_veteran_affairs_gold_card_TPI_EDA(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "DVA Gold Card marked withTotally and Permanently Incapacitated (TPI) or Disability Pension (EDA)."
