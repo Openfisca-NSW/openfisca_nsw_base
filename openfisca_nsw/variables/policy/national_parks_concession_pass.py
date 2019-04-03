@@ -14,4 +14,20 @@ class national_parks_concession_pass__person_meets_criteria(Variable):
         return (persons('has_department_human_services_pensioner_concession_card', period)
                 + persons('as_department_veteran_affairs_gold_card_TPI_EDA', period)
                 + persons('has_department_veteran_affairs_gold_card_war_widow',period)
+                + (persons('has_department_veteran_affairs_gold_card_not_TPI_EDA', period) * persons('person receives disability pension"', period) )
+                + (persons('has_department_veteran_affairs_gold_card_not_TPI_EDA', period) * persons('person receives intermediate pension"', period) )
             )
+
+
+class national_parks_concession_pass__person_receives_disability_pension(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "person receives disability pension"
+
+
+class national_parks_concession_pass__person_receives_intermediate_pension(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "person receives intermediate pension"

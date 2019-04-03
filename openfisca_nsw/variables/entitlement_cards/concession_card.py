@@ -42,4 +42,11 @@ class has_department_veteran_affairs_gold_card_TPI_EDA(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "DVA Gold Card marked withTotally and Permanently Incapacitated (TPI) or Disability Pension (EDA)."
+    label = "DVA Gold Card marked with Totally and Permanently Incapacitated (TPI) or Disability Pension (EDA)."
+
+class has_department_veteran_affairs_gold_card_not_TPI_EDA(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "DVA Gold Card without Totally and Permanently Incapacitated (TPI) or Disability Pension (EDA) embossment."
+

@@ -3,7 +3,7 @@
   input:
     has_department_human_services_pensioner_concession_card: true
     has_department_veteran_affairs_gold_card_TPI_EDA: false
-    has_department_veteran_affairs_gold_card_war_widow: false # IS THIS THE CORRECT VARIABLE??
+    has_department_veteran_affairs_gold_card_war_widow: false
   output:
     national_parks_concession_pass__person_meets_criteria: true
 - name: "Adult holds Australian Veterans Gold DVA card, embossed with 'EDA' or 'TPI', is eligible"
@@ -11,22 +11,30 @@
   input:
     has_department_human_services_pensioner_concession_card: false
     has_department_veteran_affairs_gold_card_TPI_EDA: true
-    has_department_veteran_affairs_gold_card_war_widow: false # IS THIS THE CORRECT VARIABLE??
+    has_department_veteran_affairs_gold_card_war_widow: false
   output:
     national_parks_concession_pass__person_meets_criteria: true
 - name: "Adult holds Australian Veterans Gold DVA card, without 'EDA' or 'TPI' embossed, with confirmed disability or intermediate pension, is eligible"
   period: 2019-02
   input:
-    has_department_human_services_pensioner_concession_card: false
+    has_department_human_services_pensioner_concession_card: false ## WHICH CONDITION
     has_department_veteran_affairs_gold_card_TPI_EDA: false
-    has_department_veteran_affairs_gold_card_war_widow: true # IS THIS THE CORRECT VARIABLE??
+    has_department_veteran_affairs_gold_card_war_widow: false
   output:
     national_parks_concession_pass__person_meets_criteria: true
-- name: "Adult holds Transport concession entitlement holders, not eligible"
+- name: "Adult holds Australian Veterans Gold DVA Card, embossed 'Widow', is ineligible"
   period: 2019-02
   input:
     has_department_human_services_pensioner_concession_card: false
     has_department_veteran_affairs_gold_card_TPI_EDA: false
-    has_department_veteran_affairs_gold_card_war_widow: false # IS THIS THE CORRECT VARIABLE??
+    has_department_veteran_affairs_gold_card_war_widow: true
+  output:
+    national_parks_concession_pass__person_meets_criteria: false
+- name: "Adult holds Australian Veterans Gold DVA Card, embossed 'Widower', is ineligible"
+  period: 2019-02
+  input:
+    has_department_human_services_pensioner_concession_card: false
+    has_department_veteran_affairs_gold_card_TPI_EDA: false
+    has_department_veteran_affairs_gold_card_war_widow: false
   output:
     national_parks_concession_pass__person_meets_criteria: false 
