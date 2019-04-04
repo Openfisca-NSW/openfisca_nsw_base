@@ -286,3 +286,67 @@
     teenage_education_payments__amount:
       - 0
       - 0 # The child is not a parent, so not eligible
+- name: Entitled carer applicant but child does not meet criteria as child is too young
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: true
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2010-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - False
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - False
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 0
+      - 0 # The child is not a parent, so not eligible
+- name: Entitled carer applicant but child does not meet criteria as child is too old
+  period: 2019-02
+  input:
+    persons:
+      parent1:
+        is_parent: false
+        is_guardian: false
+        is_carer: true
+        is_respite_carer: false
+        is_carer_providing_short_term_placement: false
+        teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
+        is_nsw_resident: true
+      child1:
+        is_enrolled_in_nsw_school: true
+        birth: 2000-01-01
+    families:
+      smith:
+        parents: [parent1]
+        children: [child1]
+  output:
+    teenage_education_payments__youth_meets_payment_criteria:
+      - False
+      - False
+    teenage_education_payments__adult_meets_payment_criteria:
+      - True
+      - False
+    teenage_education_payments__is_eligible:
+      - False
+      - False # The child is not a parent, so not eligible
+    teenage_education_payments__amount:
+      - 0
+      - 0 # The child is not a parent, so not eligible
