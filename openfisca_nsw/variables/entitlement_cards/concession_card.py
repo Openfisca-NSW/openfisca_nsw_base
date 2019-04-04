@@ -9,3 +9,31 @@ class has_concession_card(Variable):
     entity = Person
     definition_period = MONTH
     label = "Has any one of the Department of Human Services concession or Healthcare cards - https://www.humanservices.gov.au/individuals/subjects/concession-and-health-care-cards"
+
+
+class has_health_care_card(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Has any one of the Department of Human Services health care cards - https://www.humanservices.gov.au/individuals/subjects/concession-and-health-care-cards"
+
+
+class has_department_human_services_pensioner_concession_card(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Has a Department of Human Services pensioner concession card"
+
+
+class has_department_veteran_affairs_pensioner_concession_card(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Has a Department of Vterans Affairs concession card"
+
+
+class has_department_veteran_affairs_gold_card(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "DVA Gold Card marked with either War Widow or War Widower Pension, or Totally and Permanently Incapacitated (TPI) or Disability Pension (EDA)."

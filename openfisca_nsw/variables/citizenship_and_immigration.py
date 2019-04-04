@@ -4,8 +4,15 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class is_nsw_resident(Variable):
+class is_australian_citizen(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "is a resident of NSW"
+    label = "Holds Australian Citizenship"
+
+
+class is_permanent_resident(Variable):
+    value_type = bool
+    entity = Person
+    definition_period = MONTH
+    label = "Holds Australian Permanent Residency"

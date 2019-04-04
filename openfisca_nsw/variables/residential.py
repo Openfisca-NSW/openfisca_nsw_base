@@ -4,22 +4,22 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class is_family_tax_benefit_recipient(Variable):
+class is_nsw_resident(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "has been an FTB Recipient in the past year"
+    label = "is a resident of New South Wales"
 
 
-class is_full_age_pension_recipient(Variable):
+class is_act_resident(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Receives age pension from Department of Human Services"
+    label = "is a resident of the Australian Capital Territory"
 
 
-class is_veterans_pension_recipient(Variable):
+class is_permanent_nsw_resident(Variable):
     value_type = bool
     entity = Person
     definition_period = MONTH
-    label = "Receives full pension from Department of Veteran Affairs"
+    label = "is a permanent resident of the New South Wales"

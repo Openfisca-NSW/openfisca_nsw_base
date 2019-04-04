@@ -1,0 +1,39 @@
+by_year:
+  description: Discount % off membership cost for the age/membership duration combinations
+  reference: https://www.mynrma.com.au/cars-and-driving/roadside-assistance/free2go-terms-and-conditions#entitlements
+  1: #year 1 of membership
+    sixteen: #member first applied for free2go at age 16
+      values:
+        2017-01-01:
+          value: 100
+    over_sixteen: #member first applied for free2go at ages 17-20
+      values:
+        2017-01-01:
+          value: 100
+  2:
+    sixteen:
+      values:
+        2017-01-01:
+          value: 100
+    over_sixteen:
+      values:
+        2017-01-01:
+          value: 50
+  3:
+    sixteen:
+      values:
+        2017-01-01:
+          value: 50
+    over_sixteen:
+      values:
+        2017-01-01:
+          value: 0
+  4:
+    sixteen:
+      values:
+        2017-01-01:
+          value: 0
+    over_sixteen:
+      values:
+        2017-01-01:
+          value: 0

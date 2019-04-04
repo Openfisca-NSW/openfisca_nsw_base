@@ -1,0 +1,195 @@
+-
+    name: >
+      Eligible - 16 year old Australian Citizen in year 1 who is an
+      ACT resident and NRMA member - receives 100% discount
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 1
+        birth: 2003-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 16
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 100
+-
+    name: >
+      Eligible - 17 year old Australian Citizen in year 1 who is an
+      ACT resident and NRMA member - receives 100% discount
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 1
+        birth: 2002-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 17
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 100
+-
+    name: >
+      Eligible - 18 year old Australian Citizen in year 1 who is an
+      ACT resident and NRMA member - receives 100% discount
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 1
+        birth: 2001-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 18
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 100
+-
+    name: >
+      Eligible - 19 year old Australian Citizen in year 1 who is an
+      ACT resident and NRMA member - receives 100% discount
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 1
+        birth: 2000-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 19
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 100
+-
+    name: >
+      Eligible - 20 year old Australian Citizen in year 1 who is an
+      ACT resident and NRMA member - receives 100% discount
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 1
+        birth: 1999-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 20
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 100
+-
+    name: >
+      Eligible - 17 year old Australian Citizen in year 2 who is an
+      ACT resident and NRMA member - receives 100% discount as they joined at 16
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 2
+        birth: 2002-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 16
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 100
+-
+    name: >
+      Eligible - 18 year old Australian Citizen in year 2 who is an
+      ACT resident and NRMA member - receives 50% discount as they joined after turning 17
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 2
+        birth: 2001-01-01
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 17
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 50
+-
+    name: >
+      Eligible - 19 year old Australian Citizen in year 2 who is an
+      ACT resident and NRMA member - receives 50% discount as they joined after turning 17
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 2
+        birth: 2000-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 18
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 50
+-
+    name: >
+      Eligible - 20 year old Australian Citizen in year 2 who is an
+      ACT resident and NRMA member - receives 50% discount as they joined after turning 17
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 2
+        birth: 1999-01-01T00:00:00.000Z
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 19
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 50
+-
+    name: >
+      Eligible - 18 year old Australian Citizen in year 3 who is an
+      ACT resident and NRMA member - receives 50% discount as they joined at 16
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 3
+        birth: 2001-01-01
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 16
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 50
+-
+    name: >
+      Eligible - 19 year old Australian Citizen in year 3 who is an
+      ACT resident and NRMA member - receives 0% discount as they joined after turning 17
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 3
+        birth: 2000-01-01
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 17
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 0
+-
+    name: >
+      Eligible - 20 year old Australian Citizen in year 3 who is an
+      ACT resident and NRMA member - receives 0% discount as they joined after turning 17
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 3
+        birth: 1999-01-01
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 18
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 0
+-
+    name: >
+      Eligible - 19 year old Australian Citizen in year 4 who is an
+      ACT resident and NRMA member - receives 0% discount
+    period: 2019-02
+    input:
+        is_act_resident: true
+        NRMA_free2go__membership_term: 4
+        birth: 2000-01-01
+        NRMA_free2go__is_NRMA_member: true
+        is_australian_citizen: true
+        NRMA_free2go__age_when_joining: 16
+    output:
+        NRMA_free2go__is_eligible: true
+        NRMA_free2go__free2go_discount: 0
