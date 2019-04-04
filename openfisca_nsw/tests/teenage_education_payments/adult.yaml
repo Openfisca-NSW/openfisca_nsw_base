@@ -9,7 +9,7 @@
     teenage_education_payments__is_family_tax_benefit_recipient_partA_youth15: true
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
-    teenage_education_payments__amount: 0 #returns 0 due ot there being no eligible child associated
+    teenage_education_payments__amount: 0 #returns 0 due to there being no eligible child associated
 - name: "Adult applicant is a carer, providing short placements, and is eligible to Teenage Education Payment"
   period: 2019-02
   input:
@@ -22,7 +22,7 @@
   output:
     teenage_education_payments__adult_meets_payment_criteria: true
     teenage_education_payments__amount: 0
-- name: "Adult applicant is a guardian, and is eligible to Teenage Education Payment"
+- name: "Adult applicant is providing short term placement, and is eligible to Teenage Education Payment"
   period: 2019-02
   input:
     is_parent: false

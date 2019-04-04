@@ -26,10 +26,10 @@
       - False
     teenage_education_payments__is_eligible:
       - True
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 6000
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Entitled Parent applicant and child meets criteria - adult is NSW resident but child education is not in NSW
   period: 2019-02
   input:
@@ -58,10 +58,10 @@
       - False
     teenage_education_payments__is_eligible:
       - True
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 6000
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Entitled Parent applicant and child meets criteria - adult isnt NSW resident but child is in NSW education
   period: 2019-02
   input:
@@ -90,10 +90,10 @@
       - False
     teenage_education_payments__is_eligible:
       - True
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 6000
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Entitled guardian applicant and child meets criteria
   period: 2019-02
   input:
@@ -122,10 +122,10 @@
       - False
     teenage_education_payments__is_eligible:
       - True
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 6000
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Entitled short term placement applicant and child meets criteria
   period: 2019-02
   input:
@@ -154,10 +154,10 @@
       - False
     teenage_education_payments__is_eligible:
       - True
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 6000
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Child meets criteria but ineligible as adult is parent
   period: 2019-02
   input:
@@ -186,10 +186,10 @@
       - False
     teenage_education_payments__is_eligible:
       - False
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 0
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Child meets criteria but ineligible as adult is respite carer
   period: 2019-02
   input:
@@ -218,10 +218,10 @@
       - False
     teenage_education_payments__is_eligible:
       - False
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 0
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Child meets criteria but ineligible as adult did not receive FTB at age 15
   period: 2019-02
   input:
@@ -250,10 +250,10 @@
       - False
     teenage_education_payments__is_eligible:
       - False
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 0
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Persons meet criteria but NSW education and NSW resident both not met so ineligible
   period: 2019-02
   input:
@@ -276,16 +276,16 @@
   output:
     teenage_education_payments__youth_meets_payment_criteria:
       - False
-      - True
+      - True # The individual is technically eligible, even though the family meets neither of the NSW requirements
     teenage_education_payments__adult_meets_payment_criteria:
-      - True
+      - True # The individual is technically eligible, even though the family meets neither of the NSW requirements
       - False
     teenage_education_payments__is_eligible:
       - False
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 0
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Entitled carer applicant but child does not meet criteria as child is too young
   period: 2019-02
   input:
@@ -314,10 +314,10 @@
       - False
     teenage_education_payments__is_eligible:
       - False
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 0
-      - 0 # The child is not a parent, so not eligible
+      - 0
 - name: Entitled carer applicant but child does not meet criteria as child is too old
   period: 2019-02
   input:
@@ -346,7 +346,7 @@
       - False
     teenage_education_payments__is_eligible:
       - False
-      - False # The child is not a parent, so not eligible
+      - False # The child cannot be an applicant, so not eligible
     teenage_education_payments__amount:
       - 0
-      - 0 # The child is not a parent, so not eligible
+      - 0
