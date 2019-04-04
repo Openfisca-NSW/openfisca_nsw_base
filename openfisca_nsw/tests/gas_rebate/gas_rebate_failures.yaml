@@ -9,7 +9,8 @@
     has_health_care_card: True
     has_department_human_services_pensioner_concession_card: False
     has_department_veteran_affairs_pensioner_concession_card: False
-    has_department_veteran_affairs_gold_card: False
+    has_department_veteran_affairs_gold_card_TPI_EDA: False
+    has_department_veteran_affairs_gold_card_war_widow: False
   output:
     gas_rebate__person_meets_retail_criteria: False
     gas_rebate__person_meets_supply_criteria: False
@@ -25,7 +26,8 @@
     has_health_care_card: False
     has_department_human_services_pensioner_concession_card: False
     has_department_veteran_affairs_pensioner_concession_card: False
-    has_department_veteran_affairs_gold_card: False
+    has_department_veteran_affairs_gold_card_TPI_EDA: False
+    has_department_veteran_affairs_gold_card_war_widow: False
   output:
     gas_rebate__person_meets_retail_criteria: False
     gas_rebate__person_meets_supply_criteria: False
@@ -41,7 +43,8 @@
     has_health_care_card: False
     has_department_human_services_pensioner_concession_card: False
     has_department_veteran_affairs_pensioner_concession_card: True
-    has_department_veteran_affairs_gold_card: False
+    has_department_veteran_affairs_gold_card_TPI_EDA: False
+    has_department_veteran_affairs_gold_card_war_widow: False
   output:
     gas_rebate__person_meets_retail_criteria: False
     gas_rebate__person_meets_supply_criteria: False
@@ -57,7 +60,8 @@
     has_health_care_card: False
     has_department_human_services_pensioner_concession_card: False
     has_department_veteran_affairs_pensioner_concession_card: False
-    has_department_veteran_affairs_gold_card: True
+    has_department_veteran_affairs_gold_card_TPI_EDA: True
+    has_department_veteran_affairs_gold_card_war_widow: False
   output:
     gas_rebate__person_meets_retail_criteria: False
     gas_rebate__person_meets_supply_criteria: False

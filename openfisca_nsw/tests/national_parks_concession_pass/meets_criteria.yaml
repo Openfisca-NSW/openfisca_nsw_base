@@ -22,7 +22,7 @@
     has_any_seniors_card: false
   output:
     national_parks_concession_pass__person_meets_criteria: true
-- name: "Adult holds Australian Veterans Gold DVA card, without 'EDA' or 'TPI' embossed, with confirmed disability or intermediate pension, is eligible"
+- name: "Adult holds Australian Veterans Gold DVA card, without EDA or TPI embossed, with confirmed disability or intermediate pension, is eligible"
   period: 2019-02
   input:
     has_department_human_services_pensioner_concession_card: false ## WHICH CONDITION
