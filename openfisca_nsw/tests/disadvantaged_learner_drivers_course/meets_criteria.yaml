@@ -1,0 +1,13 @@
+- name: "Young learner driver, is under 25, is eligible"
+  period: 2019-02
+  input:
+    birth: 1994-02-01
+    has_valid_learner_licence: true
+    disadvantaged_learner_drivers_course__completed_driving_hours: true
+    disadvantaged_learner_drivers_course__driving_excludes_3_for_1_hours: true
+    has_health_care_card: true
+    has_department_human_services_pensioner_concession_card: true
+    has_stayed_in_Out_Of_Care_Home: true
+    currently_staying_in_Out_Of_Care_Home: true
+  output:
+    national_parks_concession_pass__person_meets_criteria: true
