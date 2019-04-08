@@ -56,4 +56,28 @@
 ### 0.6.0 - [#23](https://github.com/digitalnsw/openfisca-nsw/pull/23)
 
 * Tax and Benefit System evolution.
-  - Free will preparation
+- Free will preparation
+
+### 0.7.0 - [#25](https://github.com/digitalnsw/openfisca-nsw/pull/25)
+
+* Tax and Benefit System evolution.
+  - Added seniors rebates
+* Technical improvement
+  - Fixed linting errors for update pycodestyle
+  - Added python and YAML linters to circleci
+
+### 0.7.1 - [#26](https://github.com/digitalnsw/openfisca-nsw/pull/26)
+
+* Technical improvement
+  - Fixed linting errors for update pycodestyle
+  - Added python and YAML linters to circleci
+
+### 0.7.2 - [#27](https://github.com/digitalnsw/openfisca-nsw/pull/27)
+
+* Technical improvement
+  - Update Makefile to use Openfisca Test, not openfisca-make-test
+
+### 0.8.0 - [#28](https://github.com/digitalnsw/openfisca-nsw/pull/28)
+
+* Tax and Benefit System evolution.
+  - Added teenage education payments
