@@ -3,7 +3,7 @@
   input:
     has_department_human_services_pensioner_concession_card: true
     has_department_veteran_affairs_gold_card_TPI_EDA: false
-    has_department_veteran_affairs_gold_card_not_TPI_EDA: false 
+    has_department_veteran_affairs_gold_card_not_TPI_EDA: false
     has_department_veteran_affairs_gold_card_war_widow: false
     has_student_concession_card: false
     has_transport_concession_entitlement_card: false
@@ -73,4 +73,3 @@
     national_parks_concession_pass__person_receives_intermediate_pension: false
   output:
     national_parks_concession_pass__person_meets_criteria: true
-
