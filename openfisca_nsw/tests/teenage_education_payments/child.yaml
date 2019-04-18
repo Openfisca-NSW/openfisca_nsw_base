@@ -1,0 +1,36 @@
+- name: "Child meets criteria - 16 years old"
+  period: 2019-02
+  input:
+    is_enrolled_in_school: true
+    birth: 2003-01-01
+  output:
+    teenage_education_payments__youth_meets_payment_criteria: true
+- name: "Child meets criteria - 17 years old"
+  period: 2019-02
+  input:
+    is_enrolled_in_school: true
+    birth: 2002-01-01
+  output:
+    teenage_education_payments__youth_meets_payment_criteria: true
+- name: "Child meets criteria - turned 18 this school year"
+  period: 2019-02
+  input:
+    is_enrolled_in_school: true
+    birth: 2001-01-01
+    teenage_education_payments__turned_18_this_school_year: true
+  output:
+    teenage_education_payments__youth_meets_payment_criteria: true
+- name: "Child is too young to meet criteria"
+  period: 2019-02
+  input:
+    is_enrolled_in_school: true
+    birth: 2010-01-01
+  output:
+    teenage_education_payments__youth_meets_payment_criteria: false
+- name: "Child is too old to meet criteria"
+  period: 2019-02
+  input:
+    is_enrolled_in_school: true
+    birth: 2000-01-01
+  output:
+    teenage_education_payments__youth_meets_payment_criteria: false
