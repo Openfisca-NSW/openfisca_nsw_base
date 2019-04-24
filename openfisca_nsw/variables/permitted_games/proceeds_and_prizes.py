@@ -9,6 +9,7 @@ from openfisca_core.model_api import *
 # Import the Entities specifically defined for this tax and benefit system
 from openfisca_nsw.entities import *
 
+
 class gross_proceeds_from_gaming_activity(Variable):
     value_type = int
     entity = Organisation
