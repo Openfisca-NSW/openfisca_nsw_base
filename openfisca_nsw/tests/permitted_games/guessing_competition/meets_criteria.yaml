@@ -7,7 +7,7 @@
     proceeds_to_benefitting_organisation: 4000
     gross_proceeds_from_gaming_activity: 10000
   output:
-    guessing_competitions__organisation_meets_criteria: True
+    guessing_competition__game_meets_criteria: True
 - name: Organisation is a not-for-profit, is conducting a permitted gaming activity
   period: 2019-09
   input:
@@ -17,7 +17,7 @@
     proceeds_to_benefitting_organisation: 4000
     gross_proceeds_from_gaming_activity: 10000
   output:
-    guessing_competitions__organisation_meets_criteria: True
+    guessing_competition__game_meets_criteria: True
 - name: Organisation is neither a charity nor a not-for-profit, hence gaming activity is not permitted
   period: 2019-09
   input:
@@ -27,7 +27,7 @@
     proceeds_to_benefitting_organisation: 4000
     gross_proceeds_from_gaming_activity: 10000
   output:
-    guessing_competitions__organisation_meets_criteria: False
+    guessing_competition__game_meets_criteria: False
 - name: Organisation is a charity, but total value of prizes exceed allowable limit, hence gaming activity is not permitted without authority
   period: 2019-09
   input:
@@ -37,7 +37,7 @@
     proceeds_to_benefitting_organisation: 4000
     gross_proceeds_from_gaming_activity: 10000
   output:
-    guessing_competitions__organisation_meets_criteria: False
+    guessing_competition__game_meets_criteria: False
 - name: Organisation is a charity, but total value of prizes exceed allowable limit, but proceeds to benefitting organisation are less than the allowable limit, hence gaming activity is not permitted
   period: 2019-09
   input:
@@ -47,4 +47,4 @@
     proceeds_to_benefitting_organisation: 2000
     gross_proceeds_from_gaming_activity: 10000
   output:
-    guessing_competitions__organisation_meets_criteria: False
+    guessing_competition__game_meets_criteria: False
