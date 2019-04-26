@@ -42,7 +42,7 @@
     number_of_tickets: 3000
   output:
     no_draw_lottery__game_meets_criteria: False
-- name: Organisation is a charity and total value of prizes is within allowable limit, but proceeds to benefitting organisation are less than the allowable limit, hence no-draw lottery is not permitted
+- name: Organisation is a charity, but proceeds to benefitting organisation are less than the allowable limit, hence no-draw lottery is not permitted
   period: 2019-09
   input:
     is_charity: True
