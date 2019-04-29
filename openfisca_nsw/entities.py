@@ -15,14 +15,14 @@ Organisation = build_entity(
         {
             'key': 'representative',
             'plural': 'representatives',
-            'label': 'Representative',
-            'doc': 'The representatives authorised on behalf of an organisation'
+            'label': u'Representative',
+            'doc': u'The representatives authorised on behalf of an organisation'
             },
         {
             'key': 'other',
             'plural': 'others',
-            'label': 'Other',
-            'doc': 'Other members of an organisation who are not representatives'
+            'label': u'Other',
+            'doc': u'Other members of an organisation who are not representatives'
             }
         ]
     )
