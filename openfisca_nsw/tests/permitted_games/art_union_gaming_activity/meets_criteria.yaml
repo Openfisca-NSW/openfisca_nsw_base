@@ -1,0 +1,36 @@
+- name: Organisation is an art-union, is conducting a gaming activity that is permitted
+  period: 2019-09
+  input:
+    is_art_union: True
+    proceeds_to_benefitting_organisation: 12000
+    gross_proceeds_from_gaming_activity: 30000
+    total_prize_value_of_all_prizes_from_gaming_activity: 30000
+  output:
+    art_union__game_meets_criteria: True
+- name: Organisation is not an art union, hence gaming activity is not permitted
+  period: 2019-09
+  input:
+    is_art_union: False
+    proceeds_to_benefitting_organisation: 12000
+    gross_proceeds_from_gaming_activity: 30000
+    total_prize_value_of_all_prizes_from_gaming_activity: 30000
+  output:
+    art_union__game_meets_criteria: False
+- name: Organisation is an art union, total prize value is greater than allowable limit, hence gaming activity is not permitted
+  period: 2019-09
+  input:
+    is_art_union: True
+    proceeds_to_benefitting_organisation: 20000
+    gross_proceeds_from_gaming_activity: 35000
+    total_prize_value_of_all_prizes_from_gaming_activity: 35000
+  output:
+    art_union__game_meets_criteria: False
+- name: Organisation is an art union, but gross proceeds to benefitting organisation are less than 40%, hence gaming activity is not permitted
+  period: 2019-09
+  input:
+    is_art_union: True
+    proceeds_to_benefitting_organisation: 9000
+    gross_proceeds_from_gaming_activity: 30000
+    total_prize_value_of_all_prizes_from_gaming_activity: 30000
+  output:
+    art_union__game_meets_criteria: False

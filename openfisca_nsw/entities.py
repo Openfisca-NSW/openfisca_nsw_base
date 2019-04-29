@@ -5,6 +5,28 @@
  """
 from openfisca_core.entities import build_entity
 
+Organisation = build_entity(
+    key = "organisation",
+    plural = "organisations",
+    label = u'Organisation',
+    doc = '''
+    ''',
+    roles = [
+        {
+            'key': 'representative',
+            'plural': 'representatives',
+            'label': 'Representative',
+            'doc': 'The representatives authorised on behalf of an organisation'
+            },
+        {
+            'key': 'other',
+            'plural': 'others',
+            'label': 'Other',
+            'doc': 'Other members of an organisation who are not representatives'
+            }
+        ]
+    )
+
 Family = build_entity(
     key = "family",
     plural = "families",
@@ -48,7 +70,7 @@ Person = build_entity(
     in a 'Family' entity with person.has_role(Family.PARENT)).
     For more information, see: https://openfisca.org/doc/coding-the-legislation/50_entities.html
     ''',
-    is_person = True,
+    is_person = True
     )
 
-entities = [Family, Person]
+entities = [Organisation, Family, Person]
