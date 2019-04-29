@@ -30,7 +30,8 @@ class gas_rebate__person_holds_valid_concession_card(Variable):
             persons('has_health_care_card', period)
             + persons('has_department_human_services_pensioner_concession_card', period)
             + persons('has_department_veteran_affairs_pensioner_concession_card', period)
-            + persons('has_department_veteran_affairs_gold_card', period))
+            + persons('has_department_veteran_affairs_gold_card_war_widow', period)
+            + persons('has_department_veteran_affairs_gold_card_TPI_EDA', period))
 
 
 class gas_rebate__person_meets_retail_criteria(Variable):

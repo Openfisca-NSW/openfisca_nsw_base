@@ -1,0 +1,7 @@
+description: Maximum age boundary of a child required to be eligible for Disadvantaged Learner Drivers Free Course
+reference: >
+  Safer Drivers Course
+  https://www.rms.nsw.gov.au/roads/licence/driver/learner/safer-drivers-course.html
+values:
+  2019-02-01:
+    value: 25

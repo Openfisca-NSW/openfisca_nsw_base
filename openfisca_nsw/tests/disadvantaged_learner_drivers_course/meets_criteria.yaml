@@ -1,0 +1,111 @@
+- name: "Young learner driver, is eligible"
+  period: 2019-02
+  input:
+    birth: 1995-02-01
+    has_valid_learner_licence: true
+    disadvantaged_learner_drivers_course__completed_driving_hours: true
+    # disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: true
+    has_health_care_card: true
+    has_department_human_services_pensioner_concession_card: false
+    has_stayed_in_Out_Of_Care_Home: true
+    currently_staying_in_Out_Of_Care_Home: true
+  output:
+    disadvantaged_learner_drivers_course__learner_meets_criteria: true
+
+- name: "Young learner driver, without health care card, but has DHS pensioner concession card, is eligible"
+  period: 2019-02
+  input:
+    birth: 1995-02-01
+    has_valid_learner_licence: true
+    disadvantaged_learner_drivers_course__completed_driving_hours: true
+    # disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: true
+    has_health_care_card: false
+    has_department_human_services_pensioner_concession_card: true
+    has_stayed_in_Out_Of_Care_Home: true
+    currently_staying_in_Out_Of_Care_Home: true
+  output:
+    disadvantaged_learner_drivers_course__learner_meets_criteria: true
+
+- name: "Young learner driver, is over 25, not eligible"
+  period: 2019-02
+  input:
+    birth: 1992-02-01
+    has_valid_learner_licence: true
+    disadvantaged_learner_drivers_course__completed_driving_hours: true
+    # disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: true
+    has_health_care_card: true
+    has_department_human_services_pensioner_concession_card: false
+    has_stayed_in_Out_Of_Care_Home: true
+    currently_staying_in_Out_Of_Care_Home: true
+  output:
+    disadvantaged_learner_drivers_course__learner_meets_criteria: false
+
+- name: "Young learner driver, does not hold a valid drivers licence, not eligible"
+  period: 2019-02
+  input:
+    birth: 1995-02-01
+    has_valid_learner_licence: false
+    disadvantaged_learner_drivers_course__completed_driving_hours: true
+    # disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: true
+    has_health_care_card: true
+    has_department_human_services_pensioner_concession_card: false
+    has_stayed_in_Out_Of_Care_Home: true
+    currently_staying_in_Out_Of_Care_Home: true
+  output:
+    disadvantaged_learner_drivers_course__learner_meets_criteria: false
+
+- name: "Young learner driver, has not completed driving hours required, not eligible"
+  period: 2019-02
+  input:
+    birth: 1995-02-01
+    has_valid_learner_licence: true
+    disadvantaged_learner_drivers_course__completed_driving_hours: false
+    # disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: true
+    has_health_care_card: true
+    has_department_human_services_pensioner_concession_card: false
+    has_stayed_in_Out_Of_Care_Home: true
+    currently_staying_in_Out_Of_Care_Home: true
+  output:
+    disadvantaged_learner_drivers_course__learner_meets_criteria: false
+
+# - name: "Young learner driver, required driving hours includes 3 for 1 hours, not eligible"
+#   period: 2019-02
+#   input:
+#     birth: 1995-02-01
+#     has_valid_learner_licence: true
+#     disadvantaged_learner_drivers_course__completed_driving_hours: true
+#     disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: false
+#     has_health_care_card: true
+#     has_department_human_services_pensioner_concession_card: false
+#     has_stayed_in_Out_Of_Care_Home: true
+#     currently_staying_in_Out_Of_Care_Home: true
+#   output:
+#     national_parks_concession_pass__person_meets_criteria: false
+
+- name: "Young learner driver, does not have health card or DHS pensioner concession card, not eligible"
+  period: 2019-02
+  input:
+    birth: 1995-02-01
+    has_valid_learner_licence: true
+    disadvantaged_learner_drivers_course__completed_driving_hours: true
+    # disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: false
+    has_health_care_card: false
+    has_department_human_services_pensioner_concession_card: false
+    has_stayed_in_Out_Of_Care_Home: true
+    currently_staying_in_Out_Of_Care_Home: true
+  output:
+    disadvantaged_learner_drivers_course__learner_meets_criteria: false
+
+- name: "Young learner driver, has not been in Out of Home Care, not eligible"
+  period: 2019-02
+  input:
+    birth: 1995-02-01
+    has_valid_learner_licence: true
+    disadvantaged_learner_drivers_course__completed_driving_hours: true
+    # disadvantaged_learner_drivers_course__required_driving_excludes_3_for_1_hours: false
+    has_health_care_card: false
+    has_department_human_services_pensioner_concession_card: false
+    has_stayed_in_Out_Of_Care_Home: false
+    currently_staying_in_Out_Of_Care_Home: false
+  output:
+    disadvantaged_learner_drivers_course__learner_meets_criteria: false
