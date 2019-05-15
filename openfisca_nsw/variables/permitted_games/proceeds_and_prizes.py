@@ -29,3 +29,10 @@ class total_prize_value_of_all_prizes_from_gaming_activity(Variable):
     entity = Organisation
     label = u"Total prize value of all prizes"
     definition_period = MONTH
+
+
+class total_prize_value_of_all_prizes_from_single_gaming_session(Variable):
+    value_type = int
+    entity = Organisation
+    label = u"Total prize value of all prizes from a single gaming session"
+    definition_period = MONTH

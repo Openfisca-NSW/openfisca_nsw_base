@@ -1,0 +1,18 @@
+- name: For-profit business, planning for a trade promotion, free to enter
+  period: 2019-09
+  input:
+    is_for_profit_business: True
+    gaming_activity_is_free_to_enter: True
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    total_prize_value_of_all_prizes_from_single_gaming_session: 500
+  output:
+    trade_promotion__game_meets_criteria: True
+- name: For-profit business, planning for a trade promotion, plans to charge for gaming activity
+  period: 2019-09
+  input:
+    is_for_profit_business: True
+    gaming_activity_is_free_to_enter: False
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    total_prize_value_of_all_prizes_from_single_gaming_session: 500
+  output:
+    trade_promotion__game_meets_criteria: False

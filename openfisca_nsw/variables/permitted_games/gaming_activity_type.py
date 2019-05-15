@@ -44,3 +44,10 @@ class gaming_activity_is_housie(Variable):
     entity = Organisation
     definition_period = MONTH
     label = "Whether organisation is conducting a housie?"
+
+
+class gaming_activity_is_free_to_enter(Variable):
+    value_type = bool
+    entity = Organisation
+    definition_period = MONTH
+    label = "Whether the gaming activity is free to enter"
