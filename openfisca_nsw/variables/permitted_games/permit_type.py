@@ -4,11 +4,11 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-class single_promotion(Variable):
+class single_permit(Variable):
     value_type = bool
     entity = Organisation
     definition_period = DAY
-    label = "Will the organisation be running a single type of trade promotion/lottery?"
+    label = "Will the organisation require a single permit for the trade promotion activity? (Value must be set to False if organisation requires multiple promotion permit)"
 
 
 class online_application_lodgement(Variable):
