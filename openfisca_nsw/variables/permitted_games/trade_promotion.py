@@ -29,5 +29,6 @@ class trade_promotion__game_meets_criteria(Variable):
         return (
             (organisation('is_for_profit_business', period))
             * (organisation('gaming_activity_is_free_to_enter', period))
+            * (organisation('trade_promotion__has_business_principal_consent', period))
             * (organisation('total_prize_value_of_all_prizes_from_gaming_activity', period) <= parameters(period).permitted_games.trade_promotions.max_total)
             * (organisation('total_prize_value_of_all_prizes_from_single_gaming_session', period) <= parameters(period).permitted_games.trade_promotions.max_total_single_session))
