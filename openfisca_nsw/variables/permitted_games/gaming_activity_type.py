@@ -14,7 +14,7 @@ class gaming_activity_is_guessing_competition(Variable):
 class gaming_activity_is_free_to_enter(Variable):
     value_type = bool
     entity = Organisation
-    definition_period = DAY
+    definition_period = MONTH
     label = "Whether gaming activity is free for participants to enter"
 
 
