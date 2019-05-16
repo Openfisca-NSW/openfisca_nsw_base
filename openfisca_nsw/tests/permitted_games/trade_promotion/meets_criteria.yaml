@@ -58,4 +58,3 @@
     total_prize_value_of_all_prizes_from_single_gaming_session: 500
   output:
     trade_promotion__game_meets_criteria: False
-    
