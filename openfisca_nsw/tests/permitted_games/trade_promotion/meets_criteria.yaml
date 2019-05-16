@@ -38,7 +38,7 @@
     total_prize_value_of_all_prizes_from_single_gaming_session: 10050
   output:
     trade_promotion__game_meets_criteria: False
-- name: For-profit business, planning for a trade promotion, does not have consent of principal in the business 
+- name: For-profit business, planning for a trade promotion, does not have consent of principal in the business
   period: 2019-09
   input:
     is_for_profit_business: True
@@ -58,3 +58,4 @@
     total_prize_value_of_all_prizes_from_single_gaming_session: 500
   output:
     trade_promotion__game_meets_criteria: False
+    
