@@ -7,21 +7,21 @@ from openfisca_nsw.entities import *
 class single_permit(Variable):
     value_type = bool
     entity = Organisation
-    definition_period = DAY
+    definition_period = MONTH
     label = "Will the organisation require a single permit for the trade promotion activity?"  # False if organisation requires a multiple promotion permit
 
 
 class online_application_lodgement(Variable):
     value_type = bool
     entity = Organisation
-    definition_period = DAY
+    definition_period = MONTH
     label = "Will the lodgement of the permit application be made on license.nsw.gov.au?"  # False if application is not made through license.nsw.gov.au
 
 
 class single_permit_fee(Variable):
     value_type = int
     entity = Organisation
-    definition_period = DAY
+    definition_period = MONTH
     label = "Calculate single permit fee based on online/offline permit application and value of total prizes of the gaming activity"
 
     def formula(organisation, period, parameters):
@@ -84,7 +84,7 @@ class multiple_permit_fee(Variable):
 class permit_fee(Variable):
     value_type = int
     entity = Organisation
-    definition_period = DAY
+    definition_period = MONTH
     label = "Calculate permit fee based on whether it is a single or multiple permit"
 
     def formula(organisation, period, parameters):
