@@ -20,14 +20,21 @@ class gross_proceeds_from_gaming_activity(Variable):
 class proceeds_to_benefitting_organisation(Variable):
     value_type = int
     entity = Organisation
-    label = u"Gross proceeds deposited with benefiting organisation"
+    label = u"Proceeds to be given to benefiting organisation"
+    definition_period = MONTH
+
+
+class net_proceeds_returned_to_participants(Variable):
+    value_type = bool
+    entity = Organisation
+    label = "The total amount invested by participants in a session of the gaming activity, after the cost of prizes and expenses of conducting the session are deducted, is returned to participants"
     definition_period = MONTH
 
 
 class total_prize_value_of_all_prizes_from_gaming_activity(Variable):
     value_type = int
     entity = Organisation
-    label = u"Total prize value of all prizes"
+    label = u"Total prize value of all prizes in gaming activity"
     definition_period = MONTH
 
 
