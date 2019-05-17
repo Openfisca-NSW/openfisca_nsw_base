@@ -59,7 +59,7 @@ class single_permit_fee(Variable):
 class multiple_permit_fee(Variable):
     value_type = int
     entity = Organisation
-    definition_period = DAY
+    definition_period = MONTH
     label = "Calculate multiple permit fee based on online/offline permit application and value of total prizes of the gaming activity"
 
     def formula(organisation, period, parameters):
