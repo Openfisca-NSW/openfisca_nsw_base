@@ -28,7 +28,7 @@ class total_prize_value_of_all_prizes_from_gaming_activity(Variable):
     value_type = int
     entity = Organisation
     label = u"Total prize value of all prizes"
-    definition_period = DAY
+    definition_period = MONTH
 
 
 class highest_value_of_individual_prize_in_gaming_activity(Variable):
