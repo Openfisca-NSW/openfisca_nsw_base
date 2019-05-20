@@ -48,3 +48,23 @@
   output:
     multiple_permit_fee: 385
     permit_fee: 385
+- name: Online Multiple Lottery Class "C" application where single prize money <=250 and total prize money <= 100000
+  period: 2019-01
+  input:
+    total_prize_value_of_all_prizes_from_gaming_activity: 100000
+    highest_value_of_individual_prize_in_gaming_activity: 200
+    single_permit: False
+    online_application_lodgement: True
+  output:
+    multiple_permit_fee: 585
+    permit_fee: 585
+- name: Offline Multiple Lottery Class "C" application where single prize money <=250 and total prize money <= 100000
+  period: 2019-01
+  input:
+    total_prize_value_of_all_prizes_from_gaming_activity: 100000
+    highest_value_of_individual_prize_in_gaming_activity: 200
+    single_permit: False
+    online_application_lodgement: False
+  output:
+    multiple_permit_fee: 660
+    permit_fee: 660
