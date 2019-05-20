@@ -11,6 +11,13 @@ class gaming_activity_is_guessing_competition(Variable):
     label = "Whether organisation is conducting a guessing competition?"
 
 
+class gaming_activity_is_free_to_enter(Variable):
+    value_type = bool
+    entity = Organisation
+    definition_period = MONTH
+    label = "Whether gaming activity is free for participants to enter"
+
+
 class gaming_activity_is_draw_lottery(Variable):
     value_type = bool
     entity = Organisation

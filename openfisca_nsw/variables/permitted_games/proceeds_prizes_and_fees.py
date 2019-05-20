@@ -57,3 +57,10 @@ class no_fee_charged_for_conducting_game(Variable):
     entity = Organisation
     label = "No salary, wage, fee, commission, percentage or other benefit (other than a prize) is given or paid to or taken by a person in connection with the conduct of the gaming activity."
     definition_period = MONTH
+
+
+class total_prize_value_of_all_prizes_from_single_gaming_session(Variable):
+    value_type = int
+    entity = Organisation
+    label = u"Total prize value of all prizes from a single gaming session"
+    definition_period = MONTH
