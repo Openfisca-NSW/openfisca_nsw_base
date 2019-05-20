@@ -74,7 +74,7 @@ class multiple_permit_fee(Variable):
         single_threshold_two = parameters(period).permitted_games.permits.multiple_permit_prize_thresholds.two.single_prize
         single_threshold_three = parameters(period).permitted_games.permits.multiple_permit_prize_thresholds.three.single_prize
         class_b_lottery = (total_prizes >= total_threshold_one) * (total_prizes <= total_threshold_two) * (single_prize >= single_threshold_one) * (single_prize <= single_threshold_two) * not_(single_permit)
-        class_c_lottery = (total_prizes > total_threshold_two) * (total_prizes <= total_threshold_three) * (single_prize > single_threshold_two) * (single_prize <= single_threshold_three) * not_(single_permit)
+        class_c_lottery = (total_prizes >= total_threshold_one) * (total_prizes <= total_threshold_three) * (single_prize >= single_threshold_one) * (single_prize <= single_threshold_three) * not_(single_permit)
         return select(
             [class_b_lottery * online, class_b_lottery * not_(online), class_c_lottery * online, class_c_lottery * not_(online)],
             [parameters(period).permitted_games.permits.multiple_permit_fees.class_b.online, parameters(period).permitted_games.permits.multiple_permit_fees.class_b.offline,
