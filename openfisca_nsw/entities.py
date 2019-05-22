@@ -5,6 +5,28 @@
  """
 from openfisca_core.entities import build_entity
 
+Building = build_entity(
+    key = "building",
+    plural = "buildings",
+    label = u'Building',
+    doc = '''
+    ''',
+    roles = [
+        {
+            'key': 'representative',
+            'plural': 'representatives',
+            'label': u'Representative',
+            'doc': u'A person authorised to represent the building'
+            },
+        {
+            'key': 'other',
+            'plural': 'others',
+            'label': u'Other',
+            'doc': u'Other representatives who are not a person - such as Strata bodies'
+            }
+        ]
+    )
+
 Organisation = build_entity(
     key = "organisation",
     plural = "organisations",
@@ -73,4 +95,4 @@ Person = build_entity(
     is_person = True
     )
 
-entities = [Organisation, Family, Person]
+entities = [Building, Organisation, Family, Person]

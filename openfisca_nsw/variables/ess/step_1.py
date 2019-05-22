@@ -3,8 +3,9 @@ from openfisca_core.model_api import *
 # Import the Entities specifically defined for this tax and benefit system
 from openfisca_nsw.entities import *
 
+
 class measured_electricity_consumption(Variable):
     value_type = int
-    entity = Organisation
+    entity = Building
     definition_period = DAY
     label = "Measured Electricity Consumption (MWh)"
