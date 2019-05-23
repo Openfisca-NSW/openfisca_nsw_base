@@ -1,4 +1,89 @@
-- name: Organisation is a charity, conducting a progressive lottery that is permitted
+- name: Organisation is a charity, planning a progressive lottery for entertainment purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is a not for profit, planning a progressive lottery for entertainment purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: False
+    is_not_for_profit: True
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is an art union, planning a progressive lottery for entertainment purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: False
+    is_not_for_profit: False
+    is_art_union: True
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is a registered club, planning a progressive lottery for entertainment purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: False
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: True
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is a for profit business, planning a progressive lottery for entertainment purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: False
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: True
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is a charity, planning a progressive lottery for fundraising purposes, that is permitted
   period: 2019-09
   input:
     is_charity: True
@@ -10,12 +95,12 @@
     gaming_activity_is_free_to_enter: True
     gaming_activity_solely_for_entertainment_purposes: False
     net_proceeds_returned_to_participants: False
-    gaming_activity_solely_or_partly_for_fundraising: False
-    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
     no_fee_charged_for_conducting_game: True
   output:
-    no_draw_lottery__game_meets_criteria: True
-- name: Organisation is a not for profit, conducting a progressive lottery that is permitted
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is a not for profit, planning a progressive lottery for fundraising purposes, that is permitted
   period: 2019-09
   input:
     is_charity: False
@@ -27,8 +112,195 @@
     gaming_activity_is_free_to_enter: True
     gaming_activity_solely_for_entertainment_purposes: False
     net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is an art union, planning a progressive lottery for fundraising purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: False
+    is_not_for_profit: False
+    is_art_union: True
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: False
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is a registered club, planning a progressive lottery for fundraising purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: False
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: True
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: False
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is a for profit business, planning a progressive lottery for fundraising purposes, that is permitted
+  period: 2019-09
+  input:
+    is_charity: False
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: True
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: False
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: True
+- name: Organisation is charity, planning a progressive lottery for entertainment purposes, has an individual prize over 10,000, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10005
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
     gaming_activity_solely_or_partly_for_fundraising: False
     progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
     no_fee_charged_for_conducting_game: True
   output:
-    no_draw_lottery__game_meets_criteria: True
+    progressive_lotteries__game_meets_criteria: False
+- name: Organisation is charity, planning a progressive lottery for fundraising purposes, has an individual prize over 10,000, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10005
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: False
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: False
+- name: Organisation is charity, planning a progressive lottery for entertainment purposes, with paid participation, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: False
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: False
+- name: Organisation is charity, planning a progressive lottery for fundraising purposes, with paid participation, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: False
+    gaming_activity_solely_for_entertainment_purposes: False
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: False
+- name: Organisation is charity, planning a progressive lottery, solely for entertainment purposes, no proceeds returned to participants, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: False
+- name: Organisation is charity, planning a progressive lottery, solely or partly for fundraising purposes, conduct not authorised, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: False
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: True
+  output:
+    progressive_lotteries__game_meets_criteria: False
+- name: Organisation is charity, planning a progressive lottery for entertainment purposes, will charge for conducting game, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: True
+    net_proceeds_returned_to_participants: True
+    gaming_activity_solely_or_partly_for_fundraising: False
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: False
+    no_fee_charged_for_conducting_game: False
+  output:
+    progressive_lotteries__game_meets_criteria: False
+- name: Organisation is charity, planning a progressive lottery for fundraising purposes, will charge for conducting game, not permitted
+  period: 2019-09
+  input:
+    is_charity: True
+    is_not_for_profit: False
+    is_art_union: False
+    is_registered_club: False
+    is_for_profit_business: False
+    highest_value_of_individual_prize_in_gaming_activity: 10000
+    gaming_activity_is_free_to_enter: True
+    gaming_activity_solely_for_entertainment_purposes: False
+    net_proceeds_returned_to_participants: False
+    gaming_activity_solely_or_partly_for_fundraising: True
+    progressive_lotteries__conduct_authorised_by_benefiting_orgnisation: True
+    no_fee_charged_for_conducting_game: False
+  output:
+    progressive_lotteries__game_meets_criteria: False
