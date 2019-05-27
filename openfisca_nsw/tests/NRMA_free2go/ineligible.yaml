@@ -3,7 +3,7 @@
     period: 2019-02
     input:
         is_nsw_resident: true
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: false
         is_australian_citizen: true
     output:
@@ -13,7 +13,7 @@
     period: 2019-02
     input:
         is_nsw_resident: true
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: false
         is_permanent_resident: false
@@ -25,7 +25,7 @@
     input:
         is_nsw_resident: false
         is_act_resident: false
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: true
     output:
@@ -36,7 +36,7 @@
     input:
         is_nsw_resident: false
         is_act_resident: false
-        birth: 2004-01-01T00:00:00.000Z
+        birth: 2004-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: true
     output:
@@ -47,7 +47,7 @@
     input:
         is_nsw_resident: false
         is_act_resident: false
-        birth: 1998-01-01T00:00:00.000Z
+        birth: 1998-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: true
     output:
