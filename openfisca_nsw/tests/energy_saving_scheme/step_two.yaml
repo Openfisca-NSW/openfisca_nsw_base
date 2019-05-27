@@ -1,0 +1,7 @@
+- name: Building1
+  period: 2019-01-01
+  input:
+    is_office: True
+    built_after_nov_2006: False
+  output:
+    method_one: 4.0
