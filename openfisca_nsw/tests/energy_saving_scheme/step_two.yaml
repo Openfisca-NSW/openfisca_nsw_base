@@ -1,4 +1,4 @@
-- name: Building1
+- name: Test 1
   period: 2019-01-01
   input:
     is_office: True
