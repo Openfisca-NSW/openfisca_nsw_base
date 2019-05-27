@@ -6,7 +6,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 16
@@ -21,7 +21,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 2002-01-01T00:00:00.000Z
+        birth: 2002-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 17
@@ -36,7 +36,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 2001-01-01T00:00:00.000Z
+        birth: 2001-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 18
@@ -51,7 +51,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 2000-01-01T00:00:00.000Z
+        birth: 2000-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 19
@@ -66,7 +66,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 1999-01-01T00:00:00.000Z
+        birth: 1999-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 20
@@ -81,7 +81,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 2
-        birth: 2002-01-01T00:00:00.000Z
+        birth: 2002-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 16
@@ -111,7 +111,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 2
-        birth: 2000-01-01T00:00:00.000Z
+        birth: 2000-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 18
@@ -126,7 +126,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 2
-        birth: 1999-01-01T00:00:00.000Z
+        birth: 1999-01-01
         NRMA_free2go__is_NRMA_member: true
         is_permanent_resident: true
         NRMA_free2go__age_when_joining: 19
