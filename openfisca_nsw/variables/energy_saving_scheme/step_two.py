@@ -11,8 +11,7 @@ class method_one(Variable):
     label = "Benchmark NABERS Rating calculated using Calculation Method 1 (Step 2) of the NABERS Baseline Method (Method 4) in the ESS Rules"
 
     def formula(buildings, period, parameters):
-        x = buildings('is_office', period) * 4.0
-        return x
+        return (buildings('is_office', period) * 4.0)
 
 
 class first_nabers_rating(Variable):
