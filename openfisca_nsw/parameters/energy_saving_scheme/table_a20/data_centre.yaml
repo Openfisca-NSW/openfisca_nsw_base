@@ -1,0 +1,57 @@
+by_year:
+  description: Table A20 of ESS Rules
+  reference:
+  2015:
+    built_before_nov_2006:
+      values:
+        2020-01-01:
+          value: 4.0
+    built_after_nov_2006:
+      values:
+        2020-01-01:
+          value: 5.0
+  2016:
+    built_before_nov_2006:
+      values:
+        2020-01-01:
+          value: 4.0
+    built_after_nov_2006:
+      values:
+        2020-01-01:
+          value: 5.0
+  2017:
+    built_before_nov_2006:
+      values:
+        2020-01-01:
+          value: 4.5
+    built_after_nov_2006:
+      values:
+        2020-01-01:
+          value: 5.5
+  2018:
+    built_before_nov_2006:
+      values:
+        2020-01-01:
+          value: 4.5
+    built_after_nov_2006:
+      values:
+        2020-01-01:
+          value: 5.5
+  2019:
+    built_before_nov_2006:
+      values:
+        2020-01-01:
+          value: 4.5
+    built_after_nov_2006:
+      values:
+        2020-01-01:
+          value: 5.5
+  2020:
+    built_before_nov_2006:
+      values:
+        2020-01-01:
+          value: 4.5
+    built_after_nov_2006:
+      values:
+        2020-01-01:
+          value: 5.5

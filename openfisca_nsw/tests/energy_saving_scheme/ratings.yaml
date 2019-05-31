@@ -1,8 +1,0 @@
-- name: Rating Test
-  period: 2020
-  input:
-    is_office:
-      "2020-01-01": True
-  output:
-    method_one:
-      "2020-01-01": 4.0

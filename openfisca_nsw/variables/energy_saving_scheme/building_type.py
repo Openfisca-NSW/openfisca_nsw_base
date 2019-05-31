@@ -7,40 +7,40 @@ from openfisca_nsw.entities import *
 class is_office(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Building is an office"
 
 
 class is_hotel(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Building is a hotel"
 
 
 class is_shopping_centre(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Building is a shopping centre"
 
 
 class is_data_centre(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Building is a data centre"
 
 
 class is_hospital(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Building is a hospital"
 
 
 class is_apartment_building(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Building is an apartment building"

@@ -7,31 +7,55 @@ from openfisca_nsw.entities import *
 class method_one(Variable):
     value_type = float
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Benchmark NABERS Rating calculated using Calculation Method 1 (Step 2) of the NABERS Baseline Method (Method 4) in the ESS Rules"
 
     def formula(buildings, period, parameters):
-        return (buildings('is_office', period) * 4.0)
+        current_rating_year = buildings('current_rating_year', period)
+        rating_year_string = where(current_rating_year > 2020, "2020", buildings('current_rating_year', period).astype('str'))
+        office = buildings('is_office', period)
+        hotel = buildings('is_hotel', period)
+        hospital = buildings('is_hospital', period)
+        data_centre = buildings('is_data_centre', period)
+        hospital = buildings('is_hospital', period)
+        apartment_building = buildings('is_apartment_building', period)
+        built_before_or_after_nov_2006 = where(buildings('built_after_nov_2006', period), "built_after_nov_2006", "built_before_nov_2006")
+        if (current_rating_year >= 2015):
+            year_count = 2014
+            while (year_count < current_rating_year):
+                year_count = year_count + 1
+                if (office):
+                    return parameters(period).energy_saving_scheme.table_a20.office.by_year[rating_year_string][built_before_or_after_nov_2006]
+                elif (hotel):
+                    return parameters(period).energy_saving_scheme.table_a20.hotel.by_year[rating_year_string][built_before_or_after_nov_2006]
+                elif (shopping_centre):
+                    return parameters(period).energy_saving_scheme.table_a20.shopping_centre.by_year[rating_year_string][built_before_or_after_nov_2006]
+                elif (data_centre):
+                    return parameters(period).energy_saving_scheme.table_a20.data_centre.by_year[rating_year_string][built_before_or_after_nov_2006]
+                elif (hospital):
+                    return parameters(period).energy_saving_scheme.table_a20.hospital.by_year[rating_year_string][built_before_or_after_nov_2006]
+                elif (apartment_building):
+                    return parameters(period).energy_saving_scheme.table_a20.apartments.by_year[rating_year_string][built_before_or_after_nov_2006]
 
 
 class first_nabers_rating(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Is this the first NABERS rating for the NABERS Building?"
 
 
 class rating_not_obt_for_legal_requirement(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Is the rating not being obtained in order to comply with any mandatory legal requirement imposed through a statutory or regulatory instrument of any jurisdiction, including, but not limited to, the Commercial Building Disclosure Program"
 
 
 class method_one_can_be_used(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Can Method 1 be used to calculate the NABERS Benchmark Rating for the buildings?"
 
     def formula(buildings, period, parameters):
@@ -41,31 +65,55 @@ class method_one_can_be_used(Variable):
 class built_after_nov_2006(Variable):
     value_type = bool
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Benchmark NABERS Rating calculated using Calculation Method 2 (Step 2) of the NABERS Baseline Method (Method 4) in the ESS Rules"
 
 
 class end_date_of_nabers_rating_period(Variable):
     value_type = date
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "The date on which the rating period ends. The Rating Period is the time over which measurements were taken to establish the NABERS Rating or the Historical Baseline NABERS Rating for the NABERS Building"
 
 
 class current_rating_year(Variable):
     value_type = int
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "The year in which the Rating Period ends for the NABERS Rating and is the year for which Energy Savings Certificates will be created"
 
     def formula(buildings, period, parameters):
         end_date_of_nabers_rating_period = buildings('end_date_of_nabers_rating_period', period)
-        rating_year = end_date_of_nabers_rating_period.astype('datetime64[Y]') + 1970
-        return rating_year
+        current_rating_year = (end_date_of_nabers_rating_period.astype('datetime64[Y]') + 1970)
+        return current_rating_year
+
+
+class method_two(Variable):
+    value_type = float
+    entity = Building
+    definition_period = ETERNITY
+    label = "Benchmark NABERS Rating calculated using Calculation Method 2 (Step 2) of the NABERS Baseline Method (Method 4) in the ESS Rules"
+
+    def formula(buildings, period, parameters):
+        return 0.0
+
+
+class method_two_can_be_used(Variable):
+    value_type = bool
+    entity = Building
+    definition_period = ETERNITY
+    label = "Can Method 2 be used to calculate the NABERS Benchmark Rating for the buildings?"
+
+    def formula(buildings, period, parameters):
+        return True
 
 
 class benchmark_nabers_rating(Variable):
     value_type = float
     entity = Building
-    definition_period = DAY
+    definition_period = ETERNITY
     label = "Benchmark NABERS rating calculated using Method 1 or Method 2"
+
+    def formula(buildings, period, parameters):
+        return select([method_one_can_be_used, method_two_can_be_used],
+        [method_one, method_two])
