@@ -1,0 +1,333 @@
+by_year:
+  description: Table A20, Energy Savings Scheme Rules - NABERS Baseline Method
+  reference:
+  2015:
+    office:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    hotel:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+    shopping_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    data_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    hospital:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+    apartment_building:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+  2016:
+    office:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    hotel:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    shopping_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    data_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    hospital:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+    apartment_building:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+  2017:
+    office:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.5
+    hotel:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    shopping_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    data_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    hospital:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    apartment_building:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+  2018:
+    office:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.5
+    hotel:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    shopping_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    data_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    hospital:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    apartment_building:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+  2019:
+    office:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.5
+    hotel:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    shopping_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    data_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    hospital:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    apartment_building:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+  2020:
+    office:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.5
+    hotel:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    shopping_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    data_centre:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.0
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 5.0
+    hospital:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5
+    apartment_building:
+      built_before_nov_2006:
+        values:
+          2020-01-01:
+            value: 3.5
+      built_after_nov_2006:
+        values:
+          2020-01-01:
+            value: 4.5

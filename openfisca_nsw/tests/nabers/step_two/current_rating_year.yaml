@@ -1,0 +1,12 @@
+- name: Rating year - 2016
+  period: 2020
+  input:
+    end_date_of_nabers_rating_period: 2016-02-01
+  output:
+    current_rating_year: 2016
+- name: Rating year - 2023
+  period: 2020
+  input:
+    end_date_of_nabers_rating_period: 2023-02-01
+  output:
+    current_rating_year: 2023

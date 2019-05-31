@@ -1,8 +1,0 @@
-- name: Building is office, built before Nov 2006, Rating year - 2016
-  period: 2020
-  input:
-    is_office: True
-    built_after_nov_2006: True
-    current_rating_year: 2016
-  output:
-    method_one: 5.0

@@ -12,30 +12,14 @@ class method_one(Variable):
 
     def formula(buildings, period, parameters):
         current_rating_year = buildings('current_rating_year', period)
-        rating_year_string = where(current_rating_year > 2020, "2020", buildings('current_rating_year', period).astype('str'))
-        office = buildings('is_office', period)
-        hotel = buildings('is_hotel', period)
-        hospital = buildings('is_hospital', period)
-        data_centre = buildings('is_data_centre', period)
-        hospital = buildings('is_hospital', period)
-        apartment_building = buildings('is_apartment_building', period)
+        rating_year_string = where(current_rating_year > parameters(period).energy_saving_scheme.table_a20.max_year, parameters(period).energy_saving_scheme.table_a20.max_year, buildings('current_rating_year', period).astype('str'))
+        building_type = buildings("building_type", period)
         built_before_or_after_nov_2006 = where(buildings('built_after_nov_2006', period), "built_after_nov_2006", "built_before_nov_2006")
-        if (current_rating_year >= 2015):
-            year_count = 2014
+        if (current_rating_year >= parameters(period).energy_saving_scheme.table_a20.min_year):
+            year_count = parameters(period).energy_saving_scheme.table_a20.min_year - 1
             while (year_count < current_rating_year):
-                year_count = year_count + 1
-                if (office):
-                    return parameters(period).energy_saving_scheme.table_a20.office.by_year[rating_year_string][built_before_or_after_nov_2006]
-                elif (hotel):
-                    return parameters(period).energy_saving_scheme.table_a20.hotel.by_year[rating_year_string][built_before_or_after_nov_2006]
-                elif (shopping_centre):
-                    return parameters(period).energy_saving_scheme.table_a20.shopping_centre.by_year[rating_year_string][built_before_or_after_nov_2006]
-                elif (data_centre):
-                    return parameters(period).energy_saving_scheme.table_a20.data_centre.by_year[rating_year_string][built_before_or_after_nov_2006]
-                elif (hospital):
-                    return parameters(period).energy_saving_scheme.table_a20.hospital.by_year[rating_year_string][built_before_or_after_nov_2006]
-                elif (apartment_building):
-                    return parameters(period).energy_saving_scheme.table_a20.apartments.by_year[rating_year_string][built_before_or_after_nov_2006]
+                year_count += 1
+                return parameters(period).energy_saving_scheme.table_a20.ratings.by_year[rating_year_string][building_type][built_before_or_after_nov_2006]
 
 
 class first_nabers_rating(Variable):
@@ -88,26 +72,6 @@ class current_rating_year(Variable):
         return current_rating_year
 
 
-class method_two(Variable):
-    value_type = float
-    entity = Building
-    definition_period = ETERNITY
-    label = "Benchmark NABERS Rating calculated using Calculation Method 2 (Step 2) of the NABERS Baseline Method (Method 4) in the ESS Rules"
-
-    def formula(buildings, period, parameters):
-        return 0.0
-
-
-class method_two_can_be_used(Variable):
-    value_type = bool
-    entity = Building
-    definition_period = ETERNITY
-    label = "Can Method 2 be used to calculate the NABERS Benchmark Rating for the buildings?"
-
-    def formula(buildings, period, parameters):
-        return True
-
-
 class benchmark_nabers_rating(Variable):
     value_type = float
     entity = Building
@@ -115,5 +79,5 @@ class benchmark_nabers_rating(Variable):
     label = "Benchmark NABERS rating calculated using Method 1 or Method 2"
 
     def formula(buildings, period, parameters):
-        return select([method_one_can_be_used, method_two_can_be_used],
-        [method_one, method_two])
+        return select([buildings('method_one_can_be_used', period)],
+        [buildings('method_one', period)])

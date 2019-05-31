@@ -44,3 +44,15 @@ class is_apartment_building(Variable):
     entity = Building
     definition_period = ETERNITY
     label = "Building is an apartment building"
+
+
+class building_type(Variable):
+    value_type = str
+    entity = Building
+    definition_period = ETERNITY
+    label = "Building is an apartment building"
+
+    def formula(buildings, period):
+        return select([buildings('is_office', period), buildings('is_hotel', period), buildings('is_hospital', period),
+        buildings('is_shopping_centre', period), buildings('is_data_centre', period), buildings('is_apartment_building', period)],
+            ["office", "hotel", "hospital", "shopping_centre", "data_centre", "apartment_building"])
