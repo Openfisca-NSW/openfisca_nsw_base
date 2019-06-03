@@ -1,0 +1,264 @@
+description: Regional network amount based on postcodes
+brackets:
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 0 # zero and above postcodes have a RNF of 1.0
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2311 # 2311 and above postcodes have a RNF of 1.03
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2313 # 2313 and above postcodes have a RNF of 1.0
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2321
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2322
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2324
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2325
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2329
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2330
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2338
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2491
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2536
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2538
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2545
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2552
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2579
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2595
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2611
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2612
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2618
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2740
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2787
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2788
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2791
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2845
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 2850
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 2881
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 3644
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 3645
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 3691
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 3692
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 3707
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 3708
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 4375
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 4376
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 4377
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 4378
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 4380
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 4381
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 4383
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 4384
+  - amount:
+      2020-01-01:
+        value: 1.03
+    threshold:
+      2020-01-01:
+        value: 4385
+  - amount:
+      2020-01-01:
+        value: 1.0
+    threshold:
+      2020-01-01:
+        value: 4386
+metadata:
+  type: single_amount
+  threshold_unit: postcode
+  amount_unit: 0.01
