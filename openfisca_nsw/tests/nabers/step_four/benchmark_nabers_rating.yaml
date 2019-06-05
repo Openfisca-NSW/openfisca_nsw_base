@@ -16,9 +16,15 @@
     postcode: 4382
   output:
     regional_network_factor: 1.0
-- name: Regional network factor for postcode 3691
+- name: Regional network factor for postcode 4386
   period: 2020
   input:
-    postcode: 3691
+    postcode: 4386
   output:
-    regional_network_factor: 1.03
+    regional_network_factor: 1.0
+- name: Check1
+  period: 2020
+  input:
+    hours_per_week_with_20_percent_occupancy: 500.2
+  output:
+    hours_per_week_with_20_percent_occupancy: 500
