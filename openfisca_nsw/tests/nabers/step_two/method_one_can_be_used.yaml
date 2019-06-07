@@ -1,0 +1,21 @@
+- name: First NABERS rating, rating not being obtained for complying with any mandatory legal requirement, calculation method 1 can be used
+  period: 2020
+  input:
+    first_nabers_rating: True
+    rating_not_obt_for_legal_requirement: True
+  output:
+    method_one_can_be_used: True
+- name: First NABERS rating, rating being obtained for complying with any mandatory legal requirement, calculation method 1 can be used
+  period: 2020
+  input:
+    first_nabers_rating: True
+    rating_not_obt_for_legal_requirement: False
+  output:
+    method_one_can_be_used: False
+- name: Not the first NABERS rating, rating not being obtained for complying with any mandatory legal requirement, calculation method 1 cannot be used
+  period: 2020
+  input:
+    first_nabers_rating: False
+    rating_not_obt_for_legal_requirement: True
+  output:
+    method_one_can_be_used: False
