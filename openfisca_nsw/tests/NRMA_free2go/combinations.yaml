@@ -5,7 +5,7 @@
         is_act_resident: true
         is_nsw_resident: false
         NRMA_free2go__membership_term: 1
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: true
         NRMA_free2go__age_when_joining: 16
@@ -19,7 +19,7 @@
         is_act_resident: false
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: true
         NRMA_free2go__age_when_joining: 16
@@ -32,7 +32,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: false
         is_permanent_resident: true
@@ -46,7 +46,7 @@
     input:
         is_nsw_resident: true
         NRMA_free2go__membership_term: 1
-        birth: 2003-01-01T00:00:00.000Z
+        birth: 2003-01-01
         NRMA_free2go__is_NRMA_member: true
         is_australian_citizen: true
         is_permanent_resident: false

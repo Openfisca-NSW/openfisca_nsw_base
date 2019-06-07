@@ -12,18 +12,18 @@ Building = build_entity(
     doc = '''
     ''',
     roles = [
-            {
-                'key': 'representative',
-                'plural': 'representatives',
-                'label': u'Representative',
-                'doc': u'A person authorised to represent the building'
-                },
-            {
-                'key': 'other',
-                'plural': 'others',
-                'label': u'Other',
-                'doc': u'Other representatives who are not a person - such as Strata bodies'
-                }
+        {
+            'key': 'representative',
+            'plural': 'representatives',
+            'label': u'Representative',
+            'doc': u'A person authorised to represent the building'
+            },
+        {
+            'key': 'other',
+            'plural': 'others',
+            'label': u'Other',
+            'doc': u'Other representatives who are not a person - such as Strata bodies'
+            }
         ]
     )
 
