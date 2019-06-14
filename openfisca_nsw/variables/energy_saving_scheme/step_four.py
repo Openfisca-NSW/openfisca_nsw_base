@@ -18,11 +18,19 @@ class electricity_savings(Variable):
         electricity_savings = (benchmark_elec_consumption - measured_electricity_consumption - counted_elec_savings) * regional_network_factor
         return electricity_savings
 
+
 class gas_savings(Variable):
     value_type = float
     entity = Building
     definition_period = ETERNITY
     label = "Gas savings in MWh"
+
+    def formula(buildings, period, parameters):
+        benchmark_gas_consumption = buildings('benchmark_gas_consumption', period)
+        measured_gas_consumption = buildings('measured_gas_consumption', period)
+        counted_gas_savings = buildings('counted_gas_savings', period)
+        gas_savings = benchmark_gas_consumption - measured_gas_consumption - counted_gas_savings
+        return gas_savings
 
 
 class regional_network_factor(Variable):
