@@ -42,4 +42,4 @@ class benchmark_gas_consumption(Variable):
     label = "Benchmark gas consumption amount obtained from NABERS reverse calculator"
 
     def formula(buildings, period, parameters):
-            return 0.0  # calculations need to be added from Reverse Calculator
+        return 0.0  # calculations need to be added from Reverse Calculator
