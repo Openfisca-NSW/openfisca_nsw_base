@@ -16,7 +16,7 @@ class electricity_savings(Variable):
         counted_elec_savings = buildings('counted_elec_savings', period)
         regional_network_factor = buildings('regional_network_factor', period)
         electricity_savings = (benchmark_elec_consumption - measured_electricity_consumption - counted_elec_savings) * regional_network_factor
-        return electricity_savings
+        return electricity_savings # Year based calculations are missing from this formula. Need to be added
 
 
 class gas_savings(Variable):
@@ -30,7 +30,7 @@ class gas_savings(Variable):
         measured_gas_consumption = buildings('measured_gas_consumption', period)
         counted_gas_savings = buildings('counted_gas_savings', period)
         gas_savings = benchmark_gas_consumption - measured_gas_consumption - counted_gas_savings
-        return gas_savings
+        return gas_savings # Year based calculations are missing from this formula. Need to be added
 
 
 class regional_network_factor(Variable):
@@ -42,7 +42,7 @@ class regional_network_factor(Variable):
     def formula(buildings, period, parameters):
         postcode = buildings('postcode', period)
         rnf = parameters(period).energy_saving_scheme.table_a24.regional_network_factor
-        return rnf.calc(postcode)
+        return rnf.calc(postcode) # This is a built in OpenFisca function that is used to calculate a single value for regional network factor based on a zipcode provided
 
 
 class counted_gas_savings(Variable):
