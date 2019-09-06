@@ -1,3 +1,7 @@
+# For GovHack Participants:
+
+For finding out more context and documentation on the Rules as Code challenge, click [here](https://digitalnsw.github.io/govhack-nsw-guide/).
+
 # OpenFisca nsw
 
 
