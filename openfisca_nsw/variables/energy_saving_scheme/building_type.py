@@ -56,3 +56,10 @@ class building_type(Variable):
         return select([buildings('is_office', period), buildings('is_hotel', period), buildings('is_hospital', period),
         buildings('is_shopping_centre', period), buildings('is_data_centre', period), buildings('is_apartment_building', period)],
             ["office", "hotel", "hospital", "shopping_centre", "data_centre", "apartment_building"])
+
+
+class postcode(Variable):
+    value_type = int
+    entity = Building
+    definition_period = ETERNITY
+    label = "Postcode for the building"
