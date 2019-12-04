@@ -73,7 +73,7 @@ For more advanced uses, head to the [Advanced Installation](#advanced-installati
 Inside your virtualenv, check the prerequisites:
 
 ```sh
-python --version  # should print "Python 2.7.xx".
+python --version  # should print "Python 3.7.xx".
 #if not, make sure you pass the python version as an argument when creating your virtualenv
 ```
 
@@ -114,7 +114,7 @@ Set your working directory to the location where you want this OpenFisca Country
 Inside your virtualenv, check the prerequisites:
 
 ```sh
-python --version  # should print "Python 2.7.xx".
+python --version  # should print "Python 3.7.xx".
 #if not, make sure you pass the python version as an argument when creating your virtualenv
 ```
 
@@ -127,7 +127,15 @@ Clone this Country Package on your machine:
 ```sh
 git clone https://github.com/openfisca/openfisca-nsw.git
 cd openfisca-nsw
-pip install --editable .[dev]
+```
+
+> We recommend that you [use a virtualenv](https://github.com/openfisca/country-template/blob/master/README.md#setting-up-a-virtual-environment-with-pew) to install OpenFisca. If you don't, you may need to add `--user` at the end of all commands starting by `pip`.
+
+```sh
+python -m venv openfisca 
+deactivate
+source openfisca/bin/activate
+python -m pip install --editable . --user
 ```
 
 You can make sure that everything is working by running the provided tests with `make test`.
