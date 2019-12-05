@@ -20,6 +20,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
       - False
@@ -54,6 +57,9 @@
         children: [child1]
     organisations:
       "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
         others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
@@ -90,6 +96,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
       - False
@@ -124,6 +133,9 @@
         children: [child1]
     organisations:
       "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
         others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
@@ -160,6 +172,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
       - False
@@ -194,6 +209,9 @@
         children: [child1]
     organisations:
       "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
         others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
@@ -230,6 +248,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
       - False
@@ -264,6 +285,9 @@
         children: [child1]
     organisations:
       "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
         others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
@@ -300,6 +324,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
       - False
@@ -335,6 +362,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:
       - False
@@ -369,6 +399,9 @@
         children: [child1]
     organisations:
       "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
         others: [parent1, child1]
   output:
     teenage_education_payments__youth_meets_payment_criteria:

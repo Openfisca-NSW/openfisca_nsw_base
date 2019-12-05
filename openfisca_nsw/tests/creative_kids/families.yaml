@@ -20,6 +20,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1, aunty]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1, aunty]
   output:
     creative_kids__child_meets_criteria:
       - False
@@ -53,6 +56,9 @@
     organisations:
       "anyOrg":
         others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     creative_kids__child_meets_criteria:
       - False # parent
@@ -79,6 +85,9 @@
         children: [child1]
     organisations:
       "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
         others: [parent1, child1]
   output:
     creative_kids__child_meets_criteria:
