@@ -100,3 +100,10 @@ class gaming_activity_solely_or_partly_for_fundraising(Variable):
     entity = Organisation
     definition_period = MONTH
     label = "Whether organisation is conducting this gaming activity solely for entertainment purposes? (Totally non-charitable purposes)"
+
+
+class gaming_activity_session(Variable):
+    value_type = bool
+    entity = Organisation
+    definition_period = MONTH
+    label = "Whether organisation is conducting this gaming activity solely for entertainment purposes? (Totally non-charitable purposes)"

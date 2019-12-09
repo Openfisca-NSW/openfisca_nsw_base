@@ -31,6 +31,13 @@ class net_proceeds_returned_to_participants(Variable):
     definition_period = MONTH
 
 
+class money_payable_as_separate_prize(Variable):
+    value_type = int
+    entity = Organisation
+    definition_period = MONTH
+    label = "The amount of money paid as a separate prize in addition to other prizes of the gaming activity"
+
+
 class total_prize_value_of_all_prizes_from_gaming_activity(Variable):
     value_type = int
     entity = Organisation
