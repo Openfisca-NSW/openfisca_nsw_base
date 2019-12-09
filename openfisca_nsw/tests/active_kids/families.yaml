@@ -17,6 +17,12 @@
         parents: [parent1]
         children: [child1]
         others: [aunty]
+    organisations:
+      "anyOrg":
+        others: [parent1, child1, aunty]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1, aunty]
   output:
     active_kids__child_meets_criteria:
       - False
@@ -47,6 +53,12 @@
       family1:
         parents: [parent1]
         children: [child1]
+    organisations:
+      "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     active_kids__child_meets_criteria:
       - False # parent
@@ -71,6 +83,12 @@
       family1:
         parents: [parent1]
         children: [child1]
+    organisations:
+      "anyOrg":
+        others: [parent1, child1]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1]
   output:
     active_kids__child_meets_criteria:
       - False

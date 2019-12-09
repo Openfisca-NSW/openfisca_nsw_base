@@ -1,0 +1,58 @@
+description: Table A21 of ESS Rules - used for ESS Rules Method 4 - Step 2 (Method 2)
+reference:
+building_category:
+  all:
+    office:
+      one_year_old:
+        values:
+          2020-01-01:
+            value: 0
+      two_to_seven_year_old:
+        values:
+          2020-01-01:
+            value: 0.04
+    hotel:
+      one_year_old:
+        values:
+          2020-01-01:
+            value: 0
+      two_to_seven_year_old:
+        values:
+          2020-01-01:
+            value: 0.04
+    shopping_centre:
+      one_year_old:
+        values:
+          2020-01-01:
+            value: 0
+      two_to_seven_year_old:
+        values:
+          2020-01-01:
+            value: 0.04
+    data_centre:
+      one_year_old:
+        values:
+          2020-01-01:
+            value: 0
+      two_to_seven_year_old:
+        values:
+          2020-01-01:
+            value: 0.04
+    hospital:
+      one_year_old:
+        values:
+          2020-01-01:
+            value: 0
+      two_to_seven_year_old:
+        values:
+          2020-01-01:
+            value: 0.04
+    apartment_building:
+      one_year_old:
+        values:
+          2020-01-01:
+            value: 0
+      two_to_seven_year_old:
+        values:
+          2020-01-01:
+            value: 0.04

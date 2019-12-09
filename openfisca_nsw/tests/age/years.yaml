@@ -53,6 +53,12 @@
         parents: [parent1]
         children: [child1]
         others: [aunty]
+    organisations:
+      "anyOrg":
+        others: [parent1, child1, aunty]
+    buildings:
+      "anyBuilding":
+        others: [parent1, child1, aunty]
   output:
     age: [16, 2, 2]
     age_in_months: [192, 24, 24]

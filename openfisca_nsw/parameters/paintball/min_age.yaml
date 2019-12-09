@@ -1,0 +1,6 @@
+description: Minimum age for a paintball marker permit
+reference: >
+  https://legislation.nsw.gov.au/#/view/act/2018/44/full
+values:
+  2018-01-31:
+    value: 18

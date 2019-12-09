@@ -1,0 +1,32 @@
+- name: Housie is being conducted by a registered club, is permitted
+  period: 2019-09
+  input:
+    is_registered_club: True
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    ticket_cost: 0.05
+  output:
+    housie__game_meets_criteria_for_registered_club: True
+- name: Housie is not being conducted by a registered club, is not permitted
+  period: 2019-09
+  input:
+    is_registered_club: False
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    ticket_cost: 0.05
+  output:
+    housie__game_meets_criteria_for_registered_club: False
+- name: Total prize value for housie exceeds limit, is not permitted
+  period: 2019-09
+  input:
+    is_registered_club: True
+    total_prize_value_of_all_prizes_from_gaming_activity: 15000
+    ticket_cost: 0.05
+  output:
+    housie__game_meets_criteria_for_registered_club: False
+- name: Ticket cost for housie exceeds limit, is not permitted
+  period: 2019-09
+  input:
+    is_registered_club: True
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    ticket_cost: 0.06
+  output:
+    housie__game_meets_criteria_for_registered_club: False

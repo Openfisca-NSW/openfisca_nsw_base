@@ -1,56 +1,199 @@
-- name: Eligible - has NSW seniors card
+- name: Test number 0 - (true,true,true,true,true,true,true,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: true
-    has_act_seniors_card: false
-    has_nt_seniors_card: false
-    has_qld_seniors_card: false
-    has_sa_seniors_card: false
-    has_tas_seniors_card: false
-    has_vic_seniors_card: false
-    has_wa_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
-- name: Eligible - has ACT seniors card
+- name: Test number 1 - (false,true,true,true,true,true,true,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: false
     has_act_seniors_card: true
-    has_nt_seniors_card: false
-    has_qld_seniors_card: false
-    has_sa_seniors_card: false
-    has_tas_seniors_card: false
-    has_vic_seniors_card: false
-    has_wa_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
-- name: Eligible - has NT seniors card
+- name: Test number 2 - (true,false,true,true,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 3 - (false,false,true,true,true,true,true,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: false
     has_act_seniors_card: false
     has_nt_seniors_card: true
-    has_qld_seniors_card: false
-    has_sa_seniors_card: false
-    has_tas_seniors_card: false
-    has_vic_seniors_card: false
-    has_wa_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
-- name: Eligible - has QLD seniors card
+- name: Test number 4 - (true,true,false,true,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 5 - (false,true,false,true,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 6 - (true,false,false,true,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 7 - (false,false,false,true,true,true,true,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: false
     has_act_seniors_card: false
     has_nt_seniors_card: false
     has_qld_seniors_card: true
-    has_sa_seniors_card: false
-    has_tas_seniors_card: false
-    has_vic_seniors_card: false
-    has_wa_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
-- name: Eligible - has SA seniors card
+- name: Test number 8 - (true,true,true,false,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 9 - (false,true,true,false,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 10 - (true,false,true,false,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 11 - (false,false,true,false,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 12 - (true,true,false,false,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 13 - (false,true,false,false,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 14 - (true,false,false,false,true,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 15 - (false,false,false,false,true,true,true,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: false
@@ -58,12 +201,207 @@
     has_nt_seniors_card: false
     has_qld_seniors_card: false
     has_sa_seniors_card: true
-    has_tas_seniors_card: false
-    has_vic_seniors_card: false
-    has_wa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
-- name: Eligible - has TAS seniors card
+- name: Test number 16 - (true,true,true,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 17 - (false,true,true,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 18 - (true,false,true,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 19 - (false,false,true,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 20 - (true,true,false,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 21 - (false,true,false,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 22 - (true,false,false,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 23 - (false,false,false,true,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 24 - (true,true,true,false,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 25 - (false,true,true,false,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 26 - (true,false,true,false,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 27 - (false,false,true,false,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 28 - (true,true,false,false,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 29 - (false,true,false,false,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 30 - (true,false,false,false,false,true,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 31 - (false,false,false,false,false,true,true,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: false
@@ -72,11 +410,414 @@
     has_qld_seniors_card: false
     has_sa_seniors_card: false
     has_tas_seniors_card: true
-    has_vic_seniors_card: false
-    has_wa_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
-- name: Eligible - has VIC seniors card
+- name: Test number 32 - (true,true,true,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 33 - (false,true,true,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 34 - (true,false,true,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 35 - (false,false,true,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 36 - (true,true,false,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 37 - (false,true,false,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 38 - (true,false,false,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 39 - (false,false,false,true,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 40 - (true,true,true,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 41 - (false,true,true,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 42 - (true,false,true,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 43 - (false,false,true,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 44 - (true,true,false,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 45 - (false,true,false,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 46 - (true,false,false,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 47 - (false,false,false,false,true,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 48 - (true,true,true,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 49 - (false,true,true,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 50 - (true,false,true,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 51 - (false,false,true,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 52 - (true,true,false,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 53 - (false,true,false,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 54 - (true,false,false,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 55 - (false,false,false,true,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 56 - (true,true,true,false,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 57 - (false,true,true,false,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 58 - (true,false,true,false,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 59 - (false,false,true,false,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 60 - (true,true,false,false,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 61 - (false,true,false,false,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 62 - (true,false,false,false,false,false,true,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 63 - (false,false,false,false,false,false,true,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: false
@@ -86,10 +827,829 @@
     has_sa_seniors_card: false
     has_tas_seniors_card: false
     has_vic_seniors_card: true
-    has_wa_seniors_card: false
+    has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
-- name: Eligible - has WA seniors card
+- name: Test number 64 - (true,true,true,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 65 - (false,true,true,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 66 - (true,false,true,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 67 - (false,false,true,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 68 - (true,true,false,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 69 - (false,true,false,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 70 - (true,false,false,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 71 - (false,false,false,true,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 72 - (true,true,true,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 73 - (false,true,true,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 74 - (true,false,true,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 75 - (false,false,true,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 76 - (true,true,false,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 77 - (false,true,false,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 78 - (true,false,false,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 79 - (false,false,false,false,true,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 80 - (true,true,true,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 81 - (false,true,true,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 82 - (true,false,true,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 83 - (false,false,true,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 84 - (true,true,false,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 85 - (false,true,false,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 86 - (true,false,false,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 87 - (false,false,false,true,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 88 - (true,true,true,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 89 - (false,true,true,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 90 - (true,false,true,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 91 - (false,false,true,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 92 - (true,true,false,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 93 - (false,true,false,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 94 - (true,false,false,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 95 - (false,false,false,false,false,true,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 96 - (true,true,true,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 97 - (false,true,true,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 98 - (true,false,true,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 99 - (false,false,true,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 100 - (true,true,false,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 101 - (false,true,false,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 102 - (true,false,false,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 103 - (false,false,false,true,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 104 - (true,true,true,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 105 - (false,true,true,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 106 - (true,false,true,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 107 - (false,false,true,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 108 - (true,true,false,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 109 - (false,true,false,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 110 - (true,false,false,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 111 - (false,false,false,false,true,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 112 - (true,true,true,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 113 - (false,true,true,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 114 - (true,false,true,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 115 - (false,false,true,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 116 - (true,true,false,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 117 - (false,true,false,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 118 - (true,false,false,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 119 - (false,false,false,true,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 120 - (true,true,true,false,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 121 - (false,true,true,false,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 122 - (true,false,true,false,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 123 - (false,false,true,false,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 124 - (true,true,false,false,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 125 - (false,true,false,false,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 126 - (true,false,false,false,false,false,false,true)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: true
+  output:
+    has_any_seniors_card: true
+- name: Test number 127 - (false,false,false,false,false,false,false,true)
   period: 2019-01
   input:
     has_nsw_seniors_card: false
@@ -102,3 +1662,1667 @@
     has_wa_seniors_card: true
   output:
     has_any_seniors_card: true
+- name: Test number 128 - (true,true,true,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 129 - (false,true,true,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 130 - (true,false,true,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 131 - (false,false,true,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 132 - (true,true,false,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 133 - (false,true,false,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 134 - (true,false,false,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 135 - (false,false,false,true,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 136 - (true,true,true,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 137 - (false,true,true,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 138 - (true,false,true,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 139 - (false,false,true,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 140 - (true,true,false,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 141 - (false,true,false,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 142 - (true,false,false,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 143 - (false,false,false,false,true,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 144 - (true,true,true,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 145 - (false,true,true,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 146 - (true,false,true,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 147 - (false,false,true,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 148 - (true,true,false,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 149 - (false,true,false,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 150 - (true,false,false,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 151 - (false,false,false,true,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 152 - (true,true,true,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 153 - (false,true,true,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 154 - (true,false,true,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 155 - (false,false,true,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 156 - (true,true,false,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 157 - (false,true,false,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 158 - (true,false,false,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 159 - (false,false,false,false,false,true,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 160 - (true,true,true,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 161 - (false,true,true,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 162 - (true,false,true,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 163 - (false,false,true,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 164 - (true,true,false,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 165 - (false,true,false,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 166 - (true,false,false,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 167 - (false,false,false,true,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 168 - (true,true,true,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 169 - (false,true,true,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 170 - (true,false,true,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 171 - (false,false,true,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 172 - (true,true,false,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 173 - (false,true,false,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 174 - (true,false,false,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 175 - (false,false,false,false,true,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 176 - (true,true,true,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 177 - (false,true,true,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 178 - (true,false,true,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 179 - (false,false,true,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 180 - (true,true,false,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 181 - (false,true,false,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 182 - (true,false,false,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 183 - (false,false,false,true,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 184 - (true,true,true,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 185 - (false,true,true,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 186 - (true,false,true,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 187 - (false,false,true,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 188 - (true,true,false,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 189 - (false,true,false,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 190 - (true,false,false,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 191 - (false,false,false,false,false,false,true,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: true
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 192 - (true,true,true,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 193 - (false,true,true,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 194 - (true,false,true,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 195 - (false,false,true,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 196 - (true,true,false,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 197 - (false,true,false,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 198 - (true,false,false,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 199 - (false,false,false,true,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 200 - (true,true,true,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 201 - (false,true,true,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 202 - (true,false,true,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 203 - (false,false,true,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 204 - (true,true,false,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 205 - (false,true,false,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 206 - (true,false,false,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 207 - (false,false,false,false,true,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 208 - (true,true,true,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 209 - (false,true,true,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 210 - (true,false,true,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 211 - (false,false,true,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 212 - (true,true,false,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 213 - (false,true,false,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 214 - (true,false,false,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 215 - (false,false,false,true,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 216 - (true,true,true,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 217 - (false,true,true,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 218 - (true,false,true,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 219 - (false,false,true,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 220 - (true,true,false,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 221 - (false,true,false,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 222 - (true,false,false,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 223 - (false,false,false,false,false,true,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: true
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 224 - (true,true,true,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 225 - (false,true,true,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 226 - (true,false,true,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 227 - (false,false,true,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 228 - (true,true,false,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 229 - (false,true,false,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 230 - (true,false,false,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 231 - (false,false,false,true,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 232 - (true,true,true,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 233 - (false,true,true,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 234 - (true,false,true,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 235 - (false,false,true,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 236 - (true,true,false,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 237 - (false,true,false,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 238 - (true,false,false,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 239 - (false,false,false,false,true,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: true
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 240 - (true,true,true,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 241 - (false,true,true,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 242 - (true,false,true,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 243 - (false,false,true,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 244 - (true,true,false,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 245 - (false,true,false,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 246 - (true,false,false,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 247 - (false,false,false,true,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: true
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 248 - (true,true,true,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 249 - (false,true,true,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 250 - (true,false,true,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 251 - (false,false,true,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: true
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 252 - (true,true,false,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 253 - (false,true,false,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: true
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 254 - (true,false,false,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: true
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: true
+- name: Test number 255 - (false,false,false,false,false,false,false,false)
+  period: 2019-01
+  input:
+    has_nsw_seniors_card: false
+    has_act_seniors_card: false
+    has_nt_seniors_card: false
+    has_qld_seniors_card: false
+    has_sa_seniors_card: false
+    has_tas_seniors_card: false
+    has_vic_seniors_card: false
+    has_wa_seniors_card: false
+  output:
+    has_any_seniors_card: false

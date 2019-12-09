@@ -1,0 +1,14 @@
+- name: Calculation Method 1 can be used, and calculation yields a method one output of 6.0, hence benchmark nabers rating is 6.0
+  period: 2020
+  input:
+    method_one_can_be_used: True
+    method_one: 6.0
+  output:
+    benchmark_nabers_rating: 6.0
+- name: Calculation Method 1 cannot be used, hence benchmark nabers rating is 0.0
+  period: 2020
+  input:
+    method_one_can_be_used: False
+    method_one: 6.0
+  output:
+    benchmark_nabers_rating: 0.0

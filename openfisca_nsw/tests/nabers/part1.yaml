@@ -1,0 +1,14 @@
+- name: McKell
+  period: 2020
+  input:
+    nabers_electricity: 4884
+    onsite_unaccounted_electricity: 0
+  output:
+    measured_electricity_consumption: 4884
+- name: McKell with 10 domestic solar panels
+  period: 2020
+  input:
+    nabers_electricity: 4880.4
+    onsite_unaccounted_electricity: 3.6
+  output:
+    measured_electricity_consumption: 4884

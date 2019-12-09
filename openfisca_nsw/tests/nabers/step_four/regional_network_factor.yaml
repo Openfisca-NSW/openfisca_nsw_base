@@ -1,0 +1,24 @@
+- name: Regional network factor for postcode 2313
+  period: 2020
+  input:
+    postcode: 2313
+  output:
+    regional_network_factor: 1.0
+- name: Regional network factor for postcode 2583
+  period: 2020
+  input:
+    postcode: 2583
+  output:
+    regional_network_factor: 1.03
+- name: Regional network factor for postcode 4380
+  period: 2020
+  input:
+    postcode: 4382
+  output:
+    regional_network_factor: 1.0
+- name: Regional network factor for postcode 4386
+  period: 2020
+  input:
+    postcode: 4386
+  output:
+    regional_network_factor: 1.0
