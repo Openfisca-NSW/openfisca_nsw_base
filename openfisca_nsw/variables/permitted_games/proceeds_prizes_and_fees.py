@@ -66,6 +66,13 @@ class value_of_jackpot_prize(Variable):
     definition_period = MONTH
 
 
+class value_of_individual_prize(Variable):
+    value_type = int
+    entity = Organisation
+    label = u"Value of individual prize in gaming activity"
+    definition_period = MONTH
+
+
 class no_fee_charged_for_conducting_game(Variable):
     value_type = bool
     entity = Organisation
