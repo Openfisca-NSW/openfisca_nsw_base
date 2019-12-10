@@ -4,6 +4,8 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 # This is used to calculate whether an organisation is eligible to conduct a progressive lottery
+
+
 class progressive_lottery__game_meets_criteria(Variable):
     value_type = bool
     entity = Organisation
@@ -14,6 +16,7 @@ class progressive_lottery__game_meets_criteria(Variable):
         return (
             (organisation('value_of_individual_prize', period) <= parameters(period).permitted_games.progressive_lottery.max_value_of_individual_prize)
             * organisation('condition_for_exceeding_total_prize_value', period))
+
 
 class condition_for_exceeding_total_prize_value(Variable):
     value_type = bool
