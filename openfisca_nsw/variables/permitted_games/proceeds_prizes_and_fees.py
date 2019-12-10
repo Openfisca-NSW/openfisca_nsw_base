@@ -80,6 +80,13 @@ class no_fee_charged_for_conducting_game(Variable):
     definition_period = MONTH
 
 
+class participation_is_free(Variable):
+    value_type = bool
+    entity = Organisation
+    label = "Whether it is free to participate in the gaming activity?"
+    definition_period = MONTH
+
+
 class is_another_gaming_activity_happening(Variable):
     value_type = bool
     entity = Organisation
@@ -98,4 +105,11 @@ class total_prize_value_of_all_prizes_from_single_gaming_session(Variable):
     value_type = int
     entity = Organisation
     label = u"Total prize value of all prizes from single gaming session"
+    definition_period = MONTH
+
+
+class no_prize_consists_of_money(Variable):
+    value_type = int
+    entity = Organisation
+    label = u"None of the prizes consist of or include money"
     definition_period = MONTH
