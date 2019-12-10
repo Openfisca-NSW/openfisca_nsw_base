@@ -5,6 +5,7 @@ from openfisca_nsw.entities import *
 
 # This is used to calculate whether an organisation is eligible to conduct other gaming activity for charitable purposes
 
+
 class other_gaming_activity__game_meets_criteria(Variable):
     value_type = bool
     entity = Organisation
