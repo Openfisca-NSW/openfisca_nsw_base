@@ -24,6 +24,13 @@ class proceeds_to_benefitting_organisation(Variable):
     definition_period = MONTH
 
 
+class total_expenses_for_conducting_gaming_activity(Variable):
+    value_type = int
+    entity = Organisation
+    label = u"Total value of the expenses of conducting a gaming activity"
+    definition_period = MONTH
+
+
 class net_proceeds_returned_to_participants(Variable):
     value_type = bool
     entity = Organisation
@@ -66,8 +73,22 @@ class no_fee_charged_for_conducting_game(Variable):
     definition_period = MONTH
 
 
+class is_another_gaming_activity_happening(Variable):
+    value_type = bool
+    entity = Organisation
+    label = "Is another gaming activity being conducted at the same time as a session of the gaming activity?"
+    definition_period = MONTH
+
+
+class total_prize_value_from_single_gaming_session(Variable):
+    value_type = int
+    entity = Organisation
+    label = u"Total prize value of all the prizes for 1 session of the gaming activity"
+    definition_period = MONTH
+
+
 class total_prize_value_of_all_prizes_from_single_gaming_session(Variable):
     value_type = int
     entity = Organisation
-    label = u"Total prize value of all prizes from a single gaming session"
+    label = u"Total prize value of all prizes from single gaming session"
     definition_period = MONTH

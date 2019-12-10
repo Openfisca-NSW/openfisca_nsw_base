@@ -1,0 +1,5 @@
+description: Maximum permitted value of prize per session of the gaming activity if another gaming activity is being conducted at the same time as a session of the charity housie
+reference: Community Gaming Regulation 2020
+values:
+  2019-09-01:
+    value: 5000
