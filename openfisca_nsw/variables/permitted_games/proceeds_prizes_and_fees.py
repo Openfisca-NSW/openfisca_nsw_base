@@ -24,6 +24,13 @@ class proceeds_to_benefitting_organisation(Variable):
     definition_period = MONTH
 
 
+class proceeds_used_for_meeting_cost_of_prizes(Variable):
+    value_type = int
+    entity = Organisation
+    label = u"Proceeds that are used to meet the cost of the prizes in the gaming activity or other similar gaming activities"
+    definition_period = MONTH
+
+
 class total_expenses_for_conducting_gaming_activity(Variable):
     value_type = int
     entity = Organisation
