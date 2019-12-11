@@ -46,7 +46,7 @@
     venue_is_licensed_premises: False
   output:
     housie__game_meets_criteria_for_charity: False
-- name: Highest value of individual prize exceeds permitted limit, so gaming activity is not permitted
+- name: Highest value of individual prize exceeds permitted limit, so housie gaming activity is not permitted
   period: 2019-09
   input:
     is_charity: True
