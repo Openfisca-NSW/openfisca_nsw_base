@@ -14,8 +14,7 @@ class other_gaming_activity__game_meets_criteria(Variable):
 
     def formula(organisation, period, parameters):
         return (
-            (organisation('proceeds_to_benefitting_organisation', period) >= (organisation('gross_proceeds_from_gaming_activity', period) * parameters(period).permitted_games.other_gaming_activity.min_gross_proceeds_percent_to_benefit_org)) *
-            (organisation('total_prize_value_from_single_gaming_session', period) <= parameters(period).permitted_games.other_gaming_activity.max_value_of_prize_per_session) * not_(organisation('housie_lottery_sweep_or_other', period)) * organisation('gaming_activity_other_for_charitable_purposes', period))
+            (organisation('proceeds_to_benefitting_organisation', period) >= (organisation('gross_proceeds_from_gaming_activity', period) * parameters(period).permitted_games.other_gaming_activity.min_gross_proceeds_percent_to_benefit_org)) * (organisation('total_prize_value_from_single_gaming_session', period) <= parameters(period).permitted_games.other_gaming_activity.max_value_of_prize_per_session) * not_(organisation('housie_lottery_sweep_or_other', period)) * organisation('gaming_activity_other_for_charitable_purposes', period))
 
 
 class housie_lottery_sweep_or_other(Variable):

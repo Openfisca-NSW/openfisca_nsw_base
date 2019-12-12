@@ -8,7 +8,7 @@
     ticket_cost: 0.02
   output:
     club_bingo__game_meets_criteria: True
-- name: Organisation is a registered club, conducting a club bingo that has ticket cost higher than allowable limit, hence gaming activity is not permitted
+- name: Organisation is a registered club, conducting a club bingo that has ticket cost higher than allowable limit
   period: 2019-09
   input:
     is_registered_club: True

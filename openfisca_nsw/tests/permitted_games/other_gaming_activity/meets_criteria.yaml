@@ -8,7 +8,7 @@
     housie_lottery_sweep_or_other: False
   output:
     other_gaming_activity__game_meets_criteria: True
-- name: Organisation is conducting other gaming activity for charitable purposes, but proceeds to benefitting organisation are less than allowable limit, hence gaming activity is not permitted
+- name: Proceeds to benefitting organisation are less than allowable limit, hence gaming activity is not permitted
   period: 2019-09
   input:
     gaming_activity_other_for_charitable_purposes: True
