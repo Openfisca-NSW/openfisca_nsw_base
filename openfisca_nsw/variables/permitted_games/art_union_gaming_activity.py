@@ -10,7 +10,7 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-# This is used to calculate whether an organisation is permitted to conduct a guessing games
+# This is used to calculate whether an organisation is permitted to conduct an art union gaming activity
 class art_union__game_meets_criteria(Variable):
     value_type = bool
     entity = Organisation
@@ -20,5 +20,6 @@ class art_union__game_meets_criteria(Variable):
     def formula(organisation, period, parameters):
         return (
             (organisation('is_art_union', period))
-            * (organisation('total_prize_value_of_all_prizes_from_gaming_activity', period) <= parameters(period).permitted_games.art_union_gaming_activity.max_total_value_of_all_prizes)
-            * ((organisation('proceeds_to_benefitting_organisation', period)) >= ((organisation('gross_proceeds_from_gaming_activity', period) * parameters(period).permitted_games.art_union_gaming_activity.min_gross_proceeds_percent_to_benefit_org))))
+            * (organisation('total_prize_value_of_all_prizes_from_gaming_activity', period) > parameters(period).permitted_games.art_union_gaming_activity.max_total_value_of_all_prizes)
+            * ((organisation('proceeds_to_benefitting_organisation', period)) >= ((organisation('gross_proceeds_from_gaming_activity', period) * parameters(period).permitted_games.art_union_gaming_activity.min_gross_proceeds_percent_to_benefit_org))) * (organisation('money_payable_as_separate_prize', period) <= parameters(period).permitted_games.art_union_gaming_activity.max_money_for_separate_prize)
+            * (organisation('has_authority', period)))

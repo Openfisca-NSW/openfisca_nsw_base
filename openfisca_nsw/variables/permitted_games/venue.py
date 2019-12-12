@@ -9,3 +9,10 @@ class venue_is_licensed_premises(Variable):
     entity = Organisation
     label = u"Whether the gaming activity will be conducted on licensed premises"
     definition_period = MONTH
+
+
+class venue_is_registered_club(Variable):
+    value_type = bool
+    entity = Organisation
+    label = u"Whether the gaming activity will be conducted on the premises of the registered club"
+    definition_period = MONTH

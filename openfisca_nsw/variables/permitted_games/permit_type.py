@@ -4,6 +4,13 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
+class has_authority(Variable):
+    value_type = bool
+    entity = Organisation
+    definition_period = MONTH
+    label = "Does the person conducting the gaming activity hold authority to do so that is in force and the activity is conducted in accordance with the authority?"
+
+
 class single_permit(Variable):
     value_type = bool
     entity = Organisation
