@@ -1,11 +1,6 @@
-# For GovHack Participants:
-
-For finding out more context and documentation on the Rules as Code challenge, click [here](https://digitalnsw.github.io/govhack-nsw-guide/).
-
 # OpenFisca nsw
 
-
-The country whose law is modelled here has a very simple tax and benefit system.
+New South Wales (NSW) whose law is being modelled here has a very simple tax and benefit system. It is being considered as a country/separate territory in order to separate its laws from other states and Commonwealth Law within Australia.
 
 - It has a flat rate tax whose rates increase every year.
 - On the first of December, 2015, it introduced a basic income for all its citizens of age who have no income.
@@ -42,7 +37,7 @@ To install pew, launch a terminal on your computer and follow these instructions
 ```sh
 pip install --upgrade pip
 pip install pew  # if asked, answer "Y" to the question about modifying your shell config file.
-pew new openfisca --python=python2.7  # create a new virtualenv called “openfisca”
+pew new openfisca --python=python3.7  # create a new virtualenv called “openfisca”
 ```
 
 The virtualenv you just created will be automatically activated. This means you will operate in the virtualenv immediately. You should see a prompt resembling this:
