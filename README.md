@@ -1,6 +1,6 @@
 # OpenFisca nsw
 
-The country whose law is modelled here has a very simple tax and benefit system.
+New South Wales (NSW) whose law is being modelled here has a very simple tax and benefit system. It is being considered as a country/separate territory in order to separate its laws from other states and Commonwealth Law within Australia.
 
 - It has a flat rate tax whose rates increase every year.
 - On the first of December, 2015, it introduced a basic income for all its citizens of age who have no income.
