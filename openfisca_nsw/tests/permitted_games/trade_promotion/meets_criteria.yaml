@@ -1,60 +1,20 @@
-- name: For-profit business, planning for a trade promotion, free to enter
+- name: Organisation is conducting trade promotion within allowable limits, hence gaming activity is permitted
   period: 2019-09
   input:
-    is_for_profit_business: True
-    gaming_activity_is_free_to_enter: True
-    trade_promotion__has_business_principal_consent: True
-    total_prize_value_of_all_prizes_from_gaming_activity: 10000
-    total_prize_value_of_all_prizes_from_single_gaming_session: 500
+    gaming_activity_is_trade_promotion: True
+    participation_obtained_by_purchasing_goods: True
+    gaming_activity_has_business_principal_consent: True
+    total_prize_value_of_all_prizes_from_gaming_activity: 9000
+    has_authority: False
   output:
     trade_promotion__game_meets_criteria: True
-- name: For-profit business, planning for a trade promotion, plans to charge for gaming activity
+- name: Organisation is conducting trade promotion exceeding prize value threshold, does not have authority, hence gaming activity is not permitted.
   period: 2019-09
   input:
-    is_for_profit_business: True
-    gaming_activity_is_free_to_enter: False
-    trade_promotion__has_business_principal_consent: True
-    total_prize_value_of_all_prizes_from_gaming_activity: 10000
-    total_prize_value_of_all_prizes_from_single_gaming_session: 500
-  output:
-    trade_promotion__game_meets_criteria: False
-- name: For-profit business, planning for a trade promotion, total prize value exceeds $10,000
-  period: 2019-09
-  input:
-    is_for_profit_business: True
-    gaming_activity_is_free_to_enter: True
-    trade_promotion__has_business_principal_consent: True
-    total_prize_value_of_all_prizes_from_gaming_activity: 10010
-    total_prize_value_of_all_prizes_from_single_gaming_session: 500
-  output:
-    trade_promotion__game_meets_criteria: False
-- name: For-profit business, planning for a trade promotion, total prize value for single session exceeds $10,000
-  period: 2019-09
-  input:
-    is_for_profit_business: True
-    gaming_activity_is_free_to_enter: True
-    trade_promotion__has_business_principal_consent: True
-    total_prize_value_of_all_prizes_from_gaming_activity: 10050
-    total_prize_value_of_all_prizes_from_single_gaming_session: 10050
-  output:
-    trade_promotion__game_meets_criteria: False
-- name: For-profit business, planning for a trade promotion, does not have consent of principal in the business
-  period: 2019-09
-  input:
-    is_for_profit_business: True
-    gaming_activity_is_free_to_enter: True
-    trade_promotion__has_business_principal_consent: False
-    total_prize_value_of_all_prizes_from_gaming_activity: 10000
-    total_prize_value_of_all_prizes_from_single_gaming_session: 500
-  output:
-    trade_promotion__game_meets_criteria: False
-- name: Not-for-profit business, planning for a trade promotion
-  period: 2019-09
-  input:
-    is_for_profit_business: False
-    gaming_activity_is_free_to_enter: True
-    trade_promotion__has_business_principal_consent: True
-    total_prize_value_of_all_prizes_from_gaming_activity: 10000
-    total_prize_value_of_all_prizes_from_single_gaming_session: 500
+    gaming_activity_is_trade_promotion: True
+    participation_obtained_by_purchasing_goods: True
+    gaming_activity_has_business_principal_consent: True
+    total_prize_value_of_all_prizes_from_gaming_activity: 11000
+    has_authority: False
   output:
     trade_promotion__game_meets_criteria: False

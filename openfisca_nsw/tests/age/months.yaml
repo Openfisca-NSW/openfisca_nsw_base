@@ -24,7 +24,7 @@
       2015-04: (35 * 12) +2
 
 
-- name: age_in_months
+- name: age_in_months - second test
   period: 2016-01
   input:
     birth: 2000-07-01
