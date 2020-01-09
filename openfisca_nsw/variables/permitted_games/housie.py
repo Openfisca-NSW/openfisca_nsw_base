@@ -10,23 +10,6 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-# This is used to calculate whether a housie (organised by a charity) meets criteria
-class housie__game_meets_criteria_for_charity(Variable):
-    value_type = bool
-    entity = Organisation
-    definition_period = MONTH
-    label = "The eligibility conditions for organising a housie (for charitable purposes) are being met by the organisation"
-
-    def formula(organisation, period, parameters):
-        return (
-            (organisation('is_charity', period))
-            * (organisation('total_prize_value_of_all_prizes_from_gaming_activity', period) <= parameters(period).permitted_games.housie.max_total_value_of_all_prizes)
-            * (organisation('highest_value_of_individual_prize_in_gaming_activity', period) <= parameters(period).permitted_games.housie.max_value_of_individual_prize.housie_conducted_by_charity)
-            * not_(organisation('more_than_ten_tickets_sold_to_same_player', period))
-            * not_(organisation('venue_is_licensed_premises', period))
-            * (organisation('proceeds_to_benefitting_organisation', period) >= organisation('gross_proceeds_from_gaming_activity', period) * parameters(period).permitted_games.housie.min_gross_proceeds_percent_to_benefit_org))
-
-
 # This formula is used to calculate whether an organisation meets criteria for conducting a social housie
 class charity_housie__game_meets_criteria(Variable):
     value_type = bool
