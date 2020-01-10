@@ -20,6 +20,7 @@ class total_fee_in_dollars(Variable):
         return (
             parameters(period).permitted_games.permits.fee_unit * organisation('total_fee_in_units', period))
 
+
 class total_fee_in_units(Variable):
     value_type = int
     entity = Organisation
@@ -28,7 +29,8 @@ class total_fee_in_units(Variable):
 
     def formula(organisation, period, parameters):
         return (
-             (organisation('fixed_component_fee_in_units', period) + organisation('processing_component_fee_in_units', period)))
+            (organisation('fixed_component_fee_in_units', period) + organisation('processing_component_fee_in_units', period)))
+
 
 class fixed_component_fee_in_units(Variable):
     value_type = int
@@ -50,8 +52,8 @@ class processing_component_fee_in_units(Variable):
 
     def formula(organisation, period, parameters):
         duration = organisation('duration_of_authority', period)
-        return (
-             (parameters(period).permitted_games.permits.authority_fee[duration].processing_component))
+        return ((parameters(period).permitted_games.permits.authority_fee[duration].processing_component))
+
 
 # The duration of authority can be 1, 3 or 5 years
 class duration_of_authority(Variable):
