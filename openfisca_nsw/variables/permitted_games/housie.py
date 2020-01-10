@@ -35,7 +35,7 @@ class condition_for_multiple_gaming_activities(Variable):
 
 
 # This formula is used to calculate whether an organisation meets criteria for conducting a social housie
-class social_housie(Variable):
+class social_housie__game_meets_criteria(Variable):
     value_type = bool
     entity = Organisation
     definition_period = MONTH
@@ -43,7 +43,21 @@ class social_housie(Variable):
 
     def formula(organisation, period, parameters):
         return (
-            (organisation('is_charity', period) * ((organisation('proceeds_to_benefitting_organisation', period) >= organisation('gross_proceeds_from_gaming_activity', period) * parameters(period).permitted_games.housie.min_gross_proceeds_percent_to_benefit_org))))
+            ((organisation('gaming_activity_solely_for_social_purposes', period)) * (organisation('ticket_cost', period) <= parameters(period).permitted_games.housie.max_ticket_cost.social_housie) * (organisation('net_proceeds_returned_to_participants', period) * (organisation('condition_for_no_individual_prize', period)))))
+
+# This formula is used to calculate whether the conditions about individual and jackpot prizes are being met when conducting a social housie
+class condition_for_no_individual_prize(Variable):
+    value_type = bool
+    entity = Organisation
+    definition_period = MONTH
+    label = "Are the conditions being met for: If there are no individual prize, the value of a jackpot prize does not exceed $200, but if there is an individual prize, then total available prizes for 1 session of the gaming activity does not exceed $40"
+
+    def formula(organisation, period, parameters):
+        return select(
+            [organisation('no_individual_prize', period), not_(organisation('no_individual_prize', period))],
+            [(organisation('total_prize_value_from_single_gaming_session', period) <= parameters(period).
+            permitted_games.housie.max_value_of_prize_per_session.social_housie), (organisation('value_of_jackpot_prize', period) <= parameters(period).
+            permitted_games.housie.max_value_of_jackpot_prize)])
 
 
 # This formula is used to calculate whether an organisation meets criteria for conducting a club bingo

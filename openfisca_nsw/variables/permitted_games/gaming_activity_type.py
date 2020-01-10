@@ -95,11 +95,11 @@ class gaming_activity_is_free_to_enter(Variable):
     label = "Whether gaming activity is free for participants to enter"
 
 
-class gaming_activity_solely_for_entertainment_purposes(Variable):
+class gaming_activity_solely_for_social_purposes(Variable):
     value_type = bool
     entity = Organisation
     definition_period = MONTH
-    label = "Whether organisation is conducting this gaming activity solely for entertainment purposes? (Totally non-charitable purposes)"
+    label = "Whether organisation is conducting this gaming activity solely for social purposes?"
 
 
 class gaming_activity_other_for_charitable_purposes(Variable):
