@@ -1,7 +1,0 @@
-- name: Ineligible - has neither DHS nor DVA pension
-  period: 2019-01
-  input:
-    is_full_age_pension_recipient: false
-    is_veterans_pension_recipient: false
-  output:
-    will_preparation_eligible_for_free_will_preparation: false
