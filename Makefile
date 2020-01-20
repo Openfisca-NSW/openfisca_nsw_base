@@ -23,6 +23,9 @@ build: clean deps
 	python setup.py bdist_wheel
 	find dist -name "*.whl" -exec pip install --upgrade {}[dev] \;
 
+upload: build
+	python  -m twine upload --verbose dist/*
+
 check-syntax-errors:
 	python -m compileall -q .
 
